@@ -1,21 +1,23 @@
 $(function(){
-    $('#botão--menu').on('click',function(){
-        $(".sidebar").toggleClass("ação-menu");
-        $(".menu-botao").toggleClass("onseta");
-        
-    });
-    $('.menu-botao').on('click',function(){
-        $(".menu-botao").remove(".item--cat--js");
-    })
-
-
+   button=$('#botão--menu');
+   sideBar= $(".sidebar")
     
-
-    $("#boton-1").on('click',function(){
-        $("#1").toggleClass("lista")
-    });
+   button.on('click',function btnOn(){
+       sideBar.toggleClass("ação-menu")
+       ;
+    $(function(){
+     sideBarOn = $("#botão--menu").hasClass('bx-menu-alt-right');
+      if( sideBarOn){
+        $("#botão--menu").addClass('bx-menu');
+        $("#botão--menu").removeClass('bx-menu-alt-right');
+         }else{
+          $("#botão--menu").addClass('bx-menu-alt-right');
+          $("#botão--menu").removeClass('bx-menu');
+        }
+    })
+  })
 })
 
 
 
-                        
+          
