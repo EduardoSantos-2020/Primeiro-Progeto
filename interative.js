@@ -7,13 +7,8 @@ $(function(){
        ;
     $(function(){
      sideBarOn = button.hasClass('bx-menu-alt-right');
-      if( sideBarOn){
-        button.addClass('bx-menu');
-        button.removeClass('bx-menu-alt-right');
-         }else{
-          button.addClass('bx-menu-alt-right');
-          button.removeClass('bx-menu');
-        }
+
+      button.toggleClass('bx-menu bx-menu-alt-right')  
     })
   })
 })
