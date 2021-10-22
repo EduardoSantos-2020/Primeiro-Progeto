@@ -1,5 +1,6 @@
 /*-----PAGINA 1-----*/
 
+
 .sidebar .logo--container{
 vertical-align: bottom;
 }
@@ -14,7 +15,7 @@ transition: all 0.5s ease;
 } .ação-menu .logo--container .logo--img{
 opacity: 0;
 pointer-events: none;
-transition: all 0.8s ease;
+transition: all 0.5s ease;
 }
 
 .sidebar .logo--container .logo--name{
@@ -37,7 +38,7 @@ transition: all 0.5s ease;
 
 pointer-events: auto;
 opacity: 0;
-transition: all 0.2s ease;
+transition: all 0.5s ease;
 }
 
 .sidebar .btn{
@@ -51,18 +52,18 @@ font-size: 35px;
 text-align: center;
 
 transform: translateX(-50%);
-transition: all 1s ease;
+transition: all 0.5s ease;
 }
 .ação-menu .btn{
 left: 45%;
 
 transform: translateX(-50%);
-transition: all 1s ease;
+transition: all 0.5s ease;
 }
 
 .sidebar.ação-menu .btn{
 text-align: right;
-transition: all 1s ease;
+transition: all 0.5s ease;
 }
 
 .sidebar .menu--container{
