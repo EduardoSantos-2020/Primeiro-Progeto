@@ -32,13 +32,13 @@ vertical-align: bottom;
 pointer-events: none;
 opacity: 1;
 
-transition: all 0.5s ease;
+transition: all 0.2s ease;
 
 }.ação-menu .logo--container .logo--name{
 
 pointer-events: auto;
 opacity: 0;
-transition: all 0.5s ease;
+transition: all 0.2s ease;
 }
 
 .sidebar .btn{
@@ -90,14 +90,13 @@ pointer-events: none;
 margin-left: 5px;
 
 opacity: 1;
-transition: all 0.5s ease;
+transition: 0.2s ease;
 }
 .ação-menu .menu--secao {
-margin-left: 15px;
 
-transition: all 0.5s ease;
+transition:0.2s ease ;
 
-pointer-events: auto;
+pointer-events: none;
 opacity: 0;
 
 }
