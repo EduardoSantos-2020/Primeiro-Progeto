@@ -111,22 +111,21 @@ margin: 5px 15px;
 .sidebar .menu--secao{
 display:inline-flex;
 
-position: absolute;
+position: fixed;
 
 text-align: center;
 text-decoration: none;
-pointer-events: none;
+pointer-events: auto;
 
-margin-left: 5px;
+margin-left: 10px;
 
 opacity: 1;
-transition: 0.4s ease;
+transition: 0.5s ease;
 }
-.ação-menu .menu--secao {
+.ação-menu  .menu--secao {
 
-transition:0.2s ease ;
+transition:all 0.2s ease ;
 
-pointer-events: none;
 opacity: 0;
 
 }
