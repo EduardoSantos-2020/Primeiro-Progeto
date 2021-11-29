@@ -127,7 +127,7 @@ transition: 0.5s ease;
 .ação-menu .menu--secao  {
 
 transition:all 0.1s ease ;
-
+display: none;
 opacity: 0;
 
 }
@@ -186,11 +186,11 @@ box-shadow:3px 3px 2px;
 }
 /*---------------------------*/
 .tooltip-conteiner{
-    opacity: 0;
+    display: none;
     transition: 0.2s ;
    }
 .ação-menu .menu--item:hover .tooltip-conteiner{
-    opacity: 1.5;
+    display: block;
     transition:  0.2s ;
 }
 .social--cabecario{
