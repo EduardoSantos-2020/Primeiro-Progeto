@@ -1,7 +1,10 @@
 /*-----PAGINA 1-----*/
+.nav--menu{
+   
+}
 .navegação--menu{
 margin-top: 55px;
-height: 55%;
+height: 25em;
 }
 
 .sidebar .logo--container{
@@ -73,8 +76,8 @@ transition: all 0.5s ease;
 
 .sidebar .btn {
 position: absolute;
-left:85%;
-top:19px;
+left:80%;
+top:10px;
 height: 50px;
 width: 25px;
 
@@ -85,7 +88,7 @@ transform: translateX(-50%);
 transition: all 0.5s ease;
 }
 .ação-menu .btn{
-left: 45%;
+left: 30%;
 
 transform: translateX(-50%);
 transition: all 0.5s ease;
@@ -97,7 +100,6 @@ transition: all 0.5s ease;
 }
 
 .sidebar .menu--container{
-position: relative;
 
 height: 50px;
 width: 100%;
@@ -111,7 +113,7 @@ margin: 5px 15px;
 .sidebar .menu--secao{
 display:inline-flex;
 
-position: fixed;
+position: absolute;
 
 text-align: center;
 text-decoration: none;
@@ -122,14 +124,15 @@ margin-left: 10px;
 opacity: 1;
 transition: 0.5s ease;
 }
-.ação-menu  .menu--secao {
+.ação-menu .menu--secao  {
 
-transition:all 0.2s ease ;
+transition:all 0.1s ease ;
 
 opacity: 0;
 
 }
 .menu--item{
+position: relative;
 border-radius: 12px;
 line-height: 50px;
 border-radius: 5px;
@@ -137,24 +140,71 @@ border-radius: 5px;
 
 .menu--item:hover{
 border: black 1px solid;
-box-shadow:1px 2px 1px;
-
+box-shadow:3px 3px 2px;
 
 }
+ 
 
+/*balão*/
+
+
+.tooltip-body::before{
+    position: absolute;
+    content:attr(data-text);
+    width: 85px;
+    left:100%;
+    top:45%;
+    margin-left: 35px;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    transform: translateY(-50%);
+    background-color:#1C1C1C;
+    border-radius: 7px; 
+    display:block;
+    ;
+
+} 
+
+
+/*seta*/
+
+.tooltip-conteiner::before{
+    position: relative;
+    border-width: 10px;
+    border-style: solid;
+} 
+.tooltip-conteiner::after{
+    position: absolute;
+    content:'';
+    left: 100%;
+    top:45%;
+    border:10px solid #1C1C1C;
+    transform: translateY(-50%);
+    margin-left: 15px;
+    border-color: transparent 	#1C1C1C transparent transparent;
+}
+/*---------------------------*/
+.tooltip-conteiner{
+    opacity: 0;
+    transition: 0.2s ;
+   }
+.ação-menu .menu--item:hover .tooltip-conteiner{
+    opacity: 1.5;
+    transition:  0.2s ;
+}
 .social--cabecario{
-margin: 5px 0;
-position: fixed;
+    margin: 5px 0;
+    position: fixed;
 }
 
 .social--logo{
-top: 0;
-
-margin: 5px 2px 2px 15px ;
+    top: 0;
+    
+    margin: 5px 2px 2px 15px ;
 padding: 0 0 10px 0;
 }
 .social--icon{
-width: 100%;
 
 font-size: 10px;
 font-weight: bolder;
@@ -163,6 +213,7 @@ margin: 0;
 bottom: 0;
 }
 .social--icon span{
+    margin:0 10px;
 transition:all 0.1s ease;
 }
 .ação-menu .social--icon span{

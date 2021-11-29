@@ -7,7 +7,7 @@
 		<link rel="shortcut icon" href="imagens/logotitle.png"/> 
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet"/>
 		<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-		<link rel="stylesheet" href="Css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"crossorigin="anonymous">
 		<link rel="stylesheet" href="Css/base.css"/>
 		<link rel="stylesheet" href="Css/layout.css"/>
 		<link rel="stylesheet" href="Css/conteudo.css"/>
@@ -27,46 +27,61 @@
 				</div>
 				<ul class="nav--menu">
 					<div class="menu--item">
-						<li class="menu--container">
+						<li class="menu--container">	
 							<img class="nav__img" src="/imagens/casa.png">
-								<span class="menu--secao">
-									INICIO
-								</span>
+							<p class="menu--secao">
+								INICIO
+							</p>
 						</li>
+						<span  class="tooltip-conteiner">
+							<span data-text="Inicio" class="tooltip-body"></span>
+						</span>		
 					</div>
 					<div class="menu--item">
 						<li class="menu--container">
 							<img class="nav__img" src="imagens/computador.png">
-								<span class="menu--secao">
+								<p class="menu--secao">
 									PRODUTOS
-								</span>
+								</p>
 						</li>
+						<span  class="tooltip-conteiner">
+							<span data-text="Produtos" class="tooltip-body"></span>
+						</span>		
 					</div>
 					<div class="menu--item">
-						<li class="menu--container">
+						<li class="menu--container" >
 							<img class="nav__img" src="imagens/music.png">							
-								<span class="menu--secao">
+								<p class="menu--secao">
 									ACESSÓRIOS
-								</span>
+								</p>
 						</li>
+						<span  class="tooltip-conteiner">
+							<span data-text="Acessórios" class="tooltip-body"></span>
+						</span>		
 					</div>
 					<div class="menu--item">
 						<li class="menu--container">
 							<img class="nav__img" src="imagens/pino-de-localizacao.png">			
-								<span class="menu--secao">
-										LOCALIZAÇÃO								
-								</span>	
+								<p class="menu--secao">
+										LOCALIZADO							
+								</p>	
 						</li>
+						<span  class="tooltip-conteiner">
+							<span data-text="Localizado" class="tooltip-body"></span>
+						</span>		
 					</div>
 					<div class="menu--item">
 						<li class="menu--container">						
 							<img class="nav__img" src="imagens/balao-de-fala.png" >					
-								<span class="menu--secao">
+								<p class="menu--secao">
 									CONTATOS
-								</span>			
+								</p>			
 						</li>
+						<span  class="tooltip-conteiner">
+							<span data-text="Contatos" class="tooltip-body"></span>
+						</span>	
 					</div>	
-
+	
 					<i class='bx btn bx-menu-alt-right' id="botão--menu"></i>
 				</ul>
 			</nav>
@@ -126,6 +141,7 @@
 					<p>&copy;2020 INFORTEC</p>
 				</footer>
 			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script src="bootstrap.min.js"></script>
 			<script src="interative.js"></script>
 		</body>
 </html>
