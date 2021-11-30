@@ -1,7 +1,4 @@
 /*-----PAGINA 1-----*/
-.nav--menu{
-   
-}
 .navegação--menu{
 margin-top: 55px;
 height: 25em;
@@ -16,12 +13,12 @@ display:inline;
 margin: 10px;
 
 opacity: 1;
-transition: all 0.5s ease;
+transition: all 0.3s ease;
 
 } .ação-menu .logo--container .logo--img{
 opacity: 0;
 pointer-events: none;
-transition: all 0.5s ease;
+transition: all 0.3s ease;
 }
 
 .sidebar .logo--container .logo--name{
@@ -38,13 +35,13 @@ vertical-align: bottom;
 pointer-events: none;
 opacity: 1;
 
-transition: all 0.2s ease;
+transition: all 0.3s ease;
 
 }.ação-menu .logo--container .logo--name{
 
 pointer-events: auto;
 opacity: 0;
-transition: all 0.2s ease;
+transition: all 0.3s ease;
 }
 .sidebar .blog{
 font-size: 30px;
@@ -52,7 +49,7 @@ position: absolute;
 
 left: 65%;
 top:70px;
-transition: all 0.5s ease;
+transition: all 0.3s ease;
 }
 
 
@@ -71,7 +68,7 @@ font-size: 1.1rem;
 }
 .ação-menu .blog{
 left: 30%;
-transition: all 0.5s ease;
+transition: all 0.3s ease;
 }
 
 .sidebar .btn {
@@ -85,18 +82,18 @@ font-size: 35px;
 text-align: center;
 
 transform: translateX(-50%);
-transition: all 0.5s ease;
+transition: all 0.3s ease;
 }
 .ação-menu .btn{
 left: 30%;
 
 transform: translateX(-50%);
-transition: all 0.5s ease;
+transition: all 0.3s ease;
 }
 
 .sidebar.ação-menu .btn{
 text-align: right;
-transition: all 0.5s ease;
+transition: all 0.3s ease;
 }
 
 .sidebar .menu--container{
@@ -111,7 +108,7 @@ line-height: 50px;
 margin: 5px 15px;
 }
 .sidebar .menu--secao{
-display:inline-flex;
+display: block;
 
 position: absolute;
 
@@ -119,18 +116,24 @@ text-align: center;
 text-decoration: none;
 pointer-events: auto;
 
-margin-left: 10px;
+top:10%;
 
-opacity: 1;
-transition: 0.5s ease;
+margin-left: 60px;
+
+transition:all 0.3s ease;
 }
-.ação-menu .menu--secao  {
 
-transition:all 0.1s ease ;
-display: none;
-opacity: 0;
 
+.ação-menu .menu--item .menu--secao{
+    display: none;
+    transition:all 0.3s ease;
 }
+
+.menu--item:hover{
+    color:#000;
+    font-weight: bolder;
+}
+
 .menu--item{
 position: relative;
 border-radius: 12px;
@@ -141,8 +144,10 @@ border-radius: 5px;
 .menu--item:hover{
 border: black 1px solid;
 box-shadow:3px 3px 2px;
+background-color:#FFFAFA;
 
 }
+
  
 
 /*balão*/
@@ -156,14 +161,12 @@ box-shadow:3px 3px 2px;
     top:45%;
     margin-left: 35px;
     font-size: 1rem;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     transform: translateY(-50%);
-    background-color:#1C1C1C;
+    background-color:#000;
     border-radius: 7px; 
     display:block;
-    ;
-
 } 
 
 
@@ -179,10 +182,10 @@ box-shadow:3px 3px 2px;
     content:'';
     left: 100%;
     top:45%;
-    border:10px solid #1C1C1C;
+    border:10px solid #000;
     transform: translateY(-50%);
     margin-left: 15px;
-    border-color: transparent 	#1C1C1C transparent transparent;
+    border-color: transparent 	#000 transparent transparent;
 }
 /*---------------------------*/
 .tooltip-conteiner{
@@ -194,31 +197,29 @@ box-shadow:3px 3px 2px;
     transition:  0.2s ;
 }
 .social--cabecario{
-    margin: 5px 0;
-    position: fixed;
-}
-
-.social--logo{
-    top: 0;
+    width: 100%;
+    margin: 5px ;
     
-    margin: 5px 2px 2px 15px ;
-padding: 0 0 10px 0;
 }
+
 .social--icon{
+    padding: 10px;
+    font-size: 10px;
+    font-weight: bolder;
 
-font-size: 10px;
-font-weight: bolder;
-
-margin: 0;
-bottom: 0;
 }
+
 .social--icon span{
-    margin:0 10px;
-transition:all 0.1s ease;
+margin:0 10px;
+position: fixed;
+
+display: inline-block;
+transition:all 0.5s ease;
 }
 .ação-menu .social--icon span{
-visibility: hidden;
-transition:all 0.1s ease;
+ display: none;
+ ;
+transition:all 0.5s ease;
 }
 
 
