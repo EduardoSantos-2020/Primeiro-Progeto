@@ -1,6 +1,6 @@
 /*-----PAGINA 1-----*/
 .navegação--menu{
-margin-top: 55px;
+margin: 15px 15px 0 15px;
 height: 25em;
 }
 
@@ -27,7 +27,7 @@ display:inline-flex;
 
 position: absolute;
 
-top: 30px;
+top: 20px;
 
 font-weight: 400;
 line-height: 15px;
@@ -43,35 +43,49 @@ pointer-events: auto;
 opacity: 0;
 transition: all 0.3s ease;
 }
-.sidebar .blog{
-font-size: 30px;
+
+.login--container{ 
+    position: relative;
+    background-color: #DCDCDC;
+    padding: 10px 0;
+    margin: 15px 5px;
+    border-radius: 3px;
+    
+}
+.ação-menu .login--container{
+    background:none;
+}
+
+
+.login--name{
+    
+    width: 50%;
+    margin: 0 35px;
+    text-align: center;
+    padding: 0; 
+}
+.ação-menu .login--name{
+   visibility: hidden;
+    }
+
+.log{
+font-size: 25px;
+
+top: 0;
+right: 30%;
+
+margin: 10px  0 15px 0 ;
 position: absolute;
 
-left: 65%;
-top:70px;
-transition: all 0.3s ease;
+}
+.ação-menu .log{
+    display: none;
+    transition: 1s;
 }
 
 
-.menu--login{
-font-size: 1.4rem;
-display: inline;
-margin: 0 50px;
-position: fixed;
-top:75px;
-}
-.ação-menu .menu--login{
-display: none;
-font-weight: bolder;
-font-size: 1.1rem;
 
-}
-.ação-menu .blog{
-left: 30%;
-transition: all 0.3s ease;
-}
-
-.sidebar .btn {
+.sidebar .butoon {
 position: absolute;
 left:80%;
 top:10px;
@@ -84,14 +98,14 @@ text-align: center;
 transform: translateX(-50%);
 transition: all 0.3s ease;
 }
-.ação-menu .btn{
-left: 30%;
+.ação-menu .butoon{
+left: 50%;
 
 transform: translateX(-50%);
 transition: all 0.3s ease;
 }
 
-.sidebar.ação-menu .btn{
+.sidebar.ação-menu .butoon{
 text-align: right;
 transition: all 0.3s ease;
 }
@@ -198,7 +212,7 @@ background-color:#FFFAFA;
 }
 .social--cabecario{
     width: 100%;
-    margin: 5px ;
+    margin: 5px 20px ;
     
 }
 
@@ -223,13 +237,33 @@ transition:all 0.5s ease;
 }
 
 
+.campo-busca{
+    margin-top: 15px;
+    position: fixed;
+    z-index: 1;
+}
+.campo-busca .btn{
+    position: fixed;
+    font-size: 20px;
+    border-radius: 25px;
+    box-shadow: #000 2px 3px 2px;
+}
+
+.campo-busca .busca-input{
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 25px;
+    box-shadow: #000 2px 3px 2px;
+}
+
+
 
 /*--------------------*\
 Conteudo da pagina
 \*--------------------*/
 .banner--principal{
 width:90%;
-margin: 15px;
+margin: 30px;
 }
 
 .conteudo--principal{

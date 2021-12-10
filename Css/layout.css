@@ -5,11 +5,10 @@
     height: 100%;
     width:200px;
     z-index: 99;
-    padding: 6px 14px;
     border: 10px 10px ;
     background-color:#f5f5f5;
     box-shadow: 0px 0px 5px 3px black;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
 }
 
 .layout__principal{
@@ -33,5 +32,5 @@ width: 100%;
 .ação-menu{
     width: 85px;
     height: 100%;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
     }
