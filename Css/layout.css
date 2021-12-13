@@ -1,10 +1,15 @@
 .sidebar{
-    position: fixed;
-    top: 0;
+    top:0;
     left: 0;
+
+    position: fixed;
+
+    width:220px;
     height: 100%;
-    width:200px;
     z-index: 99;
+
+    padding: 10px 10px;
+    
     border: 10px 10px ;
     background-color:#f5f5f5;
     box-shadow: 0px 0px 5px 3px black;
@@ -30,7 +35,7 @@ width: 100%;
 }
 
 .ação-menu{
-    width: 85px;
+    width: 105px;
     height: 100%;
     transition: all 0.5s ease;
     }

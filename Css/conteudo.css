@@ -1,11 +1,13 @@
 /*-----PAGINA 1-----*/
 .navegação--menu{
-margin: 15px 15px 0 15px;
-height: 25em;
+
 }
 
 .sidebar .logo--container{
+position: relative;
 vertical-align: bottom;
+
+overflow: hidden;
 }
 
 .sidebar .logo--container .logo--img{
@@ -13,18 +15,16 @@ display:inline;
 margin: 10px;
 
 opacity: 1;
-transition: all 0.3s ease;
+transition: all 0.2s ease;
 
 } .ação-menu .logo--container .logo--img{
 opacity: 0;
 pointer-events: none;
-transition: all 0.3s ease;
+transition: all 0.2s ease;
 }
 
 .sidebar .logo--container .logo--name{
-display:inline-flex;
-
-
+display:inline-block;
 position: absolute;
 
 top: 20px;
@@ -33,15 +33,14 @@ font-weight: 400;
 line-height: 15px;
 vertical-align: bottom;
 pointer-events: none;
-opacity: 1;
 
-transition: all 0.3s ease;
+transition: all 0.2s ease;
 
 }.ação-menu .logo--container .logo--name{
 
 pointer-events: auto;
-opacity: 0;
-transition: all 0.3s ease;
+visibility: hidden;
+
 }
 
 .login--container{ 
@@ -88,7 +87,7 @@ position: absolute;
 .sidebar .butoon {
 position: absolute;
 left:80%;
-top:10px;
+top:20px;
 height: 50px;
 width: 25px;
 
@@ -96,164 +95,137 @@ font-size: 35px;
 text-align: center;
 
 transform: translateX(-50%);
-transition: all 0.3s ease;
+transition: all 0.5s ease;
 }
 .ação-menu .butoon{
-left: 50%;
+left: 45%;
 
 transform: translateX(-50%);
-transition: all 0.3s ease;
+transition: all 0.5s ease;
 }
 
 .sidebar.ação-menu .butoon{
 text-align: right;
-transition: all 0.3s ease;
+transition: all 0.5s ease;
 }
 
-.sidebar .menu--container{
-
-height: 50px;
-width: 100%;
-
+.nav--menu{
+margin:10px;
+height: 350px;
 list-style: none;
-line-height: 50px;
-}
-.sidebar .menu--container .nav__img{
-margin: 5px 15px;
-}
-.sidebar .menu--secao{
-display: block;
-
-position: absolute;
-
-text-align: center;
-text-decoration: none;
-pointer-events: auto;
-
-top:10%;
-
-margin-left: 60px;
-
-transition:all 0.3s ease;
 }
 
-
-.ação-menu .menu--item .menu--secao{
-    display: none;
-    transition:all 0.3s ease;
+.nav__img{
+padding: 5px;
+margin-left: 15px;
+align-items: center;
+margin-bottom: 5px;
 }
 
-.menu--item:hover{
-    color:#000;
-    font-weight: bolder;
-}
-
-.menu--item{
+.menu--item{ 
 position: relative;
-border-radius: 12px;
+line-height: 50px;
+
+}
+
+.menu--container{
+position: relative;
 line-height: 50px;
 border-radius: 5px;
+overflow: hidden;
+}
+.menu--container:hover{
+    background-color: white;
+   border: 1px solid;
+    box-shadow: 1px 3px 3px;
+   
 }
 
-.menu--item:hover{
-border: black 1px solid;
-box-shadow:3px 3px 2px;
-background-color:#FFFAFA;
+
+.menu--secao{
+margin-left: 10px;
+text-align: center;
+display:inline-block;
+position: absolute;
+transition: all 0.4s ease;
 
 }
 
- 
-
-/*balão*/
-
-
-.tooltip-body::before{
-    position: absolute;
-    content:attr(data-text);
-    width: 85px;
-    left:100%;
-    top:45%;
-    margin-left: 35px;
-    font-size: 1rem;
-    color: #fff;
-    text-align: center;
-    transform: translateY(-50%);
-    background-color:#000;
-    border-radius: 7px; 
-    display:block;
-} 
+.ação-menu .menu--secao{
+    visibility: hidden;
+   
+}
 
 
-/*seta*/
+/*------------seta-----------*/
 
 .tooltip-conteiner::before{
-    position: relative;
     border-width: 10px;
     border-style: solid;
 } 
 .tooltip-conteiner::after{
     position: absolute;
     content:'';
-    left: 100%;
+    left:45px;
     top:45%;
     border:10px solid #000;
     transform: translateY(-50%);
     margin-left: 15px;
-    border-color: transparent 	#000 transparent transparent;
+    border-color: transparent#000 transparent transparent;
 }
 /*---------------------------*/
+
 .tooltip-conteiner{
-    display: none;
-    transition: 0.2s ;
+    visibility: hidden;
    }
+
+
 .ação-menu .menu--item:hover .tooltip-conteiner{
-    display: block;
-    transition:  0.2s ;
-}
-.social--cabecario{
-    width: 100%;
-    margin: 5px 20px ;
-    
+    visibility: visible;
 }
 
-.social--icon{
-    padding: 10px;
-    font-size: 10px;
-    font-weight: bolder;
+/*----------balão-----------*/
 
-}
 
-.social--icon span{
-margin:0 10px;
-position: fixed;
+.tooltip-body::before{
+    position: absolute;
+    content:attr(data-text);
 
-display: inline-block;
-transition:all 0.5s ease;
-}
-.ação-menu .social--icon span{
- display: none;
- ;
-transition:all 0.5s ease;
-}
+    width: 85px;
+
+    left:65px;
+    top:45%;
+
+    margin-left: 15px;
+
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+
+    transform: translateY(-50%);
+    background-color:#000;
+    border-radius: 7px; 
+
+    display:block;
+
+} 
 
 
 .campo-busca{
-    margin-top: 15px;
-    position: fixed;
-    z-index: 1;
+   position: fixed;
+   padding: 10px;
+   z-index: 1;
 }
 .campo-busca .btn{
-    position: fixed;
+    position: absolute;
     font-size: 20px;
     border-radius: 25px;
-    box-shadow: #000 2px 3px 2px;
 }
 
 .campo-busca .busca-input{
     padding: 20px;
-    margin-right: 10px;
     border-radius: 25px;
-    box-shadow: #000 2px 3px 2px;
+    
 }
 
 
@@ -263,7 +235,7 @@ Conteudo da pagina
 \*--------------------*/
 .banner--principal{
 width:90%;
-margin: 30px;
+margin: 55px 0;
 }
 
 .conteudo--principal{
