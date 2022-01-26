@@ -1,354 +1,377 @@
-/*-----PAGINA 1-----*/
+/*----------------------*\
+        Pagina
+\*----------------------*/
 .navegação--menu{
-
+padding: 10px;
+height: 95vh;
+border-radius: 7px;
 }
 
-.sidebar .logo--container{
+.container--nav{
 position: relative;
-vertical-align: bottom;
-
+width:inherit;
+height:50px;
+margin: 0 ;
 overflow: hidden;
+border-radius: 5px;
+padding: 10px;
 }
 
-.sidebar .logo--container .logo--img{
-display:inline;
-margin: 10px;
+.container--nav .logo--img{
+position: absolute;
 
+margin-bottom:5px;
+
+left: 15px;
+bottom: 0;
+
+display: inline-flex;
+}
+
+ .container--nav .logo--name{
+position:absolute;
+display: inline-flex;
+font-size: 1.4rem;
+font-weight:bolder;
+
+pointer-events: none;
+bottom: 0;
+left: 60px;
 opacity: 1;
-transition: all 0.2s ease;
+}
 
-} .ação-menu .logo--container .logo--img{
+.ação-menu .container--nav .logo--name{
 opacity: 0;
-pointer-events: none;
-transition: all 0.2s ease;
+transition: all ease 0.3s;
 }
-
-.sidebar .logo--container .logo--name{
-display:inline-block;
-position: absolute;
-
-top: 20px;
-
-font-weight: 400;
-line-height: 15px;
-vertical-align: bottom;
-pointer-events: none;
-
-transition: all 0.2s ease;
-
-}.ação-menu .logo--container .logo--name{
-
-pointer-events: auto;
-visibility: hidden;
-
-}
-
-.login--container{ 
-    position: relative;
-    background-color: #DCDCDC;
-    padding: 10px 0;
-    margin: 15px 5px;
-    border-radius: 3px;
-    
-}
-.ação-menu .login--container{
-    background:none;
-}
-
-
-.login--name{
-    
-    width: 50%;
-    margin: 0 35px;
-    text-align: center;
-    padding: 0; 
-}
-.ação-menu .login--name{
-   visibility: hidden;
-    }
-
-.log{
-font-size: 25px;
-
-top: 0;
-right: 30%;
-
-margin: 10px  0 15px 0 ;
-position: absolute;
-
-}
-.ação-menu .log{
-    display: none;
-    transition: 1s;
-}
-
-
 
 .sidebar .butoon {
 position: absolute;
-left:80%;
-top:20px;
-height: 50px;
-width: 25px;
-
+z-index: 1;
+left: 200px;
+top:15px;
 font-size: 35px;
-text-align: center;
-
-transform: translateX(-50%);
-transition: all 0.5s ease;
+transition: all ease 0.5s;
 }
 .ação-menu .butoon{
-left: 45%;
-
-transform: translateX(-50%);
-transition: all 0.5s ease;
+left: 110px;
+transition: all ease 0.5s;
 }
 
-.sidebar.ação-menu .butoon{
-text-align: right;
-transition: all 0.5s ease;
+.log{
+font-size: 20px;
+color: #000;
 }
 
 .nav--menu{
-margin:10px;
-height: 350px;
+margin: 75px 0;  
+position: relative;
+height: 70%;
+border-radius: 7px;
 list-style: none;
 }
 
 .nav__img{
-padding: 5px;
-margin-left: 15px;
+padding: 10px;
+margin-left: 10px;
 align-items: center;
 margin-bottom: 5px;
 }
 
-.menu--item{ 
-position: relative;
-line-height: 50px;
-
+.menu--item > a{
+color: #000;
 }
+
+.menu--item{
+position: relative;
+line-height: normal;
+}
+.menu--item .menu--container{ 
+line-height: 50px;
+}
+
 
 .menu--container{
 position: relative;
-line-height: 50px;
-border-radius: 5px;
 overflow: hidden;
-}
-.menu--container:hover{
-    background-color: white;
-   border: 1px solid;
-    box-shadow: 1px 3px 3px;
-   
+border-radius: 5px;
+margin: 0 5px;
 }
 
+.menu--container i{
+font-size: 35px;
+text-align: center;
+}
+
+
+.ação-menu .active .menu--container,.active .menu--container{
+background-color: white;
+border: 1px solid;
+box-shadow: 1px 2px 3px;
+}
+
+.style__nav{
+border: 3px solid;
+}
 
 .menu--secao{
-margin-left: 10px;
 text-align: center;
+opacity: 1;
 display:inline-block;
 position: absolute;
-transition: all 0.4s ease;
-
-}
+} 
 
 .ação-menu .menu--secao{
-    visibility: hidden;
-   
+opacity: 0;
+transition: all 0.3s ease;
+
 }
 
-
-/*------------seta-----------*/
+/*----------------------*\
+    Seta Tooltip
+\*----------------------*/
 
 .tooltip-conteiner::before{
-    border-width: 10px;
-    border-style: solid;
+border-width: 5px;
+border-style: solid;
+
 } 
 .tooltip-conteiner::after{
-    position: absolute;
-    content:'';
-    left:45px;
-    top:45%;
-    border:10px solid #000;
-    transform: translateY(-50%);
-    margin-left: 15px;
-    border-color: transparent#000 transparent transparent;
+position: absolute;
+content:'';
+left:70px;
+top:45%;
+
+border:8px solid rgba(0, 0, 0,0.7);
+transform: translateY(-50%);
+margin-left: 15px;
+border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent;
 }
+
 /*---------------------------*/
+.menu--item .tooltip-conteiner {
+visibility: hidden;
 
-.tooltip-conteiner{
-    visibility: hidden;
-   }
+}
+.ação-menu .menu--item .active:hover .tooltip-conteiner {
+visibility: visible;
 
-
-.ação-menu .menu--item:hover .tooltip-conteiner{
-    visibility: visible;
 }
 
-/*----------balão-----------*/
-
+/*----------------------*\
+    Balão Tooltip
+\*----------------------*/
 
 .tooltip-body::before{
-    position: absolute;
-    content:attr(data-text);
 
-    width: 85px;
+position:absolute;
 
-    left:65px;
-    top:45%;
+content:attr(data-text);
 
-    margin-left: 15px;
+width: 75px;
 
-    font-size: 1rem;
-    color: #fff;
-    text-align: center;
+left:85px;
+top:45%;
 
-    transform: translateY(-50%);
-    background-color:#000;
-    border-radius: 7px; 
+margin-left:16px;
+padding: 15px 0 ;
+font-size: 10px;
+text-align: center;
+font-weight: bold;
+color: #fff;
 
-    display:block;
+
+transform: translateY(-50%);
+background-color:rgba(0, 0, 0, 0.7);
+border-radius: 5px; 
 
 } 
 
 
-.campo-busca{
-   position: fixed;
-   padding: 10px;
-   z-index: 1;
-}
-.campo-busca .btn{
-    position: absolute;
-    font-size: 20px;
-    border-radius: 25px;
-}
-
-.campo-busca .busca-input{
-    padding: 20px;
-    border-radius: 25px;
-    
-}
-
-
-
-/*--------------------*\
-Conteudo da pagina
-\*--------------------*/
-.banner--principal{
-width:90%;
-margin: 55px 0;
-}
+/*----------------------*\
+    Conteudo da pagina
+\*----------------------*/
 
 .conteudo--principal{
-margin:0 5%;
-padding:20px;
-font-size: 0,14em;
+margin: 40px;
+padding: 30px;
+}
+
+.conteudo--pagina{
+margin:0 5em;
+font-size: 1rem;
 }
 
 .titulo--principal{
 text-align: center;
 padding:20px;
-margin: 10px 15%;
 font-size: 2.09rem;
 font-weight: bolder;
 }
 
-.conteudo--principal > p{
-font-size: 1.785rem;
-padding:0 15px ;
+.sobre-img{
+
+float: right;
+margin: 5px;
+border-radius: 5px;
 }
 
-.titulo--mapa{
+.conteudo--pagina > p{
+font-size: 1.585rem;
+padding:0 20px ;
+}
+
+.conteiner--slider{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.slider-type{
+position: relative;
+width: 45vw;
+height: 55vh;
+margin-top: 85px;
+background-color: azure;
+overflow: hidden;
+}
+.slider--controls{
+position: absolute;
+z-index: 1;
+display:flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+
+.slider__control {
+font-size: 4em;
+color: #fff;
+cursor: pointer; 
+padding: 100% 20px 100% 20px;
+transition: all ease 3s ;
+z-index: 1;
+
+}
+
+.control--left:hover{
+    background-image: linear-gradient(to right, #000 5%, transparent);
+}
+
+.control--right:hover{
+    background-image: linear-gradient(to left, #000 5%, transparent);
+}
+
+.slider_width{
+display: flex;
+height: 100%;
+transition: all ease 0.5s;
+}
+
+.slider--item{
+width: 100vh;
+height:inherit;
+background-size:cover;
+background-position: center;
+
+}
+
+.produtos--container{
+margin: 40px ;
+padding: 30px;
+}
+
+.produtos--container h1{
+font-size: 2em;
+font-weight: bolder;
 text-align: center;
-font-size: 2.09rem;
+}
+
+.conteudo--produtos{
+width: 100%;
+display: inline-block;
+}
+
+.produtos--items{
+position: relative;
+display:inline-flex;
+width: 70vw;
+margin: 0 2em;
+height: 23em;
+}
+
+.produto--item{
+position: relative;
+margin:20px;
+padding: 15px;
+width: 30%;
+height: inherit;
+list-style: none;
+padding: 10px;
+border: #000 solid 1px;
+box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.3);
+background-color:#DCDCDC;
+border-radius: 8px;
+text-align: center;
+align-items: center;
+font-size: 1.2rem;
+}
+
+.produto--item h2{
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 2em;
+text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.produto--item img{
+width: 10em;
+height:100%;
+}
+
+.produto--item button{
+position: absolute;
+
+padding: 10px;
+left: 30%;
+bottom: 15px;
+
+background-color:#fff;
+border-radius: 10px;
+box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.5);
+border: 2px solid #fff;
+
+display:inline-flex;
+
+transition: all ease 0.2s;
+}
+.produto--item button:hover {
+transition: all ease 0.2s;
+padding: 15px;
 font-weight: bolder;
+}
+.table-services {
+padding:20px ;
+}
 
-padding:20px;
-
+.table-services h2{
+  text-align: center;
 }
 
 .mapa--conteudo{
-margin:0 20%;
+margin: 40px ;
+padding: 30px;
+text-align: center;
+
 }
 
+.titulo--mapa{
+width: 100%;
+padding: 20px 10px;
+font-size: 1.6em;
+font-weight: bolder;
+}
 .logo--loja--rod{
 width: 100%;
 
 };
-
-/*-----PAGINA 2-----*/
-
-.produtos-pagina1 h5{
-margin: 30px 20px;
-text-align: center
-}
-
-.produtos-pagina1{
-width: 100%;
-}
-
-.produtos-pagina1 li{
-width: 20%;
-display:inline-block;
-margin:20px 15px;
-}
-
-.botao-esti{
-background-color: #0fefe0;
-border-radius:4px;
-cursor: pointer;
-font-size:15px;
-border:4px;
-padding: 10px 15px;
-font-weight:bold;
-text-align: center;
-margin: 30px;
-}
-
-.botao-esti:hover{
-background-color:aquamarine;
-padding: 1rem;
-font-size: 20px;
-width: auto;
-}
-
-/*-------PRODUTOS PAGINA 2--------*/
-
-.produtos-pagina2{
-width:940px;
-margin: 0 auto;
-}
-.imgprog{
-width: 50%;
-float: left;
-top: 0;
-
-}
-.requisitos{
-width:30%;
-margin:10px 5px;
-padding: 15px 5px;
-display: inline-block;
-}
-
-.ficha {
-font-size:11px;
-font-weight: bolder;
-width: 40%;
-text-align: top; 
-display: none;
-padding: 10px 5px;
-border: solid 2px #000;
-}
-.lista{
-display: inline-block;
-font-size:10px;
-font-weight: bolder;
-width: 40%;
-padding: 20px 10px;
-}
-#boton-1{
-padding: 10px;
-position:absolute;
-
-}
-

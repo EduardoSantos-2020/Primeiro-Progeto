@@ -12,131 +12,232 @@
 		<link rel="stylesheet" href="Css/layout.css"/>
 		<link rel="stylesheet" href="Css/conteudo.css"/>
 	</head>
-	<body> 
-			<div class="input-group campo-busca col-md-offset-3 col-md-6">
-				<div class="busca col-xs-9 col-xs-offset-1">
-					<input type="search" class="form-control busca-input" placeholder="Buscar...">
-					<span class="input-group-btn">
-						<button type="submit" class=" btn bx bx-search"></button>
-					</span>
+	<body>
+	<div class="sidebar">
+		<nav class="navegação--menu">
+				<div class="container--nav">
+					<img src="imagens/logo marca//logo.png" class="logo--img" alt="logo-marca da loja">
+				<div class="logo--name">INFORTEC</div>	
 				</div>
-			</div>
-			<div class="sidebar">
-				<div class="logo--container">
-					<img src="imagens/logo.png" class="logo--img" alt="logo-marca da loja">
-					<div class="logo--name">INFORTEC</div>
-				</div>
-				<div class="login--container">
-					<div class="login">
-						<p class="login--name">Entrar</p>
-							<i class='bx log bx-log-in'></i>
-					</div>
-				</div>
-				
-				<nav class="navegação--menu">
-					<ul class="nav--menu">
-						<div class="menu--item">
-							<li class="menu--container">	
-								<img class="nav__img" src="/imagens/casa.png">
+				<ul class="nav--menu">
+					<div class="menu--item">
+						<a href="#sec-1" class="active">
+						<li class="menu--container">	
+								<img class="nav__img" src="/imagens/logo marca/casa.png">
+								
 								<p class="menu--secao">
 									INICIO
 								</p>
 							</li>
-							<span  class="tooltip-conteiner">
-								<span data-text="Inicio" class="tooltip-body"></span>
-						</div>
-						</span>		
-						<div class="menu--item">
+							<span class="tooltip-conteiner">
+								<span data-text="INICIO" class="tooltip-body"></span>
+							</span>		
+						</a>
+					</div>
+					<div class="menu--item">
+						<a href="#sec-2">
 							<li class="menu--container">
-								<img class="nav__img" src="imagens/computador.png">
-									<p class="menu--secao">
+								<img class="nav__img" src="imagens/logo marca/computador.png">
+								<p class="menu--secao">
 										PRODUTOS
-									</p>
+								</p>
 							</li>
 							<span class="tooltip-conteiner">
-								<span data-text="Produtos" class="tooltip-body"></span>
-						</div>
-						</span>		
-						<div class="menu--item">
-							<li class="menu--container" >
-								<img class="nav__img" src="imagens/music.png">							
-									<p class="menu--secao">
-										ACESSÓRIOS
-									</p>
-							</li>
-							<span  class="tooltip-conteiner">
-								<span data-text="Acessórios" class="tooltip-body"></span>
+								<span data-text="PRODUTOS" class="tooltip-body"></span>
 							</span>		
-						</div>
-						<div class="menu--item">
+						</a>
+					</div>
+					<div class="menu--item">
+						<a href="#sec-3">
 							<li class="menu--container">
-								<img class="nav__img" src="imagens/pino-de-localizacao.png">			
-									<p class="menu--secao">
+								<img class="nav__img" src="imagens/logo marca/serviços.png">							
+								<p class="menu--secao">
+										SERVIÇOS
+								</p>
+							</li>
+							<span class="tooltip-conteiner">
+								<span data-text="SERVIÇOS" class="tooltip-body"></span>
+							</span>		
+						</a>
+					</div>
+					<div class="menu--item">
+						<a href="#sec-4">
+							<li class="menu--container">
+								<img class="nav__img" src="imagens/logo marca/pino-de-localizacao.png">			
+								<p class="menu--secao">
 											LOCALIZADO							
-									</p>	
+								</p>	
 							</li>
-							<span  class="tooltip-conteiner">
-								<span data-text="Localizado" class="tooltip-body"></span>
-						</div>
-						</span>		
-						<div class="menu--item">
+							<span class="tooltip-conteiner">
+								<span data-text="LOCALIZADO" class="tooltip-body"></span>
+							</span>		
+						</a>
+					</div>
+					<div class="menu--item">
+						<a>
 							<li class="menu--container">						
-								<img class="nav__img" src="imagens/balao-de-fala.png" >					
-									<p class="menu--secao">
-										CONTATOS
-									</p>			
+								<img class="nav__img" src="imagens/logo marca/phone.png" >					
+								<p class="menu--secao">
+									CONTATOS
+								</p>			
 							</li>
-							<span  class="tooltip-conteiner">
-								<span data-text="Contatos" class="tooltip-body"></span>
+							<span class="tooltip-conteiner">
+								<span data-text="CONTATOS" class="tooltip-body"></span>
 							</span>	
-						</div>	
-		
-						<i class='bx butoon bx-x' id="botão--menu"></i>
-					</ul>
-				</nav>
-						
-						<!-- <span>InforTec</span> -->
-						<!-- <span>@InforTec-sp</span> -->
-						<!-- <span>(11)9468-7823</span> -->
-			</div> 	
-		
+						</a>
+					</div>	
+				</ul>
+				<div class="login--container">
+				   <div class="login">
+					   <i class='bx log bx-log-out'></i>
+				   </div>
+			   </div> 
+			</nav>		
+			<i class='bx butoon bx-x' id="botão--menu"></i>			
+		</div> 	
 		<main class=layout__principal>
-				<div class="container">
-					<div class="row">
-						<section class= "conteudo--principal">
-							<div id="cont-1" class="conteudo--principal">
-			
-								<img src="/imagens/banner.jpg"class="banner--principal">
-								
-								<h2 class="titulo--principal">Sobre a infortec</h2>
-			
-								<p>A infortec foi fundada em 2020 onde se localiza na regial mais populosa para que todos os nossos
-									clientes tenham a melhores escolhas e qualidade dos produtos seja no mundo de jogos ou profissional</p>
-			
-								<p>Nossa missão e oferecer o melhores produtos para que seguir seus objetivos</p>
-			
-								<p>Oferecemos um otimo atendimento online com varias opiçoes de preço e gosto ou visite nossa loja para qualquer duvida</p>
+			<div class="container">
+				<!-- <div class="container-bar col-md-offset-1">
+					<div class="input-group campo-busca col-md-12">		
+						<div class="busca col-md-6 col-md-offset-2">
+							<input type="search" class="form-control busca-input" placeholder="Buscar...">
+							<span class="input-group-btn">
+								<button type="submit" class=" btn bx bx-search"></button>
+							</span>
+						</div>
+					</div>
+				</div> -->
+				<div class="row">
+					<div class="conteiner--slider">
+						<div class="slider-type banner--principal">
+							<div class="slider--controls">
+								<div class="slider__control control--left" onclick="goPrev()"><i class='bx bx-chevron-left'></i></div>				
+								<div class="slider__control control--right" onclick="goNext()"><i class='bx bx-chevron-right'></i></div>	
 							</div>
-						</section>
-							<div class="layout__mapa">
-								<h4 class="titulo--mapa">Estamos localizado regiao metropólitana de São Paulo</h4>
-								<section class="mapa--conteudo">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233917.70610682477!2d-46.8
-									35439483593746!3d-23.641454600000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
-									1s0x94ce50f6b07b4801%3A0x8799b574355e4d84!2sInfortec!5e0!3m2!1spt-BR!2sbr!4v1603326
-									729415!5m2!1spt-BR!2sbr" width="90%" height="315" frameborder="0" style="border:0;"
-										allowfullscreen="" aria-hidden="false" tabindex="0"class=mapa-conteudo></iframe>	
-								</section>
+							<div class="slider_width">
+								<div class="slider--item" style="background-image: url(/imagens/itens/ibrem.jpg);"></div>
+								<div class="slider--item" style="background-image: url(/imagens/itens/ibrem2.jpg) ;"></div>
+								<div class="slider--item" style="background-image: url(/imagens/itens/ibrem3.jpg)"></div>
 							</div>
 						</div>
 					</div>
-				</main>
-				<footer class="layout__rodape">
-					<img src="/imagens/cablogo.png" class=logo--loja--rod/>
-					<p>&copy;2020 INFORTEC</p>
-				</footer>
-			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-			<script src="bootstrap.min.js"></script>
-			<script src="interative.js"></script>
+					<section class= "conteudo--principal" id="sec-1">
+						<div class="conteudo--pagina">
+							<h2 class="titulo--principal">Sobre a infortec</h2>
+							<img src="/imagens/Conteudo /qualidades.jpeg" class="sobre-img">
+		
+							<p>A infortec foi fundada em 2020 onde se localiza na regial mais populosa para que todos os nossos
+								clientes tenham a melhores escolhas e qualidade dos produtos seja no mundo de jogos ou profissional</p>
+								
+							<p>Nossa missão e oferecer o melhores produtos para que seguir seus objetivos</p>
+								
+							<p>Oferecemos um otimo atendimento online com varias opiçoes de preço e gosto ou visite nossa loja para qualquer duvida</p>
+							 <!-- <span>InforTec</span> 
+					 <span>@InforTec-sp</span> 
+					<span>(11)9468-7823</span>  -->
+						</div>
+					</section>
+						<section class="produtos--container" id="sec-2">
+							<div class="conteudo--produtos">
+									<h1>Conheça Alguns dos Nossos Produtos</h1>
+									<ul class="produtos--items">
+										<li class=produto--item>
+											<h2> Adiquira agora !</h2>
+											<div class="produto--img">
+												<img src="/imagens/Conteudo /pcgamer1.png" alt="">
+											</div>
+											<p>R$: 3.400,00</p>
+											<button>Saiba Mais</button>
+										</li>
+										<li class=produto--item>
+											<h2>Adiquira agora !</h2>
+											<div class="produto--img">
+												<img src="/imagens/Conteudo /pcgamer2.png" alt="">
+											</div>											
+											<p>R$: 4.200,00</p>
+											<button>Saiba Mais</button>
+										</li>
+										
+										<li class=produto--item>	
+											<h2>Adiquira agora !</h2>
+												<div class="produto--img">
+													<img src="/imagens/Conteudo /pcgamer3.png" alt="">
+												</div>									
+												<p>R$: 5.000,00</p>
+											<button> Saiba Mais</button>
+										</li>
+									</ul>
+								</div>						
+						</section>
+						<section class="table-services" id="sec-3">
+							<h2>Serviços </h2>
+							<div class=" table-responsive col-sm-10 col-md-offset-1">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>Serviços Disponiveis</th>
+											<th>Horas</th>
+											<th>Valor</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td> Formatação sem backup</td>
+											<td>1 hora</td>
+											<td>R$:85,00</td>
+											
+										</tr>
+										<tr>
+											<td> Formatação com backup de arquivos - 5Gb Até 20 GB</td>
+											<td>3 horas</td>
+											<td>R$:120,00</td>
+										</tr>
+										<tr>
+											<td> Formatação com backup de arquivos - acima de 40 GB</td>
+											<td>5 horas</td>
+											<td>R$:130,00</td>
+										</tr>
+										<tr>
+											<td> Atualização de BIOS (Placa Mãe)</td>
+											<td>30 minutos</td>
+											<td>R$:50,00</td>
+										</tr>
+										<tr>
+											<td> Preventiva de Hardware - Teste/Limpeza/Lubrificação</td>
+											<td>2 horas</td>
+											<td>R$:80,00</td>
+										</tr>
+										<tr>
+											<td> Instalação de Drivers</td>
+											<td> 30 minutos</td>
+											<td>R$:35,00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+						<section class="mapa--conteudo col-sm-12" id="sec-4">
+							<h4 class="titulo--mapa">Estamos localizado regiao metropólitana de São Paulo</h4>
+							<div class="layout__mapa">
+								<iframe class=mapa-conteudo src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233965.52901977723!2d-46.5694
+								5400879149!3d-23.61468140876301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5cec20e7
+								8cd9%3A0xcf13695f501f60e9!2sInfortec%20Notebooks!5e0!3m2!1spt-BR!2sbr!4v1643056043115!5m2!1spt-BR
+								!2sbr" width="600" height="350" style="border:10px;" allowfullscreen="" loading="lazy"></iframe>
+								
+
+							
+							</div>
+						</section>						
+				</div>
+			</div>
+		</main>
+		<footer class="layout__rodape">
+			<img src="/imagens/logo marca/cablogo.png" class=logo--loja--rod/>
+			<p>&copy;2020 INFORTEC</p>
+		</footer>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="interative.js"></script>
+	<script>src="jscode.js"</script>
 		</body>
 </html>
