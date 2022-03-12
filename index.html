@@ -20,17 +20,27 @@
 				<div class="logo--name">INFORTEC</div>	
 				</div>
 				<ul class="nav--menu">
+					<div class="container-bar">
+						<div class="pesquisar">		
+							<div class="busca">
+								<input type="search" class="busca-input" placeholder="Buscar ...">						
+									<button type="submit" class="busca-btn bx bx-search"></button>
+								</div>				
+								<span class="tooltip-conteiner">
+									<span class="tooltip-body">BUSCAR</span>
+								</span>		
+						</div>
+					</div>
 					<div class="menu--item">
 						<a href="#sec-1" class="active">
 						<li class="menu--container">	
-								<img class="nav__img" src="/imagens/logo marca/casa.png">
-								
+								<img class="nav__img" src="/imagens/logo marca/casa.png">			
 								<p class="menu--secao">
 									INICIO
 								</p>
 							</li>
 							<span class="tooltip-conteiner">
-								<span data-text="INICIO" class="tooltip-body"></span>
+								<span class="tooltip-body">INICIO</span>
 							</span>		
 						</a>
 					</div>
@@ -39,11 +49,11 @@
 							<li class="menu--container">
 								<img class="nav__img" src="imagens/logo marca/computador.png">
 								<p class="menu--secao">
-										PRODUTOS
+									PRODUTOS
 								</p>
 							</li>
 							<span class="tooltip-conteiner">
-								<span data-text="PRODUTOS" class="tooltip-body"></span>
+								<span class="tooltip-body">PRODUTOS</span>
 							</span>		
 						</a>
 					</div>
@@ -52,11 +62,11 @@
 							<li class="menu--container">
 								<img class="nav__img" src="imagens/logo marca/serviços.png">							
 								<p class="menu--secao">
-										SERVIÇOS
+									SERVIÇOS
 								</p>
 							</li>
 							<span class="tooltip-conteiner">
-								<span data-text="SERVIÇOS" class="tooltip-body"></span>
+								<span class="tooltip-body">SERVIÇOS</span>
 							</span>		
 						</a>
 					</div>
@@ -65,11 +75,11 @@
 							<li class="menu--container">
 								<img class="nav__img" src="imagens/logo marca/pino-de-localizacao.png">			
 								<p class="menu--secao">
-											LOCALIZADO							
+									LOCALIZADO							
 								</p>	
 							</li>
 							<span class="tooltip-conteiner">
-								<span data-text="LOCALIZADO" class="tooltip-body"></span>
+								<span class="tooltip-body">LOCALIZADO</span>
 							</span>		
 						</a>
 					</div>
@@ -82,37 +92,27 @@
 								</p>			
 							</li>
 							<span class="tooltip-conteiner">
-								<span data-text="CONTATOS" class="tooltip-body"></span>
+								<span class="tooltip-body">CONTATOS</span>
 							</span>	
 						</a>
 					</div>	
 				</ul>
 				<div class="login--container">
-				   <div class="login">
-					   <i class='bx log bx-log-out'></i>
-				   </div>
-			   </div> 
+					<div class="login">
+						<i class='bx log bx-log-out'></i>
+					</div>
+				</div> 
 			</nav>		
 			<i class='bx butoon bx-x' id="botão--menu"></i>			
 		</div> 	
 		<main class=layout__principal>
 			<div class="container">
-				<!-- <div class="container-bar col-md-offset-1">
-					<div class="input-group campo-busca col-md-12">		
-						<div class="busca col-md-6 col-md-offset-2">
-							<input type="search" class="form-control busca-input" placeholder="Buscar...">
-							<span class="input-group-btn">
-								<button type="submit" class=" btn bx bx-search"></button>
-							</span>
-						</div>
-					</div>
-				</div> -->
 				<div class="row">
 					<div class="conteiner--slider">
 						<div class="slider-type banner--principal">
 							<div class="slider--controls">
-								<div class="slider__control control--left" onclick="goPrev()"><i class='bx bx-chevron-left'></i></div>				
-								<div class="slider__control control--right" onclick="goNext()"><i class='bx bx-chevron-right'></i></div>	
+								<div class="slider__control left"><i id="contleft" class='bx bgg bx-chevron-left'></i></div>				
+								<div class="slider__control right" ><i id="contright" class='bx bgg bx-chevron-right'></i></div>	
 							</div>
 							<div class="slider_width">
 								<div class="slider--item" style="background-image: url(/imagens/itens/ibrem.jpg);"></div>
@@ -223,9 +223,6 @@
 								5400879149!3d-23.61468140876301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5cec20e7
 								8cd9%3A0xcf13695f501f60e9!2sInfortec%20Notebooks!5e0!3m2!1spt-BR!2sbr!4v1643056043115!5m2!1spt-BR
 								!2sbr" width="600" height="350" style="border:10px;" allowfullscreen="" loading="lazy"></iframe>
-								
-
-							
 							</div>
 						</section>						
 				</div>
@@ -237,7 +234,6 @@
 		</footer>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="bootstrap.min.js"></script>
-	<script src="interative.js"></script>
-	<script>src="jscode.js"</script>
+	<script src="Script.js"></script>
 		</body>
 </html>

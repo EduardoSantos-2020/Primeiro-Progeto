@@ -1,15 +1,4 @@
-.container-bar{
-    width: 65em;
-    background-color:#f5f5f5;
-    position: fixed;
-  
-    display:inline-flex;
-    padding: 15px;
-    top: 0;
-    border-radius: 7px;
-    box-shadow: 1px 3px 2px;
-    z-index: 99;
-}
+
 
 .sidebar{
     position: fixed;
@@ -24,10 +13,11 @@
 
     z-index: 99;
 
-    background-color:whitesmoke;
-    box-shadow: 3px 3px 2px black;
+    background-color:rgb(237, 238, 241);
+    box-shadow: 3px 1px 3px black;
 
     transition: all 0.5s ease;
+    
 }
 
 .layout__principal{

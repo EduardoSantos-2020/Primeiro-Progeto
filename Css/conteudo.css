@@ -11,10 +11,8 @@ border-radius: 7px;
 position: relative;
 width:inherit;
 height:50px;
-margin: 0 ;
 overflow: hidden;
-border-radius: 5px;
-padding: 10px;
+margin-left:5px ;
 }
 
 .container--nav .logo--img{
@@ -63,8 +61,63 @@ font-size: 20px;
 color: #000;
 }
 
+.pesquisar{
+    position: relative;
+}
+
+.busca{
+    position: relative;
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    border: 1px solid;
+    box-shadow: 1px 2px 3px;
+    background-color: white;
+    display: inline-flex;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+.busca-input{
+    top:0;
+    width: 80%;
+    border-style: none;
+    outline: none;
+}
+
+.busca-btn{
+    right: 5px;
+
+    position: absolute;
+    display: inline-flex;
+
+    padding: 5px;
+
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 50%;
+    color: #000;
+
+    background-color:white;
+    transition: 1s ;
+}
+
+.ação-menu .busca{
+    width: 65%;
+}
+
+.ação-menu .busca-btn{
+    right: 10px;
+    transition: 1s ;
+}
+
+
 .nav--menu{
-margin: 75px 0;  
+margin: 20px 0;
 position: relative;
 height: 70%;
 border-radius: 7px;
@@ -86,7 +139,7 @@ color: #000;
 position: relative;
 line-height: normal;
 }
-.menu--item .menu--container{ 
+.menu--item .menu--container{
 line-height: 50px;
 }
 
@@ -119,7 +172,7 @@ text-align: center;
 opacity: 1;
 display:inline-block;
 position: absolute;
-} 
+}
 
 .ação-menu .menu--secao{
 opacity: 0;
@@ -131,62 +184,56 @@ transition: all 0.3s ease;
     Seta Tooltip
 \*----------------------*/
 
-.tooltip-conteiner::before{
-border-width: 5px;
-border-style: solid;
-
-} 
-.tooltip-conteiner::after{
+.tooltip-body::before{
 position: absolute;
-content:'';
-left:70px;
-top:45%;
-
-border:8px solid rgba(0, 0, 0,0.7);
-transform: translateY(-50%);
-margin-left: 15px;
-border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent;
-}
+content:"";
+left: 0;
+align-items: center;
+border:7px solid rgba(0, 0, 0,0.8);
+transform:translateX(-100%) rotate(-90deg);
+border-color:  transparent  transparent rgba(0, 0, 0, 0.8) transparent; 
+} 
 
 /*---------------------------*/
-.menu--item .tooltip-conteiner {
-visibility: hidden;
 
-}
-.ação-menu .menu--item .active:hover .tooltip-conteiner {
-visibility: visible;
-
-}
 
 /*----------------------*\
     Balão Tooltip
 \*----------------------*/
-
-.tooltip-body::before{
+.tooltip-body{
 
 position:absolute;
 
-content:attr(data-text);
-
 width: 75px;
-
-left:85px;
-top:45%;
-
-margin-left:16px;
-padding: 15px 0 ;
+padding: 11px 0;
 font-size: 10px;
 text-align: center;
 font-weight: bold;
 color: #fff;
 
+left: 75px;
+top: 10px;
 
-transform: translateY(-50%);
-background-color:rgba(0, 0, 0, 0.7);
-border-radius: 5px; 
-
+background-color:rgba(0, 0, 0, 0.8);
+border-radius: 5px;
 } 
 
+
+.pesquisar .tooltip-body ,.menu--item .tooltip-body {
+opacity: 0;
+visibility: hidden;
+
+transition:all ease 0.3s;
+
+}
+.ação-menu .pesquisar:hover .tooltip-body,  .ação-menu .menu--item .active:hover .tooltip-body{ 
+opacity: 1;
+left: 100px;
+visibility: visible; 
+
+}
+
+/*----------------------*/
 
 /*----------------------*\
     Conteudo da pagina
@@ -229,37 +276,36 @@ align-items: center;
 
 .slider-type{
 position: relative;
-width: 45vw;
-height: 55vh;
+width: 35vw;
+height: 45vh;
 margin-top: 85px;
 background-color: azure;
 overflow: hidden;
+
 }
 .slider--controls{
 position: absolute;
 z-index: 1;
-display:flex;
+display:inline-flex;
 justify-content: space-between;
 align-items: center;
-
 }
 
 
 .slider__control {
-font-size: 4em;
-color: #fff;
-cursor: pointer; 
-padding: 100% 20px 100% 20px;
-transition: all ease 3s ;
-z-index: 1;
-
+    position: relative;
+    font-size: 4em;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    transition: all ease 3s ;
+    z-index: 1;
 }
 
-.control--left:hover{
+.left:hover{
     background-image: linear-gradient(to right, #000 5%, transparent);
 }
-
-.control--right:hover{
+.right:hover{
     background-image: linear-gradient(to left, #000 5%, transparent);
 }
 
@@ -335,6 +381,8 @@ position: absolute;
 padding: 10px;
 left: 30%;
 bottom: 15px;
+font-size: 1.4rem;
+font-weight: 600;
 
 background-color:#fff;
 border-radius: 10px;
@@ -347,8 +395,7 @@ transition: all ease 0.2s;
 }
 .produto--item button:hover {
 transition: all ease 0.2s;
-padding: 15px;
-font-weight: bolder;
+font-size: 1.5em;
 }
 .table-services {
 padding:20px ;
