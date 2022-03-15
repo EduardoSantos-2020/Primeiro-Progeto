@@ -11,8 +11,10 @@ font-family: 'Montserrat', sans-serif;
 html{
 font-size: 12px;
 scroll-behavior: smooth;
-scroll-padding-top: 20px;
+scroll-padding-top: 30px;
+scroll-padding-bottom:30px ;
 
+transition-duration: 3s smooth;
 }
 
 body{

@@ -1,5 +1,5 @@
 /*----------------------*\
-        Pagina
+       Sessao-1
 \*----------------------*/
 .navegação--menu{
 padding: 10px;
@@ -26,7 +26,7 @@ bottom: 0;
 display: inline-flex;
 }
 
- .container--nav .logo--name{
+.container--nav .logo--name{
 position:absolute;
 display: inline-flex;
 font-size: 1.4rem;
@@ -43,18 +43,85 @@ opacity: 0;
 transition: all ease 0.3s;
 }
 
-.sidebar .butoon {
+/*-------------------------*\
+    Menu Hanburguer 
+\*-------------------------*/
+
+.button-prop{
 position: absolute;
-z-index: 1;
-left: 200px;
-top:15px;
-font-size: 35px;
-transition: all ease 0.5s;
+top:35px;
+left:215px; 
+width: 25px;
+height: 24px; 
+overflow: hidden;
+transition: all 0.5s ease
 }
-.ação-menu .butoon{
-left: 110px;
-transition: all ease 0.5s;
+
+
+
+.menu-btn{ 
+position: absolute; 
+display: flex;
+width: 25px;
+height: 23px; 
+align-items: center;
+justify-content: center;
+cursor: pointer;
 }
+
+.menu-btn .line{
+position: absolute;
+width: 100%;
+height: 3px;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+border-radius: 7px;
+background-color: #000;
+transition: all 0.5s linear;
+}
+
+.menu-btn .btn-active .line {
+transition: all 0.5s linear;
+}
+
+.list-1{
+top:0;
+}
+.list-2{
+left:0;
+opacity: 1;
+}
+
+.list-3{
+bottom:0;
+}
+
+.btn-active .list-1{
+top: 10px;
+transform: translateY(50%) rotate(45deg);
+
+}
+
+.btn-active .list-2{
+left:-100%;
+opacity: 0;
+}
+
+.btn-active .list-3{
+
+transform: translateY(50%) rotate(-45deg);
+
+bottom:10px;
+} 
+
+.ação-menu .button-prop{
+left:120px; 
+transition: all 0.5s ease;
+}
+
+/*-------------------------*/
+
 
 .log{
 font-size: 20px;
@@ -62,57 +129,57 @@ color: #000;
 }
 
 .pesquisar{
-    position: relative;
+position: relative;
 }
 
 .busca{
-    position: relative;
-    width: 90%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-left: 15px;
-    margin-bottom: 15px;
-    border: 1px solid;
-    box-shadow: 1px 2px 3px;
-    background-color: white;
-    display: inline-flex;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    align-items: center;
-    overflow: hidden;
+position: relative;
+width: 90%;
+padding: 10px;
+margin-top: 5px;
+margin-left: 15px;
+margin-bottom: 15px;
+border: 1px solid;
+box-shadow: 1px 2px 3px;
+background-color: white;
+display: inline-flex;
+border-radius: 10px;
+font-size: 1.2rem;
+align-items: center;
+overflow: hidden;
 }
 
 .busca-input{
-    top:0;
-    width: 80%;
-    border-style: none;
-    outline: none;
+top:0;
+width: 80%;
+border-style: none;
+outline: none;
 }
 
 .busca-btn{
-    right: 5px;
+right: 5px;
 
-    position: absolute;
-    display: inline-flex;
+position: absolute;
+display: inline-flex;
 
-    padding: 5px;
+padding: 5px;
 
-    font-size: 1.4rem;
-    border: none;
-    border-radius: 50%;
-    color: #000;
+font-size: 1.6rem;
+border: none;
+border-radius: 50%;
+color: #000;
 
-    background-color:white;
-    transition: 1s ;
+background-color:white;
+transition: 1s ;
 }
 
 .ação-menu .busca{
-    width: 65%;
+width: 65%;
 }
 
 .ação-menu .busca-btn{
-    right: 10px;
-    transition: 1s ;
+right: 10px;
+transition: 1s ;
 }
 
 
@@ -157,7 +224,8 @@ text-align: center;
 }
 
 
-.ação-menu .active .menu--container,.active .menu--container{
+.ação-menu .active .menu--container,
+.active .menu--container{
 background-color: white;
 border: 1px solid;
 box-shadow: 1px 2px 3px;
@@ -181,7 +249,7 @@ transition: all 0.3s ease;
 }
 
 /*----------------------*\
-    Seta Tooltip
+Seta Tooltip
 \*----------------------*/
 
 .tooltip-body::before{
@@ -191,14 +259,15 @@ left: 0;
 align-items: center;
 border:7px solid rgba(0, 0, 0,0.8);
 transform:translateX(-100%) rotate(-90deg);
-border-color:  transparent  transparent rgba(0, 0, 0, 0.8) transparent; 
-} 
+border-color:  transparent  transparent 
+rgba(0, 0, 0, 0.8) transparent;
+}
 
 /*---------------------------*/
 
 
 /*----------------------*\
-    Balão Tooltip
+Balão Tooltip
 \*----------------------*/
 .tooltip-body{
 
@@ -216,27 +285,29 @@ top: 10px;
 
 background-color:rgba(0, 0, 0, 0.8);
 border-radius: 5px;
-} 
+}
 
 
-.pesquisar .tooltip-body ,.menu--item .tooltip-body {
+.pesquisar .tooltip-body,
+.menu--item .tooltip-body {
 opacity: 0;
 visibility: hidden;
 
 transition:all ease 0.3s;
 
 }
-.ação-menu .pesquisar:hover .tooltip-body,  .ação-menu .menu--item .active:hover .tooltip-body{ 
+.ação-menu .pesquisar:hover .tooltip-body,
+.ação-menu .menu--item .active:hover .tooltip-body{
 opacity: 1;
 left: 100px;
-visibility: visible; 
+visibility: visible;
 
 }
 
 /*----------------------*/
 
 /*----------------------*\
-    Conteudo da pagina
+Conteudo da pagina
 \*----------------------*/
 
 .conteudo--principal{
@@ -293,20 +364,13 @@ align-items: center;
 
 
 .slider__control {
-    position: relative;
-    font-size: 4em;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    transition: all ease 3s ;
-    z-index: 1;
-}
-
-.left:hover{
-    background-image: linear-gradient(to right, #000 5%, transparent);
-}
-.right:hover{
-    background-image: linear-gradient(to left, #000 5%, transparent);
+position: relative;
+font-size: 4em;
+color: #fff;
+cursor: pointer;
+display: inline-flex;
+transition: all ease 3s ;
+z-index: 1;
 }
 
 .slider_width{
@@ -340,19 +404,17 @@ display: inline-block;
 }
 
 .produtos--items{
-position: relative;
 display:inline-flex;
-width: 70vw;
-margin: 0 2em;
-height: 23em;
+
+margin: 0 8em;
 }
 
 .produto--item{
 position: relative;
 margin:20px;
-padding: 15px;
+padding: 25px 30px;
 width: 30%;
-height: inherit;
+height: 22em;
 list-style: none;
 padding: 10px;
 border: #000 solid 1px;
@@ -360,7 +422,6 @@ box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.3);
 background-color:#DCDCDC;
 border-radius: 8px;
 text-align: center;
-align-items: center;
 font-size: 1.2rem;
 }
 
@@ -376,33 +437,26 @@ height:100%;
 }
 
 .produto--item button{
-position: absolute;
-
-padding: 10px;
-left: 30%;
-bottom: 15px;
+position: relative;
 font-size: 1.4rem;
-font-weight: 600;
+padding: 10px 15px;
 
 background-color:#fff;
 border-radius: 10px;
-box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.5);
+box-shadow: 3px 4px 3px rgba(0, 0, 0,0.5);
 border: 2px solid #fff;
-
-display:inline-flex;
-
-transition: all ease 0.2s;
 }
 .produto--item button:hover {
-transition: all ease 0.2s;
-font-size: 1.5em;
+font-size: 1.7rem;
+font-weight: 500;
+padding: 0.5em;
 }
 .table-services {
 padding:20px ;
 }
 
 .table-services h2{
-  text-align: center;
+text-align: center;
 }
 
 .mapa--conteudo{

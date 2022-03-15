@@ -1,9 +1,10 @@
 $(function(){
-button=$('#botão--menu');
-pesquisa=$('.busca-btn ')
+$('.button-prop').on('click',clicked);
+$('.busca-btn ').on('click',clicked)
+btnchave=$('.menu-btn') ;
 sideBar= $(".sidebar");
 action=$('.ação-menu');
-setas=$('.slider__control > i')
+setas=$('.slider__control > div > i')
 sliderWidth=$('.slider-type').innerWidth();
 totalSlider=$(".slider--item").length;
 control=$(".slider__control")
@@ -11,16 +12,10 @@ control=$(".slider__control")
 correntSlider=0
 
 
-   button.on('click',function(){
-      sideBar.toggleClass("ação-menu");
-      button.toggleClass('bx-menu bx-x');
-   })
-      pesquisa.on('click',function(){
-         sideBar.toggleClass("ação-menu");
-         button.toggleClass('bx-menu bx-x');
-         })
-
- 
+function clicked() {
+   sideBar.toggleClass("ação-menu");
+   btnchave.toggleClass('btn-active')
+}
 
     $(".slider_width").width(`${sliderWidth*totalSlider}px`);
 
@@ -29,12 +24,12 @@ correntSlider=0
     $(".slider--controls").height(`${ $(".slider-type").innerHeight()}px`);
     
 
-
+ 
    setas.each(function(){
+
       $(this).on('click',function(){ 
-          
          ids=$(this).attr('id');
-         
+              
       if(ids==="contleft"){
 
          correntSlider--
