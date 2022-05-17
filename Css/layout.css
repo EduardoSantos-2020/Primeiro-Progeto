@@ -3,18 +3,17 @@
 .sidebar{
     position: fixed;
 
-    width: 200px;
+    width: 240px;
     height: 100%;
-    padding: 5px;
-  
-
+   
     top:0;
     left: 0;
 
     z-index: 99;
 
-    background-color:rgb(237, 238, 241);
-    box-shadow: 3px 1px 3px black;
+    background:#fff ;
+
+    box-shadow: 5px 5px 5px rgb(23, 32, 42 );
 
     transition: all 0.5s ease;
     
@@ -40,6 +39,6 @@ width: 100%;
 }
 
 .ação-menu{
-    width: 105px;
+    width: 115px;
     transition: all 0.5s ease;
     }

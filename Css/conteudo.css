@@ -1,47 +1,61 @@
 /*----------------------*\
        Sessao-1
 \*----------------------*/
-.navegação--menu{
-padding: 10px;
-height: 95vh;
-border-radius: 7px;
+a{  
+position: relative;
+opacity: 0;
+text-decoration: none;
+top: 0;
 }
 
+.navegação--menu{
+padding:1rem 0.5rem;
+height: 100vh;
+}
+/*-------------------------*\
+    Conteiner navegação
+\*-------------------------*/
+
 .container--nav{
-position: relative;
-width:inherit;
+position:relative ;
+
 height:50px;
 overflow: hidden;
-margin-left:5px ;
+border-radius: 7px;
+margin: 10px 5px;
+
+
+background-color: #fff ;
+vertical-align: baseline;
 }
+
+
 
 .container--nav .logo--img{
 position: absolute;
-
-margin-bottom:5px;
-
-left: 15px;
-bottom: 0;
-
-display: inline-flex;
+left: 1.5em;
+display: inline-block;
 }
 
 .container--nav .logo--name{
-position:absolute;
-display: inline-flex;
-font-size: 1.4rem;
+position: absolute;
+display: inline-block;
+font-size: 1.5rem;
 font-weight:bolder;
-
 pointer-events: none;
-bottom: 0;
-left: 60px;
 opacity: 1;
+left: 4em;
+top: 20%;
+transition: all ease 0.3s;
 }
 
 .ação-menu .container--nav .logo--name{
 opacity: 0;
 transition: all ease 0.3s;
 }
+
+
+/*-------------------------*\
 
 /*-------------------------*\
     Menu Hanburguer 
@@ -50,7 +64,7 @@ transition: all ease 0.3s;
 .button-prop{
 position: absolute;
 top:35px;
-left:215px; 
+left:255px; 
 width: 25px;
 height: 24px; 
 overflow: hidden;
@@ -72,11 +86,11 @@ cursor: pointer;
 .menu-btn .line{
 position: absolute;
 width: 100%;
-height: 3px;
+height: 0.2rem;
 align-items: center;
 justify-content: center;
 cursor: pointer;
-border-radius: 7px;
+border-radius: 5px;
 background-color: #000;
 transition: all 0.5s linear;
 }
@@ -86,7 +100,7 @@ transition: all 0.5s linear;
 }
 
 .list-1{
-top:0;
+top:2px;
 }
 .list-2{
 left:0;
@@ -94,13 +108,14 @@ opacity: 1;
 }
 
 .list-3{
-bottom:0;
+bottom: 2px;
 }
+
+
 
 .btn-active .list-1{
 top: 10px;
-transform: translateY(50%) rotate(45deg);
-
+transform: translateY(50%) rotate(-45deg);
 }
 
 .btn-active .list-2{
@@ -109,147 +124,160 @@ opacity: 0;
 }
 
 .btn-active .list-3{
-
-transform: translateY(50%) rotate(-45deg);
-
 bottom:10px;
+transform: translateY(50%) rotate(45deg);
 } 
 
 .ação-menu .button-prop{
-left:120px; 
+left:130px; 
 transition: all 0.5s ease;
 }
 
 /*-------------------------*/
 
+/*-------------------------*\
+    Campo de busca
+\*-------------------------*/
 
-.log{
-font-size: 20px;
-color: #000;
+.buscar{
+z-index: 1;
 }
-
-.pesquisar{
-position: relative;
-}
-
-.busca{
-position: relative;
-width: 90%;
-padding: 10px;
-margin-top: 5px;
-margin-left: 15px;
-margin-bottom: 15px;
-border: 1px solid;
-box-shadow: 1px 2px 3px;
-background-color: white;
-display: inline-flex;
-border-radius: 10px;
-font-size: 1.2rem;
-align-items: center;
-overflow: hidden;
+.pesquisa{ 
+display: flex;
 }
 
 .busca-input{
-top:0;
-width: 80%;
-border-style: none;
-outline: none;
+width: 90%;
+padding: 0.5em ;
 }
 
+.busca-input:focus{
+border: 1px solid rgb(252, 14, 2 ) ;
+}
 .busca-btn{
-right: 5px;
-
 position: absolute;
-display: inline-flex;
+display: flex;
+z-index: 99;
+font-size: 1.7em;
+top: 10px;
+left: 6.0em;
+padding: 0.5em;
+border-radius: .5rem;
 
-padding: 5px;
-
-font-size: 1.6rem;
-border: none;
-border-radius: 50%;
 color: #000;
+background-color: red;
 
-background-color:white;
-transition: 1s ;
+transition: all .5s ease;
 }
-
-.ação-menu .busca{
-width: 65%;
+.active .busca-btn{
+color: #fff;
 }
 
 .ação-menu .busca-btn{
-right: 10px;
-transition: 1s ;
+left: 0.7em;
+transition: all 0.5s ease;
+}
+.ação-menu .busca-input{
+width: 20%;
+margin-left: 1.5em;
+transition: all 0.5s ease;
 }
 
+/*-------------------------/*
+ 
 
+/*-------------------------*\
+    Items de Navegação
+\*-------------------------*/
 .nav--menu{
-margin: 20px 0;
 position: relative;
-height: 70%;
-border-radius: 7px;
+display: block;
+border-radius: 10px;
 list-style: none;
-}
-
-.nav__img{
-padding: 10px;
-margin-left: 10px;
-align-items: center;
-margin-bottom: 5px;
-}
-
-.menu--item > a{
-color: #000;
+margin: 0.5em 1em;
+padding:0;
+background-color:#fff ;  
 }
 
 .menu--item{
-position: relative;
-line-height: normal;
-}
-.menu--item .menu--container{
-line-height: 50px;
+color: #fff;  
+font-size: 1.2rem;
+align-items: baseline;
+
+}  
+
+
+
+#pesq .container-log{
+    background:none;
+    border: none;
+    box-shadow: none;
 }
 
+ .container-log{
+margin: 0.5em;
+padding:1em  ;
+border-radius: .5rem;
+}
 
 .menu--container{
-position: relative;
-overflow: hidden;
-border-radius: 5px;
-margin: 0 5px;
+position:absolute;
+display: inline-flex;
+top: 1.5em;
+left: 3em;
 }
-
-.menu--container i{
-font-size: 35px;
-text-align: center;
-}
-
-
-.ação-menu .active .menu--container,
-.active .menu--container{
-background-color: white;
-border: 1px solid;
-box-shadow: 1px 2px 3px;
-}
-
-.style__nav{
-border: 3px solid;
-}
-
 .menu--secao{
-text-align: center;
+color: #000;
+display: inline-flex;
+margin: 0 1.5rem;
 opacity: 1;
-display:inline-block;
-position: absolute;
+transition: all .3s ease;
+}
+
+.active .menu--secao {
+color: #fff;
+font-weight: 800;
+}
+
+.ação-menu .active .container-log, 
+.active .container-log {
+background-color: rgb(252, 14, 2 );
+border: 1px solid rgb(252, 14, 2 ) ;
+box-shadow: 3px 3px 3px rgb(252, 15, 3 );
 }
 
 .ação-menu .menu--secao{
 opacity: 0;
-transition: all 0.3s ease;
-
 }
 
+/*-------------------------*/
+
+/*-------------------------*\
+    Icons navegação
+\*-------------------------*/
+
+i{
+font-size: 2rem;
+display: flex;
+text-align: center;
+color: #000;
+left: 20px;
+}
+ 
+.ação-menu 
+.menu--item i{
+color: #000;
+}
+
+.active i,.ação-menu 
+.active .container-log  i {
+color: #fff;  
+}
+
+/*-------------------------*\
+
 /*----------------------*\
-Seta Tooltip
+     Seta Tooltip
 \*----------------------*/
 
 .tooltip-body::before{
@@ -257,22 +285,20 @@ position: absolute;
 content:"";
 left: 0;
 align-items: center;
-border:7px solid rgba(0, 0, 0,0.8);
+border:7px solid rgba(0, 0, 0,0.9);
 transform:translateX(-100%) rotate(-90deg);
 border-color:  transparent  transparent 
-rgba(0, 0, 0, 0.8) transparent;
+rgba(0, 0, 0, 0.9) transparent;
 }
 
 /*---------------------------*/
 
-
 /*----------------------*\
-Balão Tooltip
+    Balão Tooltip
 \*----------------------*/
+
 .tooltip-body{
-
-position:absolute;
-
+position: absolute;
 width: 75px;
 padding: 11px 0;
 font-size: 10px;
@@ -280,29 +306,16 @@ text-align: center;
 font-weight: bold;
 color: #fff;
 
-left: 75px;
-top: 10px;
+left: 2em;
+top: 1.5em;
 
-background-color:rgba(0, 0, 0, 0.8);
+background-color:rgba(0, 0, 0, 0.9);
 border-radius: 5px;
 }
-
-
-.pesquisar .tooltip-body,
-.menu--item .tooltip-body {
+ .pesquisar .tooltip-body,
+.container-log .tooltip-body {
 opacity: 0;
-visibility: hidden;
-
-transition:all ease 0.3s;
-
-}
-.ação-menu .pesquisar:hover .tooltip-body,
-.ação-menu .menu--item .active:hover .tooltip-body{
-opacity: 1;
-left: 100px;
-visibility: visible;
-
-}
+} 
 
 /*----------------------*/
 
@@ -313,6 +326,7 @@ Conteudo da pagina
 .conteudo--principal{
 margin: 40px;
 padding: 30px;
+
 }
 
 .conteudo--pagina{
@@ -362,6 +376,14 @@ justify-content: space-between;
 align-items: center;
 }
 
+.slider-btn{
+font-size: 55px;
+font-weight: 800;
+}
+
+.slider__control i {
+color: #fff;
+}
 
 .slider__control {
 position: relative;

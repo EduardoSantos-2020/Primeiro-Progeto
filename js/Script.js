@@ -3,19 +3,52 @@ $('.button-prop').on('click',clicked);
 $('.busca-btn ').on('click',clicked)
 btnchave=$('.menu-btn') ;
 sideBar= $(".sidebar");
-action=$('.ação-menu');
 setas=$('.slider__control > div > i')
 sliderWidth=$('.slider-type').innerWidth();
 totalSlider=$(".slider--item").length;
-control=$(".slider__control")
 
 correntSlider=0
 
-
 function clicked() {
    sideBar.toggleClass("ação-menu");
-   btnchave.toggleClass('btn-active')
-}
+   btnchave.toggleClass('btn-active');
+}   
+
+$(document).ready(function() {
+   
+   $('.container-log > i').hover(function() {
+      icon=$(this).attr('id')
+   
+      time=setTimeout(()=>{
+          $('.ação-menu .active .tooltip-body[data-text=\\' + icon + ']').css(
+         {'opacity':'1',
+         'left':'85px',
+         'transition':'all ease 0.5s'
+         })
+      } ,3000)
+   
+      },function(){
+
+      $('.ação-menu .tooltip-body').css(
+         {'opacity': '0',
+         'left':'50px',
+         "transition": "all ease 0.5s"
+         }) 
+
+   })
+   
+         setInterval(()=>{
+         
+            $('.ação-menu .tooltip-body').css(
+               {'opacity': '0',
+               'left':'50px',
+               "transition": "all ease 0.5s"
+               
+               }) 
+            clearTimeout(time)
+         },8000)
+})
+
 
     $(".slider_width").width(`${sliderWidth*totalSlider}px`);
 
@@ -26,7 +59,6 @@ function clicked() {
 
  
    setas.each(function(){
-
       $(this).on('click',function(){ 
          ids=$(this).attr('id');
               
@@ -61,9 +93,11 @@ function clicked() {
             }
          updateMargin()
       },5000)
+
 })
- 
+
 $(window).scroll(() =>{ 
+
    position=$(this).scrollTop()
    
    sectionHeight=$('section > div').height()
@@ -72,8 +106,8 @@ $(window).scroll(() =>{
       target=$(this).offset().top ;
          id=$(this).attr('id');
          if(position >= (target && target-sectionHeight/2)){
-               $('.navegação--menu > ul > div > a').removeClass('active');
-               $('.navegação--menu > ul > div > a[href=\\#' + id + ']').addClass('active');    
+               $('.navegação--menu > ul > a').removeClass('active');
+               $('.navegação--menu > ul > a[href=\\#' + id + ']').addClass('active');    
          }
       });
    });

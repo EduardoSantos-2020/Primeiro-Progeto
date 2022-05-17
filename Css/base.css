@@ -5,11 +5,10 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: 'Montserrat', sans-serif;
-
+font-size: 14px;
 }
 
 html{
-font-size: 12px;
 scroll-behavior: smooth;
 scroll-padding-top: 30px;
 scroll-padding-bottom:30px ;
