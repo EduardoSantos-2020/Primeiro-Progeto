@@ -3,9 +3,14 @@
 \*----------------------*/
 a{  
 position: relative;
-opacity: 0;
 text-decoration: none;
 top: 0;
+}
+
+.pesquisa .menu--secao{
+    display: none;
+    font-weight: bolder;
+    font-size: 1em;
 }
 
 .navegação--menu{
@@ -140,7 +145,7 @@ transition: all 0.5s ease;
 \*-------------------------*/
 
 .buscar{
-z-index: 1;
+z-index: 0;
 }
 .pesquisa{ 
 display: flex;
@@ -148,7 +153,7 @@ display: flex;
 
 .busca-input{
 width: 90%;
-padding: 0.5em ;
+padding: 0.1.5em ;
 }
 
 .busca-input:focus{
@@ -159,7 +164,7 @@ position: absolute;
 display: flex;
 z-index: 99;
 font-size: 1.7em;
-top: 10px;
+top: 5px;
 left: 6.0em;
 padding: 0.5em;
 border-radius: .5rem;
@@ -174,7 +179,7 @@ color: #fff;
 }
 
 .ação-menu .busca-btn{
-left: 0.7em;
+left: 0.6em;
 transition: all 0.5s ease;
 }
 .ação-menu .busca-input{
@@ -182,6 +187,8 @@ width: 20%;
 margin-left: 1.5em;
 transition: all 0.5s ease;
 }
+
+
 
 /*-------------------------/*
  
@@ -196,14 +203,14 @@ border-radius: 10px;
 list-style: none;
 margin: 0.5em 1em;
 padding:0;
-background-color:#fff ;  
+background-color:#fff;
 }
 
 .menu--item{
+display: inline-flex;
 color: #fff;  
 font-size: 1.2rem;
 align-items: baseline;
-
 }  
 
 
@@ -214,23 +221,25 @@ align-items: baseline;
     box-shadow: none;
 }
 
- .container-log{
+.container-log{
+display: flex;
 margin: 0.5em;
-padding:1em  ;
+padding:1em;
 border-radius: .5rem;
+overflow: hidden;
+
 }
 
 .menu--container{
-position:absolute;
-display: inline-flex;
 top: 1.5em;
 left: 3em;
+vertical-align: bottom;
 }
 .menu--secao{
 color: #000;
-display: inline-flex;
-margin: 0 1.5rem;
+margin: 0 1.7rem; 
 opacity: 1;
+bottom: 0;
 transition: all .3s ease;
 }
 
@@ -240,14 +249,16 @@ font-weight: 800;
 }
 
 .ação-menu .active .container-log, 
-.active .container-log {
+.active .container-log { 
+z-index: 0;
 background-color: rgb(252, 14, 2 );
 border: 1px solid rgb(252, 14, 2 ) ;
 box-shadow: 3px 3px 3px rgb(252, 15, 3 );
 }
 
 .ação-menu .menu--secao{
-opacity: 0;
+opacity: 1;
+transition: all 1s ease;
 }
 
 /*-------------------------*/
@@ -258,10 +269,9 @@ opacity: 0;
 
 i{
 font-size: 2rem;
-display: flex;
-text-align: center;
 color: #000;
 left: 20px;
+display: flex;
 }
  
 .ação-menu 
@@ -312,6 +322,7 @@ top: 1.5em;
 background-color:rgba(0, 0, 0, 0.9);
 border-radius: 5px;
 }
+
  .pesquisar .tooltip-body,
 .container-log .tooltip-body {
 opacity: 0;
