@@ -7,12 +7,6 @@ text-decoration: none;
 top: 0;
 }
 
-.pesquisa .menu--secao{
-    display: none;
-    font-weight: bolder;
-    font-size: 1em;
-}
-
 .navegação--menu{
 padding:1rem 0.5rem;
 height: 100vh;
@@ -163,14 +157,15 @@ border: 1px solid rgb(252, 14, 2 ) ;
 position: absolute;
 display: flex;
 z-index: 99;
-font-size: 1.7em;
-top: 5px;
-left: 6.0em;
+font-size: 1.8em;
+
+top: 2px;
+left: 5.8em;
 padding: 0.5em;
 border-radius: .5rem;
 
 color: #000;
-background-color: red;
+background-color:rgb(252, 14, 2) ;
 
 transition: all .5s ease;
 }
@@ -179,12 +174,13 @@ color: #fff;
 }
 
 .ação-menu .busca-btn{
-left: 0.6em;
+left: 0.7em;
 transition: all 0.5s ease;
 }
 .ação-menu .busca-input{
 width: 20%;
-margin-left: 1.5em;
+margin-left: 1em;
+text-decoration: none;
 transition: all 0.5s ease;
 }
 
@@ -201,8 +197,8 @@ position: relative;
 display: block;
 border-radius: 10px;
 list-style: none;
-margin: 0.5em 1em;
-padding:0;
+margin:1em 0.5em;
+padding: 0;
 background-color:#fff;
 }
 
@@ -223,7 +219,7 @@ align-items: baseline;
 
 .container-log{
 display: flex;
-margin: 0.5em;
+margin: 1.5em 1em;
 padding:1em;
 border-radius: .5rem;
 overflow: hidden;
@@ -231,13 +227,13 @@ overflow: hidden;
 }
 
 .menu--container{
-top: 1.5em;
 left: 3em;
 vertical-align: bottom;
 }
 .menu--secao{
 color: #000;
 margin: 0 1.7rem; 
+padding: 0.5rem 0  0  0;
 opacity: 1;
 bottom: 0;
 transition: all .3s ease;
@@ -271,8 +267,11 @@ i{
 font-size: 2rem;
 color: #000;
 left: 20px;
+z-index: 99;
 display: flex;
 }
+
+
  
 .ação-menu 
 .menu--item i{
@@ -315,7 +314,6 @@ font-size: 10px;
 text-align: center;
 font-weight: bold;
 color: #fff;
-
 left: 2em;
 top: 1.5em;
 
@@ -392,19 +390,28 @@ font-size: 55px;
 font-weight: 800;
 }
 
-.slider__control i {
-color: #fff;
-}
-
 .slider__control {
 position: relative;
 font-size: 4em;
 color: #fff;
 cursor: pointer;
+height: 100%;
 display: inline-flex;
 transition: all ease 3s ;
 z-index: 1;
 }
+
+/* .slider__control:hover{
+    background-image: linear-gradient(to right, #000,transparent);
+} */
+.slider__control i {
+color: #fff;
+display: flex;
+margin: 80% 10px;
+padding: 80% 0;
+
+}
+
 
 .slider_width{
 display: flex;
@@ -417,12 +424,12 @@ width: 100vh;
 height:inherit;
 background-size:cover;
 background-position: center;
-
 }
 
 .produtos--container{
 margin: 40px ;
 padding: 30px;
+
 }
 
 .produtos--container h1{
