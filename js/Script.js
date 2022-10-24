@@ -64,9 +64,11 @@ $(function () {
       
         $('.left').css({'background-image':'linear-gradient(to right,#000,#000,transparent','transition':'all ease 3s'})
 
-          }else{
-      
-             $('.right').css({'background-image':'linear-gradient(to left,#000,#000,transparent','transition':'all ease 3s'})
+          }
+
+      if(color==='right'){
+         
+         $('.right').css({'background-image':'linear-gradient(to left,#000,#000,transparent','transition':'all ease 3s'})
          
           }
       
