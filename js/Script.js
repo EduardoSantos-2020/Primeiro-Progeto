@@ -18,10 +18,10 @@ $(function () {
 
       $('.container-log').each((number, index) => {
 
-         const NumberId = index.firstChild.nextSibling.id = number
+         const NumberId = index.firstChild.nextSibling.id = number;
          const Icons = index.firstChild.nextSibling;
          const span = document.createElement('span');
-         const Names = index.children[1].innerText
+         const Names = index.children[1].innerText;
          span.classList.add('tooltip-body');
          span.innerText = Names;
          $(span).attr('data-key', NumberId)
@@ -63,12 +63,13 @@ $(function () {
      if(color==='left'){
       
         $('.left').css({'background-image':'linear-gradient(to right,#000,#000,transparent','transition':'all ease 3s'})
-
-          }
-
+         $('.left > #contleft').css({'color':'#a8a3a3'})
+      }
+      
       if(color==='right'){
          
          $('.right').css({'background-image':'linear-gradient(to left,#000,#000,transparent','transition':'all ease 3s'})
+         $('.right > #contright').css({'color':'#a8a3a3'})
          
           }
       
@@ -76,6 +77,8 @@ $(function () {
       
       $('.left').css({'background':'none'})
       $('.right').css({'background':'none'})
+      $('.left > #contleft').css({'color':'#fff'})
+      $('.right > #contright').css({'color':'#fff'})
    })
 
    setas.each(function () {
