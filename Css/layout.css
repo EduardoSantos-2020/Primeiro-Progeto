@@ -19,21 +19,66 @@
 }
 
 .layout__principal{
-    position: relative;
-    margin: 0 8em;
-    padding: 0;
+  
 }
 
 .layout__mapa{
-padding:20px;
-left: 10%;
+    position: relative;
+    width: 50%;
+    height: 38em;
+    padding:3em 2em;
+    align-items: center;
+    justify-content: center;
 }
+
+.layout__mapa:before{
+    content: '';
+    position: absolute;
+    border-radius: 0 50% ;
+    width: 25px;
+    height: 20em;
+    padding:  0 2.5em;
+    background-color: #fff;
+    box-shadow: 0 0 3px #fff;
+  left: 590px;
+  z-index: 1;
+    top:0;
+}
+.layout__mapa:after{
+    content: '';
+    position: absolute;
+    border-radius:50% 0 ;
+    width:20px;
+    padding: 0 2.5em;
+    height: 35em;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0 3px #fff;
+    left: 590px;
+    bottom: 0;
+}
+
+.layout__localizacao{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    width: 800px;
+    padding: 3em 1em;
+    background-color: #EAECEE;
+ }
+
+.layout__contatos{
+    width: 100%;
+    margin:0;
+   padding: 0;
+    display: inline-flex;
+}
+
 .layout__rodape{
 padding: 30px 0;
 text-align: center;
 background:#1C1C1C;
 color: #fff;
-position: absolute;
 width: 100%;
 }
 

@@ -1,6 +1,6 @@
 $(function () {
    $('.button-prop').on('click', clicked);
-   // $('.busca-btn ').on('click',clicked)
+    $('.busca-btn ').on('click',clicked)
    btnchave = $('.menu-btn');
    sideBar = $(".sidebar");
    setas = $('.slider__control > div > i')
@@ -35,15 +35,16 @@ $(function () {
                $(`.container-log > .tooltip-body[data-key=${Fort}]`).css({
                   "opacity": "1",
                   "left": "12em",
-                  "transition": " all .8s ease"
+                  'z-index':'1',
+                  "transition": " all 1s ease"
                })
             }
 
          }, function () {
             $(`.container-log > .tooltip-body`).css({
                "opacity": "0",
-               "left": "8em",
-               "transition": " all .8s ease"
+               "left": "3em",
+               "transition": " all 1s ease"
             })
          })
       })
@@ -60,18 +61,17 @@ $(function () {
    
       const color=event.target.className
 
-     if(color==='left'){
+     if(color=='left'){
       
         $('.left').css({'background-image':'linear-gradient(to right,#000,#000,transparent','transition':'all ease 3s'})
-         $('.left > #contleft').css({'color':'#a8a3a3'})
-      }
-      
-      if(color==='right'){
-         
-         $('.right').css({'background-image':'linear-gradient(to left,#000,#000,transparent','transition':'all ease 3s'})
-         $('.right > #contright').css({'color':'#a8a3a3'})
-         
-          }
+         $('.left > #contleft').css({'color':'#a8a3a3'});
+
+         }else if(color=='right'){
+               
+               $('.right').css({'background-image':'linear-gradient(to left,#000,#000,transparent','transition':'all ease 3s'})
+               $('.right > #contright').css({'color':'#a8a3a3'});
+               
+            }
       
    },function(){
       
@@ -134,12 +134,12 @@ $(function () {
 
       position = $(this).scrollTop()
 
-      sectionHeight = $('section > div').height()
+      sectionHeight = $('section > div').offset().top
 
       $('section').each(function () {
          target = $(this).offset().top;
          id = $(this).attr('id');
-         if (position >= (target && target - sectionHeight / 2)) {
+         if (position >= (target && target - sectionHeight / 1)) {
             $('.navegação--menu > ul > a').removeClass('active');
             $('.navegação--menu > ul > a[href=\\#' + id + ']').addClass('active');
          }
