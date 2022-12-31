@@ -498,7 +498,7 @@ padding: 0.5em;
 
 @media screen and (max-width:992px) {
     .conteudo--produtos{
-        margin-top: 35px;
+        margin-top: 75px;
         width: 100%;
         height: 70vh;
         overflow-x: scroll;
