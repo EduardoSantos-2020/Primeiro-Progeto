@@ -3,86 +3,126 @@
 .sidebar{
     position: fixed;
 
-    width: 240px;
-    height: 100%;
-   
-    top:0;
+    width: 100vw;
+    height: 90px;
+    top: 0;
     left: 0;
+    z-index:100;
 
-    z-index: 99;
-
-    background:#fff ;
-
-    box-shadow: 5px 5px 5px rgb(23, 32, 42 );
-
+    background:rgba(251, 252, 252, 1) ;
+    box-shadow:.3rem .3rem .3rem #1C1C1C;
     transition: all 0.5s ease;
+}
+
+@media screen and (max-width:992px){
+    .sidebar{
+        position: fixed;
+    
+        width: 100%;
+        height: 90px;
+        top: 0;
+        left: 0;
+        z-index:100;
+        border-bottom:#1C1C1C solid 2px;
+        background:rgba(251, 252, 252, 1);
+    }
 }
 
 .layout__principal{
-  
-}
-
-.layout__mapa{
-    position: relative;
-    width: 50%;
-    height: 38em;
-    padding:3em 2em;
-    align-items: center;
-    justify-content: center;
-}
-
-.layout__mapa:before{
-    content: '';
-    position: absolute;
-    border-radius: 0 50% ;
-    width: 25px;
-    height: 20em;
-    padding:  0 2.5em;
-    background-color: #fff;
-    box-shadow: 0 0 3px #fff;
-  left: 590px;
-  z-index: 1;
-    top:0;
-}
-.layout__mapa:after{
-    content: '';
-    position: absolute;
-    border-radius:50% 0 ;
-    width:20px;
-    padding: 0 2.5em;
-    height: 35em;
-    z-index: 1;
-    background-color: #fff;
-    box-shadow: 0 0 3px #fff;
-    left: 590px;
-    bottom: 0;
-}
-
-.layout__localizacao{
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    width: 800px;
-    padding: 3em 1em;
-    background-color: #EAECEE;
- }
-
-.layout__contatos{
-    width: 100%;
-    margin:0;
-   padding: 0;
-    display: inline-flex;
-}
-
-.layout__rodape{
-padding: 30px 0;
-text-align: center;
-background:#1C1C1C;
-color: #fff;
 width: 100%;
 }
 
-.ação-menu{
-    width: 115px;
-    transition: all 0.5s ease;
+.mapa--container{
+    position: relative;
+    width: 50%;
+    height: 38em;
+    padding:3em .5em;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.mapa--container:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -2.5em;
+    width:5px;
+    height: 44.0em;
+    z-index: 1;
+    padding: 0 2.5em;
+    border: #fff solid 3px;
+
+    background-color: #fff;
+    border-radius: 50% ;
+}
+
+.localizacao--container{
+    position: relative;
+    width: 50%;
+    height: 44em;
+    color: #fff;
+    background-color:rgb(48, 49, 49);
+}
+@media screen and (max-width:992px){
+    .localizacao--container{
+        position: relative;
+        width: 100%;
+        color: #fff;
+        padding: 4em;
+        background-color:rgb(48, 49, 49);
     }
+
+    .mapa--container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .mapa--container:before{
+      display: none;
+    }
+    
+    .localizacao--container{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 80vh;
+        color: #fff;
+        background-color:rgb(48, 49, 49);
+    }
+}
+
+.contatos--container{
+margin:0;
+padding: 0;
+display: inline-flex;
+background-color:#000000cc;
+height: 100vh;
+}
+
+
+.layout__rodape{
+    padding: 30px 0;
+    text-align: center;
+    background:#1C1C1C;
+    color: #fff;
+}
+@media screen and (max-width:992px){
+    .contatos--container{
+        display: inline;
+        width: 100%;
+        background-color:rgba(0, 0, 0, 0.8);
+        }
+        .layout__rodape{
+            width: 100%;
+            height: 200px;
+            padding:30px 0;
+            text-align: center;
+            background-color:#1C1C1C;
+            color: #fff;
+        }
+
+}
+
+

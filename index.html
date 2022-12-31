@@ -7,7 +7,6 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="imagens/logos/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="imagens/logos/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="imagens/logos/favicon-16x16.png">
-		<link rel="manifest" href="logos/site.webmanifest">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet"/>
 		<link rel="stylesheet" href="Css/bootstrap.min.css"> 
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
@@ -16,27 +15,15 @@
 		<link rel="stylesheet" href="Css/conteudo.css"/>
 	</head>
 	<body>
-	<div class="sidebar ação-menu">
+	<aside class="sidebar ação-menu">
 		<nav class="navegação--menu">
 				<div class="container--nav">
 					<img src="/imagens/logos/logo.png" class="logo--img" alt="logo-marca da loja">
-				<div class="logo--name">INFORTEC</div>
+					<p class="logo--name">infortec</p>
 				</div>
-				<ul class="nav--menu">
-				<div id="pes" class="active">
-					<div class="container-log">
-						<i id class="busca-btn bi bi-search"></i>
-						<p class="menu--secao" style="display: none;">PESQUISA</p>
-						<div class="pesquisa">
-							<div class="buscar">
-								<input type="text" class="busca-input form-control"placeholder="Buscar">				
-							</div>	
-						</div>
-					</div>
-				</div>
+				<ul class="nav--menu mobile-btn">
 				<a href="#sec-1" class="active">
-					<div class="container-log">
-						<i id class="bi bi-house-fill"></i>								
+					<div class="container-log">								
 						<div class="menu--item">	
 							<li class="menu--container">
 								<p class="menu--secao">INICIO</p>
@@ -46,7 +33,6 @@
 				</a>
 				<a href="#sec-2">
 					<div class="container-log">
-						<i id class=" bi bi-pc-display"></i>
 						<div class="menu--item">								
 							<li class="menu--container">
 								<p class="menu--secao">
@@ -58,7 +44,6 @@
 				</a>
 				<a href="#sec-3">
 					<div class="container-log">
-						<i id class="bi bi-tools" id="icon3" ></i>
 						<div class="menu--item">					
 							<li class="menu--container">
 								<p class="menu--secao">
@@ -69,8 +54,7 @@
 					</div>
 				</a>
 					<a href="#sec-4">
-						<div class="container-log">
-							<i id class="bi bi-geo-alt-fill"></i>						
+						<div class="container-log">						
 							<div class="menu--item">								
 								<li class="menu--container">
 									<p class="menu--secao">
@@ -81,8 +65,7 @@
 						</div>
 					</a>
 					<a href="#sec-5">
-						<div class="container-log">
-							<i id class=" bi bi-telephone-fill"></i>	
+						<div class="container-log">	
 							<div class="menu--item">
 								<li class="menu--container">
 									<p class="menu--secao">
@@ -92,214 +75,160 @@
 							</div>
 						</div>			
 					</a>
-					<div class="login--container">
-						<div class="login">
-							<div class="imgcontainer">
-								<img src="/imagens/logos/user.png" class="login-img"  alt="login">
-							</div>
-							<!-- <button  type="submit" class="button-login">ENTRAR</button>  -->
-							<p class="">Eduardo Nunes</p>
-						</div>
-					</div>
+					<button class="login">Login</button>
 				</ul>
 			</nav>
 			<div class="button-prop">
-				<div class="menu-btn">
-					<span class="list-1 line "></span>
-					<span class="list-2 line "></span>
-					<span class="list-3 line "></span>
-				</div>
-			</div>
-		</div>
+                <div class="menu-btn">
+                    <span class="list-1 line "></span>
+                    <span class="list-2 line "></span>
+                    <span class="list-3 line "></span>
+                </div>
+            </div>
+	</aside> 
 		<main class=layout__principal>
-			<div class="">
-				<div class="">
+			<section class= "conteudo--principal" id="sec-1">
+				<div class="container-pricipal">
 					<div class="conteiner--slider">
-						<div class="slider-type banner--principal">
-							<div class="slider--controls">
-								<div class="slider__control">
-									<div class="left">
-										<i id="contleft" class='slider-btn bi bi-chevron-left'></i>
-									</div>					
-								</div>
-								<div class="slider__control">
-									<div class="right">
-										<i id="contright" class='slider-btn bi bi-chevron-right'></i>
-									</div>
-								</div>
-							</div>
+						<div class="slider-type">
 							<div class="slider_width">
-								<div class="slider--item" style="background-image: url(/imagens/itens/ibrem.jpg);"></div>
-								<div class="slider--item" style="background-image: url(/imagens/itens/ibrem2.jpg) ;"></div>
-								<div class="slider--item" style="background-image: url(/imagens/itens/ibrem3.jpg)"></div>
+								<div class="slider--item"></div>
+								<div class="slider--item"></div>
+								<div class="slider--item"></div>
 							</div>
 						</div>
 					</div>
-					<section class= "conteudo--principal" id="sec-1">
-						<div class="conteudo--pagina">
-							<h2 class="titulo--principal">Sobre a infortec</h2>
-							<img src="/imagens/Conteudo /qualidades.jpeg" class="sobre-img">
-
-							<p>A infortec foi fundada em 2020 onde se localiza na regial mais populosa para que todos os nossos
-								clientes tenham a melhores escolhas e qualidade dos produtos seja no mundo de jogos ou profissional</p>
-
-							<p>Nossa missão e oferecer o melhores produtos para que seguir seus objetivos</p>
-
-							<p>Oferecemos um otimo atendimento online com varias opiçoes de preço e gosto ou visite nossa loja para qualquer duvida</p>
-						</div>
-					</section>
-						<section class="produtos--container" id="sec-2">
-							<div class="conteudo--produtos">
-									<h1>Conheça Alguns dos Nossos Produtos</h1>
-									<ul class="produtos--items">
-										<li class=produto--item>
-											<h2> Adiquira agora !</h2>
-											<div class="produto--img">
-												<img src="/imagens/Conteudo /pcgamer1.png" alt="">
-											</div>
-											<p>R$: 3.400,00</p>
-											<button>Saiba Mais</button>
-										</li>
-										<li class=produto--item>
-											<h2>Adiquira agora !</h2>
-											<div class="produto--img">
-												<img src="/imagens/Conteudo /pcgamer2.png" alt="">
-											</div>
-											<p>R$: 4.200,00</p>
-											<button>Saiba Mais</button>
-										</li>
-
-										<li class=produto--item>
-											<h2>Adiquira agora !</h2>
-												<div class="produto--img">
-													<img src="/imagens/Conteudo /pcgamer3.png" alt="">
-												</div>
-												<p>R$: 5.000,00</p>
-											<button> Saiba Mais</button>
-										</li>
-									</ul>
+				</div>
+				<div class="conteudo--pagina">
+					<h2 class="titulo--principal">Infortec</h2>
+					<p>Somos uma impressa pretativa e focamos em oferecer otimos serviços ao nossos clientes</p>
+				</div>
+			</section>
+			<section class="produtos--container" id="sec-2">
+				<h1>Conheça Alguns dos Nossos Produtos</h1>
+				<div class="conteudo--produtos">
+						<ul class="produtos--items">
+							<li class="produto--item">
+								<h2> Adiquira agora !</h2>
+								<div class="produto--img">
+									<img src="/imagens/Conteudo /pcgamer1.png" alt="">
 								</div>
-						</section>
-						<section class="table-services" id="sec-3">
-							<h2>Serviços </h2>
-							<div class=" table-responsive col-sm-6 offset-3">
-								<table class="table table-dark">
-									<thead>
-										<tr>
-											<th>Serviços Disponiveis</th>
-											<th>Horas</th>
-											<th>Valor</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td> Formatação sem backup</td>
-											<td>1 hora</td>
-											<td>R$:85,00</td>
+								<p>R$: 3.400,00</p>
+								<button class="btn-card">Saiba Mais</button>
+							</li>
+							<li class="produto--item">
+								<h2>Adiquira agora !</h2>
+								<div class="produto--img">
+									<img src="/imagens/Conteudo /pcgamer2.png" alt="">
+								</div>
+								<p>R$: 4.200,00</p>
+								<button class="btn-card">Saiba Mais</button>
+							</li>
 
-										</tr>
-										<tr>
-											<td> Formatação com backup de arquivos - 5Gb Até 20 GB</td>
-											<td>3 horas</td>
-											<td>R$:120,00</td>
-										</tr>
-										<tr>
-											<td> Formatação com backup de arquivos - acima de 40 GB</td>
-											<td>5 horas</td>
-											<td>R$:130,00</td>
-										</tr>
-										<tr>
-											<td> Atualização de BIOS (Placa Mãe)</td>
-											<td>30 minutos</td>
-											<td>R$:50,00</td>
-										</tr>
-										<tr>
-											<td> Preventiva de Hardware - Teste/Limpeza/Lubrificação</td>
-											<td>2 horas</td>
-											<td>R$:80,00</td>
-										</tr>
-										<tr>
-											<td> Instalação de Drivers</td>
-											<td> 30 minutos</td>
-											<td>R$:35,00</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</section>
-						<section class="mapa--conteudo col-sm-12" id="sec-4">
-							<h1 class="titulo--mapa1">Estamos em São Paulo capital</h1>
-							<div class="layout__mapa">
-								<iframe class= mapa-item src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233965.52901977723!2d-46.5694
-								5400879149!3d-23.61468140876301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5cec20e7
-								8cd9%3A0xcf13695f501f60e9!2sInfortec%20Notebooks!5e0!3m2!1spt-BR!2sbr!4v1643056043115!5m2!1spt-BR
-								!2sbr" width="450" height="270" allowfullscreen="" loading="lazy"></iframe>
-							</div>
-						<div class="layout__localizacao">
-							<h1 class="titulo--mapa2">Coloque suas informações de localidade</h1>
-							<form class="items-de-cadastro">
-								<div class="name-sob">
-									<label for="">Nome :</label>
-									<input type="text">
-	
-									<label for="">Sobrenome :</label>
-									<input type="text">
-								</div>
-								<div class="namecit-bai">
-									<label for="">Cidade :</label>
-									<input  type="text">
-	
-									<label for="">Bairro :</label>
-									<input type="text">
-								</div>
-								
-								<div class="namerua-cep">						
-									<label for="">Rua :</label>
-									<input  type="text">
-	
-									<label for="">CEP :</label>
-									<input  type="text">
-								</div>
-								<button type="submit" class="botao-loq">Enviar</button>			
-							</form>
-						</div>
-						</section>
-						<section class="layout__contatos col-sm-12 offset-1"  id="sec-5">
-							<div class="contatos_container">	
-								<h1>FALE COM NOSSA EQUIPE !</h1>
-
-								<div class="cunteudo-contatos">
-									<div class="itemDecontato">
-										<i class="bi bi-whatsapp"></i>
-										<p>(11)95564-8976</p>
+							<li class="produto--item">
+								<h2>Adiquira agora !</h2>
+									<div class="produto--img">
+										<img src="/imagens/Conteudo /pcgamer3.png" alt="">
 									</div>
-									<div class="itemDecontato">
-										<i class="bi bi-instagram"></i>
-										<p>@infortec2020</p>
-									</div>
-									<div class="itemDecontato">
-										<i class="bi bi-facebook"></i>
-										<p>Infortec_2020</p>
-									</div>
-									<div class="itemDecontato">
-										<i class="bi bi-youtube"></i>
-										<p>youtube-Infortec2020</p>
-									</div>
+									<p>R$: 5.000,00</p>
+								<button class="btn-card"> Saiba Mais</button>
+							</li>
+							<li class="produto--item">
+								<h2> Adiquira agora !</h2>
+								<div class="produto--img">
+									<img src="/imagens/Conteudo /pcgamer1.png" alt="">
 								</div>
-							</div>
-							<div class="contatosImg">
-								<img class="img-cont"  src="/imagens/itens/profissional.png" alt="contatos">					
-							</div>
-						</section>
+								<p>R$: 3.400,00</p>
+								<button class="btn-card">Saiba Mais</button>
+							</li>
+							<li class="produto--item">
+								<h2>Adiquira agora !</h2>
+								<div class="produto--img">
+									<img src="/imagens/Conteudo /pcgamer2.png" alt="">
+								</div>
+								<p>R$: 4.200,00</p>
+								<button class="btn-card">Saiba Mais</button>
+							</li>
+
+							<li class="produto--item">
+								<h2>Adiquira agora !</h2>
+									<div class="produto--img">
+										<img src="/imagens/Conteudo /pcgamer3.png" alt="">
+									</div>
+									<p>R$: 5.000,00</p>
+								<button class="btn-card"> Saiba Mais</button>
+							</li>
+						</ul>
 					</div>
-			</div>
+			</section>
+			<section class="services" id="sec-3">
+				<div class="container-service">
+					<h2>Serviços </h2>
+					<div class="service-img">
+						<img class="img-service" src="/imagens/itens/manuPc.jpg" alt="Img-serviços">
+					</div>
+					<div class="base-services">
+						<div class="servicosPrestados">
+							<p> Formatação sem backup</p>
+							<p> Formatação com backup de arquivos - 5Gb Até 20 GB</p>
+							<p> Formatação com backup de arquivos - acima de 40 GB</p>
+							<p> Atualização de BIOS (Placa Mãe)</p>
+							<p> Preventiva de Hardware - Teste/Limpeza/Lubrificação</p>
+							<p> Instalação de Drivers</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="mapa--conteudo" id="sec-4">
+				<h1 class="titulo--mapa1">Estamos em São Paulo capital</h1>
+				<div class="mapa--container">
+					<iframe class="mapa--item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.982718037278!2d-46.65548478559927!3d-23.46108786378075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef76af0b82459%3A0xe5fd5bdb77503d77!2sR.%20Condessa%20Am%C3%A1lia%20Matarazzo%2C%20255%20-%20Jardim%20Peri%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002652-000!5e0!3m2!1spt-BR!2sbr!4v1671302934470!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div class="localizacao--container">
+					<h1 class="titulo--mapa2">Nossa localização e rotas </h1>
+					<div class="localizacao-itens">
+						<p>Rua  Condessa Amália Matarazzo</p>
+						<p>Jardim Peri-Teles</p>
+						<p>Nº254</p>
+						<p>São Paulo-SP</p>
+						<p>CEP: 02652-000</p>
+						<button class="botao-loq">ver rotas</button>
+					</div>
+				</div>
+			</section>
+			<section class="contatos--container"id="sec-5">
+				<div class="contatos_container">	
+					<h1>FALE COM NOSSA EQUIPE !</h1>
+					<div class="conteudo-contatos">
+						<div class="itemDecontato">
+							<i class="bi bi-whatsapp"></i>
+							<p>(11)95564-8976</p>
+						</div>
+						<div class="itemDecontato">
+							<i class="bi bi-instagram"></i>
+							<p>@infortec2020</p>
+						</div>
+						<div class="itemDecontato">
+							<i class="bi bi-facebook"></i>
+							<p>Infortec_2020</p>
+						</div>
+						<div class="itemDecontato">
+							<i class="bi bi-youtube"></i>
+							<p>youtube-Infortec2020</p>
+						</div>
+					</div>
+				</div>
+				<div class="contatosImg">
+					<img class="img-cont" src="/imagens/itens/woman-with-a-headset.jpg" alt="contatos">					
+				</div>
+			</section>
 		</main>
 		<footer class="layout__rodape">
-			<img src="/imagens/logo marca/cablogo.png" class=logo--loja--rod/>
+			<img src="/imagens/logos/cablogo.png" class=logo--loja--rod/>
 			<p>&copy;2020 INFORTEC</p>
 		</footer>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/Script.js"></script>
-		</body>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/Script.js"></script>
+	</body>
 </html>
