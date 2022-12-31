@@ -299,15 +299,15 @@ transition: all ease 0.5s;
 }
 
 .slider--item:nth-child(1){
-background-image: url(/imagens/itens/img1.jpg);
+background-image: url(../imagens/itens/img1.jpg);
 object-fit: cover;
 }
 .slider--item:nth-child(2){
-background-image: url(/imagens/itens/img2.jpg); 
+background-image: url(../imagens/itens/img2.jpg); 
 object-fit: cover;
 }
 .slider--item:nth-child(3){
-background-image: url(/imagens/itens/img3.jpg);
+background-image: url(../imagens/itens/img3.jp);
 object-fit: cover;
 }
 
@@ -317,11 +317,6 @@ height:inherit;
 background-size:cover;
 background-position: center;
 opacity: .9;
-}
-
-
-.conteudo--principal{
-
 }
 
 .conteudo--pagina{
