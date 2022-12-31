@@ -715,7 +715,7 @@ margin-top: 30px;
     }
     .titulo--mapa2{
         top: 0; 
-        left: 0;
+        left: 20px;
         position: absolute;
         font-size: 1.7em;
         margin: 25px 15px;
@@ -729,13 +729,13 @@ margin-top: 30px;
         
         }
         .botao-loq{
-        margin-top: 75px;
+        margin-top: 45px;
         border: 1px solid #000;
         }
 
         .botao-loq:active{
         box-shadow: none;
-        margin-top: 78px;
+        margin-top: 48px;
         }            
 }
 
@@ -751,7 +751,7 @@ background-color: rgb(252, 14, 2 ) ;
 position: absolute;
 display: flex;
 top: 2em;
-left: 3em;
+left: 2em;
 font-weight: 900;
 font-size: 2em;
 color: #fff; 
