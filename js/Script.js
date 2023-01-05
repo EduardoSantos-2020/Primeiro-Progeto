@@ -54,6 +54,7 @@ $(function () {
    
    const containerProdutos=$(".conteudo--produtos");
    const produtosItens=$('.produtos--items');
+   const btnCard=$('.btn-card');
    
    let inpressDown=false;
    let cursorXSpace;
@@ -65,12 +66,14 @@ $(function () {
 
       containerProdutos.css('cursor',"grabbing");
       produtosItens.css('pointer-events','none')
+      btnCard.css('pointer-events','none')
    })
 
    containerProdutos.on('mouseup',(e)=>{
       inpressDown=false;
       containerProdutos.css('cursor',"grab");
-      produtosItens.css('pointer-events','visible')
+      produtosItens.css('pointer-events','none')
+      btnCard.css('pointer-events','visible')
    })
 
 
@@ -87,7 +90,8 @@ $(function () {
       let container_rect=containerProdutos[0].getBoundingClientRect();
       let Produtos_rect=produtosItens[0].getBoundingClientRect();
 
-
+      produtosItens.css('pointer-events','none');
+      
       if(parseInt(produtosItens.css('left'))>0){
 
          produtosItens.css('left','0');
