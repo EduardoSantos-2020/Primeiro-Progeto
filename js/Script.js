@@ -58,25 +58,19 @@ $(function () {
    let inpressDown=false;
    let cursorXSpace;
 
-   $('.produto--item').each(function(indice ,item){
-      const button=$('.btn-card');
-
-       button.mouseover(function(e){
-         e.css({'font-size': '1.7rem','font-weight':'500','padding': '0.5em'})
-       })
-   })
-
    containerProdutos.on('mousedown',(e)=>{
       inpressDown=true;
 
       cursorXSpace = e.offsetX-produtosItens[0].offsetLeft;
 
       containerProdutos.css('cursor',"grabbing");
+      produtosItens.css('pointer-events','none')
    })
 
    containerProdutos.on('mouseup',(e)=>{
       inpressDown=false;
       containerProdutos.css('cursor',"grab");
+      produtosItens.css('pointer-events','visible')
    })
 
 
@@ -85,7 +79,6 @@ $(function () {
 
       e.preventDefault()
       produtosItens.css({'left':`${e.offsetX-cursorXSpace}px`});
-
       bondCards()
    })
 
