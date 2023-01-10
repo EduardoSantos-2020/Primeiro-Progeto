@@ -9,14 +9,14 @@
     z-index:100;
     background-color: #fff;
     box-shadow:.2rem .2rem .2rem #1C1C1C;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 }
 
 .styleSidebar {
     background-color:transparent;
     box-shadow:none;
     color: #fff;
-    transition:all 1s ease-in-out;
+    transition:all 1s ease;
 }
 
 @media screen and (max-width:992px){

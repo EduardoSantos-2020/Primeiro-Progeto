@@ -54,7 +54,7 @@ text-shadow: #000 1px 1px 1px;
 text-transform: uppercase;
 }
 
-.styleSidebar .container--nav .logo--name{
+.styleSidebar .logo--name{
     color: #fff;
 }
 
@@ -184,7 +184,7 @@ transition: all 1s ease;
         color: #000;
         }  
 
-       .styleSidebar .logo--name,.styleSidebar .container--nav .logo--name{
+        .logo--name, .logo--name{
         color: #000;
         }
        

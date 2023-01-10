@@ -36,26 +36,27 @@ $(function () {
       pos=$(this).scrollTop(0);
 
       if(pos){
-         sideBar.removeClass('styleSidebar');
-         
-      }else{
          sideBar.addClass('styleSidebar');
+      }else{
+         sideBar.removeClass('styleSidebar');
       }
 
       setInterval(showSlider,15000)
-
   });
      
 
    $(window).scroll(() => {
       position=$(this).scrollTop()
 
-      if (position >0) {
+      if (position > 0) {
          
          sideBar.removeClass('styleSidebar');
-         
+         menuItem.css('color','#000')
+         nameLogo.css('color','#000')
       }else{
          sideBar.addClass('styleSidebar');
+         menuItem.css('color','#fff');
+         nameLogo.css('color','#fff');
       }
       
       sectionHeight = $('section').height()
@@ -119,7 +120,7 @@ $(function () {
 
       }else if(Produtos_rect.right < container_rect.right){
 
-         produtosItens.css('left',`-${Produtos_rect.width-container_rect.width}px`);
+         produtosItens.css('left',`-${Produtos_rect.width-container_rect.width+30}px`);
 
       }
    }
