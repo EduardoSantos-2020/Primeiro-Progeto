@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+:root{
+    --primeirafont:'Baloo Da 2', sans-serif;
+    --segundafont:'Josefin Sans', sans-serif;
+    --terceirafont:'Franklin Gothic Medium',sans-serif
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(219, 221, 224, 0.84);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    font-family: var(--segundafont);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.containerMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 500px;
+    height: 500px;
+    background-color:#353333;
+    border: 1px solid rgba(0, 0, 0,0.3);
+    border-radius: 3px;
+    box-shadow: 8px 6px 17px 4px rgba(0,0,0,0.75);
+}
+
+.container-titulo{
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.img-title{
+    object-fit: cover;
+    margin:0 10px;
+}
+
+.titulo-login{
+    font-size: 2rem;
+    color: #FFFF;
+    text-shadow:1px 2px 1px #000;
+    font-weight: bolder;
+    vertical-align: bottom;
+    margin: 10px;
+    text-transform: uppercase;
+}
+.nameGrupo,.passwordGrupo,.botoesGrupo{
+    position: relative;
+    font-size: 1.2rem;
+    color: #FFFF;
+    width: 80%;
+    height: 50px;
+    margin: 15px;
+    padding: 10px;
+}
+
+.input-cad ,.passwordGrupo input{
+padding:5px; 
+border: none;
+background: none;
+outline: none;
+font-size: 1.3rem;
+color: #FFFF;
+width: 100%;
+border-bottom: 2px solid #000;
+transition: border .5s linear;
+}
+
+.nameLabel,.namePassword{
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: var(--segundafont);
+    text-shadow:1px 1px 1px #000;
+    transition: all .5s ease-in-out;
+}
+
+
+.input-cad:focus,.input-cad:focus{
+    border-style: none;
+    border-bottom: 2px solid #FA290C ;
+}
+
+
+.input-cad:focus ~ .nameLabel,
+.input-cad:not(:placeholder-shown) ~ .nameLabel{
+   top: 0;
+   font-size: 1rem;
+}
+.input-cad:focus ~ .namePassword ,
+.input-cad:not(:placeholder-shown) ~ .namePassword{
+  top: 0;
+  font-size: 1rem;
+}
+
+.botoesGrupo{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botoesGrupo .btn-enter {
+    font-size: 1.4rem;
+    margin-top: 1rem ;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color:#fff;
+    border-radius: 6px;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0,0.5);
+    border: 1px solid #000;
+}
+
+.btn-cadastrar{
+    font-size: 1.4rem;
+    margin-top: 1rem ;
+    cursor: pointer;
+    padding:  10px;
+    background-color:#fff;
+    border-radius: 6px;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0,0.5);
+    border: 1px solid #000;
+}
+
+     .btn-enter:active, .btn-cadastrar:active{
+    margin-top: 1.2rem;
+    box-shadow: none;
+    }
+
+
+
