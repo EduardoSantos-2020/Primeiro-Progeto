@@ -1,155 +1,158 @@
-
-
-.sidebar{
+.sidebar {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 90px;
     top: 0;
     left: 0;
-    z-index:100;
-    background-color: #fff;
-    box-shadow:.2rem .2rem .2rem #1C1C1C;
+    z-index: 100;
+    background-color: #e9e8e8f8;
+    box-shadow: .2rem .2rem .2rem #1C1C1C;
     transition: all 1s ease;
 }
 
 .styleSidebar {
-    background-color:transparent;
-    box-shadow:none;
+    background-color: transparent;
+    box-shadow: none;
     color: #fff;
-    transition:all 1s ease;
+    transition: all 1s ease;
 }
 
-@media screen and (max-width:992px){
-    .sidebar{
-    position: fixed;
-    width: 100%;
-    height: 90px;
-    top: 0;
-    left: 0;
-    z-index:100;
-    background-color: #fff;
-    box-shadow:.2rem .2rem .2rem #1C1C1C;
+@media screen and (max-width:992px) {
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        height: 90px;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: #e9e8e8f8;
+        box-shadow: .2rem .2rem .2rem #1C1C1C;
     }
 }
 
-.layout__principal{
-width: 100%;
+.line{
+    border-top: 1px   solid #2c2c2c;
+    border-bottom: 1px   solid #2c2c2c;
+    box-shadow: inset 0px -3px 25px -8px rgba(0,0,0,0.75);
 }
 
-.mapa--container{
+
+.layout__principal {
+    width: 100%;
+
+}
+
+.mapa--container {
     position: relative;
-    width: 50%;
-    height: 38em;
-    padding:3em .2em;
+    width: 45%;
+    height: 47em;
+    padding: 5em .2em;
     align-items: center;
     justify-content: center;
 }
 
-
-.mapa--container:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -2.5em;
-    width:5px;
-    height: 44.0em;
-    z-index: 1;
-    padding: 0 2.5em;
-    border: #fff solid 3px;
-
-    background-color: #fff;
-    border-radius: 50% ;
-}
-
-.localizacao--container{
+.localizacao--container {
     position: relative;
-    width: 50%;
-    height: 44em;
+    width: 55%;
+    height: 30em;
     color: #fff;
-    background-color:rgb(48, 49, 49);
 }
-@media screen and (max-width:992px){
-        .localizacao--container{
+
+
+
+@media screen and (max-width:992px) {
+
+
+.layout__principal {
+    overflow-x: hidden;
+
+
+}
+    .localizacao--container {
         position: relative;
         width: 100%;
-        height: 35em;
-        }
-        .mapa--container{
-        width: 100%;
-        height: 60vh;
-        }
-        .mapa--container:before{
-        display: none;
-        }
-    }  
+        padding:2em 0;
+    }
 
- @media screen and (max-height:354px){
-        .localizacao--container{
+    .mapa--container {
+        width: 100%;
+    height: 65vh;
+    }
+
+    .mapa--container:before {
+        display: none;
+    }
+}
+
+@media screen and (max-height:354px) {
+    .localizacao--container {
         position: relative;
         width: 100%;
         color: #fff;
-        background-color:rgb(48, 49, 49);
-        }
+        background-color: rgb(48, 49, 49);
+    }
 
-        .mapa--container{
+    .mapa--container {
         width: 100%;
-        height:75vh;
-        }
+        height: 75vh;
+    }
 
-        .mapa--container:before{
+    .mapa--container:before {
         display: none;
-        }
-    } 
+    }
+}
 
 
 
-.contatos--container{
+.contatos--container {
+position: relative;
 display:flex;
+justify-content:space-around;
 width: 100%;
-height: 100vh;
+
 }
 
 
-.layout__rodape{
+.layout__rodape {
     width: 100%;
-    padding:10px 0;
-    height: 10em;
-    text-align: center;
-    background:#1C1C1C;
+    height: 13em;
+   display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
     color: #fff;
+    background-color: #000000;
 }
 
 
-@media screen and (max-width:992px){
-    .contatos--container{
+@media screen and (max-width:992px) {
+    .contatos--container {
         position: relative;
-        margin:0;
-        padding: 20px 0;
-        display: inline;
-        background-color:#000000cc;
-        }
-
-
-        .layout__rodape{
+        display: flex;
         width: 100%;
-        height: 200px;
-        padding:30px 0;
-        text-align: center;
-        background-color:#1C1C1C;
-        color: #fff;
-        }
+        padding: 20px 0;
+      
+    }
 
-    }@media screen and (max-width:600px) and (max-height:354px){
-        .contatos--container{
+
+    .layout__rodape {
+        display: flex;
+       flex-direction: column;
+        width: 100%;
+        height: 25em;
+        padding: 10px 0;
+       
+        color: #fff;
+    }
+
+}
+
+@media screen and (max-width:600px) and (max-height:354px) {
+    .contatos--container {
         position: relative;
-        margin:0;
+        margin: 0;
         width: 100%;
         height: 100vh;
         padding: 20px 0;
         display: inline;
-        background-color:#000000cc;
-        }
     }
-
-
-
+}

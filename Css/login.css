@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+
+:root {
+
+    --fontPrimary: 'Baloo Da 2', sans-serif;
+    --fontSecundary: 'Josefin Sans', sans-serif;
+    --fontTerceiry: 'Franklin Gothic Medium', sans-serif;
+
+}
+
+::-webkit-scrollbar
+{
+
+display: none;
+
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +29,9 @@
     --segundafont:'Josefin Sans', sans-serif;
     --terceirafont:'Franklin Gothic Medium',sans-serif
 }
+
+
+
 body{
     width: 100vw;
     height: 100vh;
@@ -37,7 +58,7 @@ body{
     height: 500px;
     background-color:#353333;
     border: 1px solid rgba(0, 0, 0,0.3);
-    border-radius: 3px;
+    border-radius: 7px;
     box-shadow: 8px 6px 17px 4px rgba(0,0,0,0.75);
 }
 
@@ -85,7 +106,7 @@ transition: border .5s linear;
 
 .nameLabel,.namePassword{
     position: absolute;
-    top: 1.2rem;
+    top: 1.5rem;
     left: 1rem;
     font-size: 1.3rem;
     font-weight: bold;
@@ -121,25 +142,36 @@ transition: border .5s linear;
 }
 
 .botoesGrupo .btn-enter {
-    font-size: 1.4rem;
-    margin-top: 1rem ;
+    width: 30%;
+    font-size: 1.2rem;
     cursor: pointer;
-    padding: 10px 10px;
-    background-color:#fff;
-    border-radius: 6px;
-    box-shadow: 3px 4px 3px rgba(0, 0, 0,0.5);
+    padding: .5rem;
+    margin: 10px;
+    font-family: var(--fontPrimary);
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     border: 1px solid #000;
+    
 }
 
 .btn-cadastrar{
-    font-size: 1.4rem;
-    margin-top: 1rem ;
+    width: 30%;
+    font-size: 1.2rem;
     cursor: pointer;
-    padding:  10px;
-    background-color:#fff;
-    border-radius: 6px;
-    box-shadow: 3px 4px 3px rgba(0, 0, 0,0.5);
+    padding: .5rem;
+    margin: 10px;
+    text-align: center;
+    font-family: var(--fontPrimary);
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     border: 1px solid #000;
+    
 }
 
      .btn-enter:active, .btn-cadastrar:active{
