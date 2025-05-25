@@ -9,5 +9,5 @@ Este projeto está hospedado no **GitHub Pages**. Você pode acessar a página c
 
 ### 🖼️ Preview
 
-![Preview da página](imagem/preview.png)
+![Preview da página](imagens/preview.png)
 
