@@ -1,0 +1,66 @@
+ [
+   {
+      "name": "Headset Gamer Havit",
+      "price": "221,00",
+      "image": "imagens/Conteudo/headset-gamer.png"
+   },
+   {
+      "name": "Teclado Gamer Redragon Mecânico Kumara K552 RGB ABNT2",
+      "price": "320,00",
+      "image": "imagens/Conteudo/teclado.png",
+      "descricao":[
+         { "p":"SeuFormatoÉTKL,SuperCompactoTecladoMagnéticoGamerRedragonKumuraProfoiprojetadoparaoferecerumfuncionamentotãobom quantoseudesignSeuFormatoTKLésupercompactoresultandoemmaisespaçoparamovimentosdomousealémdomaisotecladoéABNT2de" },
+
+         { "p": "tamanho completo com teclado numérico interno que vai manter a sua produtividade durante o uso no desktop RGB Redragon Chroma Mk.IIKeycaps feitas com o método double shot injection resultando em legendas duradouras e a iluminação fica por conta do RGB Redragon " },
+         { "p": "Chroma Mk.II individual por tecla trazendo mais brilho para seu setup, um espetáculo não é?! Falando em compatibilidade, ele é compatível com Software para controle da iluminação RGB e criação de Macros. Importante destacar que ele possui a funcionalidade " },
+         { "p": "para o bloqueio da tecla Windows, se você gostou desse teclado branco, garanta já o seu no nosso site! " }
+      ],
+
+      "caracteristics":[
+         { "p":"SeuFormatoÉTKL,SuperCompactoTecladoMagnéticoGamerRedragonKumuraProfoiprojetadoparaoferecerumfuncionamentotãobom quantoseudesignSeuFormatoTKLésupercompactoresultandoemmaisespaçoparamovimentosdomousealémdomaisotecladoéABNT2de" },
+
+         { "p": "tamanho completo com teclado numérico interno que vai manter a sua produtividade durante o uso no desktop RGB Redragon Chroma Mk.IIKeycaps feitas com o método double shot injection resultando em legendas duradouras e a iluminação fica por conta do RGB Redragon " },
+         { "p": "Chroma Mk.II individual por tecla trazendo mais brilho para seu setup, um espetáculo não é?! Falando em compatibilidade, ele é compatível com Software para controle da iluminação RGB e criação de Macros. Importante destacar que ele possui a funcionalidade " },
+         { "p": "para o bloqueio da tecla Windows, se você gostou desse teclado branco, garanta já o seu no nosso site! " }
+
+   ]},
+   {
+      "name": "Mouse Gamer Razer Deathadder V2 Mini Chroma",
+      "price": "123,20",
+      "image": "imagens/Conteudo/mouse.png"
+   },
+   {
+      "name": "Mouse Pad Gamer Speed MPG-101 Vermelho Fortrek",
+      "price": "34,00",
+      "image": "imagens/Conteudo/mousePad.png"
+   },
+   {
+      "name": "Repetidor Sinal Wifi Expansor wifi Wireless aumenta sinal wi-fi",
+      "price": "39,00",
+      "image": "imagens/Conteudo/amplificador.png"
+   },
+   {
+      "name": "Placa Wi-Fi Fenvi Dual Band Wireless AC 9260 Gigabit PC PCIe 2030Mbps BT5.0 802.11ac",
+      "price": "370,00",
+      "image": "imagens/Conteudo/adaptadorWifi.png"
+   },
+   {
+      "name": "Caixa de som 12w, Preta, DHS-2101, 8CA76AA, HP - CX 1 UN",
+      "price": "170,00",
+      "image": "imagens/Conteudo/caixinha.png"
+   },
+   {
+      "name": "Monitor Gamer Bluecase 27 Pol, Full HD, 144Hz.",
+      "price": "800,00",
+      "image": "imagens/Conteudo/monitor.png"
+   },
+   {
+      "name": "PLACA DE VIDEO AMD RX580 8GB PCYES RADEON 8GB DDR5 256 BITS",
+      "price": "983,90",
+      "image": "imagens/Conteudo/placa_de_video_amd_rx580_8gb.png"
+   }
+]
+
+
+
+

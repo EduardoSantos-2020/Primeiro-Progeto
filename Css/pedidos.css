@@ -1,0 +1,909 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+:root {
+    --fontPrimary: 'Baloo Da 2', sans-serif;
+    --fontSecundary: 'Josefin Sans', sans-serif;
+    --fontTerceiry: 'Franklin Gothic Medium', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontPrimary);
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #0B0A0A;
+}
+
+.sidebar {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #e9e8e8f8;
+    box-shadow: .2rem .2rem .2rem #1C1C1C;
+    transition: all 1s ease;
+}
+
+@media screen and (max-width:992px) {
+    /*-------------------------*\
+        Menu Hanburguer
+    \*-------------------------*/
+
+    .button-prop {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 45px;
+        height: 43px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+
+
+
+    .menu-btn {
+        position: absolute;
+        display: flex;
+        width: 55px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .menu-btn .line {
+        position: absolute;
+        width: 40px;
+        left: 0;
+        height: 0.3rem;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: #000;
+        box-shadow: .3rem .2rem .2rem rgba(0, 0, 0, 0.5);
+        transition: all 0.5s linear;
+    }
+
+    .menu-btn .btn-active .line {
+        transition: all 0.9s linear;
+    }
+
+    .list-1 {
+        top: 1px;
+    }
+
+    .list-2 {
+        left: 0;
+        opacity: 1;
+    }
+
+    .list-3 {
+        bottom: 1px;
+    }
+
+    .btn-active .list-1 {
+        top: 17px;
+        transform: translateY(50%) rotate(-45deg);
+    }
+
+    .btn-active .list-2 {
+        left: -100%;
+        opacity: 0;
+    }
+
+    .btn-active .list-3 {
+        bottom: 19px;
+        transform: translateY(50%) rotate(45deg);
+    }
+
+
+    /*-------------------------*/
+
+    .containerbuttons {
+        position: absolute;
+        top: 90px;
+        left:0;
+        display: flex;
+
+        line-height: 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        width: 100%;
+        height: 100dvh;
+        margin: 0;
+        padding: 5em 0;
+        color: #fff;
+        z-index: 100;
+        overflow-y: scroll;
+
+        background-color: rgb(46, 46, 46);
+        transition: all .7s ease-in-out;
+    }
+
+    .container-User {
+        width: 20em;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 11px 16px;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .container-section{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-User p {
+        font-size: 3.3rem;
+        font-weight: bold;
+    }
+
+    .container-User .textEmail {
+        top: 2.4rem;
+        left: 8.8rem;
+        position: absolute;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+
+
+    .userGrup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .userImg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .userImg img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+
+
+    .btnExit {
+        position: absolute;
+        top: 5rem;
+        width: 100%;
+        padding: 0 20px;
+        border: none;
+        font-weight: 900;
+        font-size: 2rem;
+        color: #fdfbfb;
+        background-color: #ffffff1a;
+        border-radius: 0 0 8px 8px;
+        text-transform: uppercase;
+        display: none;
+        justify-content: center;
+    }
+
+    #btn-login {
+        margin: 2em 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+    .mobile-btn {
+        left: 40em;
+        transition: all 0.5s ease-in;
+    }
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100vh;
+}
+
+.campo-container {
+    width: 90dvw;
+    display: grid;
+    background-color: #adaaaa26;
+    color: #fff;
+    margin-top: 5rem;
+    padding: 1.8rem 1rem;
+}
+
+.campoSob {
+    margin-left: 1.5rem;
+}
+
+.campo-container .title--produto {
+    width: 100%;
+    font-size: 1.7em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.infoProd summary::-webkit-details-marker summary::-webkit-details-marker {
+    display: none;
+
+}
+
+.preco-produto {
+    width: 100%;
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: var(--fontTerceiry);
+}
+
+.formasPagamentos {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: .4rem;
+}
+
+.formasPagamentos i {
+    font-size: 1.7em;
+    margin: 10px 5px;
+}
+
+.campo--Imgs {
+    width: 70%;
+    /*height: 70%; */
+    object-fit: cover;
+    background-color: #b1b1b1;
+}
+
+.img--produto {
+    width: 100%;
+}
+
+.navegação--menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+    margin: 20px 0;
+}
+
+.container--nav {
+    width: 30%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.container--nav .logo--img {
+    display: flex;
+    object-fit: cover;
+    margin: 0 5px;
+}
+
+.container--nav .logo--name {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    font-family: var(--fontPrimary);
+    font-weight: bolder;
+    /* margin: 10px 0 0 0; */
+    color: #000;
+    text-shadow: #000 1px 1px 1px;
+    text-transform: uppercase;
+}
+
+.campo-container {
+    display: grid;
+    margin: 0 auto;
+    padding: 1.7rem;
+    max-width:1200px;
+    margin-top: 5.5rem;
+    border-radius: 1rem;
+    grid-template-areas:
+    "titulo titulo titulo"
+    "imgProduto informacao informacao"
+    "pagamento pagamento pagamento "
+    "formaParce formaParce formaParce"
+    "buttons buttons buttons";
+}
+.title--produto{
+    width: auto;
+grid-area:" titulo";
+grid-column: titulo;
+}
+
+.campoInfoProdutos{
+    max-width: 260px;
+    grid-area: "imgProduto";
+    grid-column: imgProduto;
+}
+
+.campoSob{
+    grid-area: "informacao";
+    grid-column: informacao;
+}
+
+.campoPagamentos{
+grid-area: "pagamento";
+grid-column:pagamento;
+display: flex;
+align-items: center;
+align-items: baseline;
+}
+
+.parcePag{
+grid-area: "formaParce";
+grid-column: formaParce;
+}
+
+.campo--button{
+grid-area: "buttons";
+grid-column: buttons;
+
+}
+
+.campoSob h2{
+    margin: .5rem 0;
+}
+
+.caracter--produto,.descricao--produto{
+    width: 90%;
+    font-size: 1rem;
+    word-break: break-all;
+    padding: .2rem;
+}
+
+.campoInfoProdutos,
+.campoPagamentos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text{
+    display: flex;
+    
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1rem .3rem;
+}
+
+
+.campo--caracteristicas {
+    width: 100%;
+    height: 8em;
+    overflow-y: scroll;
+}
+
+
+.campo--descricao {
+    width: 100%;
+    height: 8em;
+    overflow-y: scroll;
+}
+
+
+.campo--caracteristicas::-webkit-scrollbar,
+.campo--descricao::-webkit-scrollbar {
+
+}
+
+.parcePag{
+    width: 100%;
+    margin: .7rem 0;
+}
+
+.btnPrimary{
+    display: flex;
+    gap: 2rem;
+}
+
+.containerbuttons {
+    display: flex;
+    align-items: center;
+}
+
+.containerbuttons .card {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: rgb(252, 14, 2);
+}
+
+.container-section {
+    display: flex;
+    align-items: center;
+}
+
+.campo--button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.campo--button button {
+
+    font-size: 1rem;
+    cursor: pointer;
+    padding: .7rem .5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: var(--fontPrimary);
+    font-weight: 800;
+    background-color: #fff;
+    border-radius: 3px;
+    border: none;
+
+}
+
+ .btnPrimary button:nth-child(3) {
+    background: none;
+    color: #fff;
+
+}
+
+.campo--button i {
+    font-size: 2.5em;
+    margin: 0 1rem;
+}
+
+.campo--button i {
+
+   color: red;
+}
+#btn-login {
+    text-decoration: none;
+}
+
+.userGrup {
+    display: flex;
+    align-items: center;
+    height: .78rem;
+}
+
+.btnExit {
+    position: absolute;
+    top: 2.66rem;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #fdfbfb;
+    background-color: #13121228;
+    border-radius: 0 0 8px 8px;
+    text-transform: uppercase;
+    display: none;
+    justify-content: center;
+}
+
+.btnExit:hover {
+    color: #3f3c3c;
+
+}
+
+.sidebar .container-User:hover .btnExit {
+    display: flex;
+}
+
+.login {
+    width: 100px;
+    margin: 10px;
+    padding: 5px;
+    display: none;
+    font-family: var(--fontTerceiry);
+    font-weight: bolder;
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: rgb(252, 14, 2);
+    transition: all .5s ease-in-out;
+}
+
+.login:hover {
+    background-color: rgb(199, 11, 1);
+    color: rgb(216, 213, 213);
+    transition: all .5s ease-in-out;
+}
+
+
+
+.containerbuttons p {
+    font-family: var(--fontPrimary);
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+
+.campoBack img {
+    width: 1.3rem;
+
+}
+
+.campoFavorito i {
+    margin: 0 .5rem;
+    font-size: 1.2rem;
+}
+
+
+
+.nav--menu {
+    position: relative;
+    display: inline-flex;
+    margin: 0 10px;
+    align-items: center;
+}
+
+
+.container-User {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 8px;
+    margin: 0 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.container-User p {
+    font-size: 1.2rem;
+   
+    font-weight: bold;
+    margin: 0 10px;
+
+}
+   
+ 
+.container-User .textEmail {
+    width: 17.5em;
+    top: 1.9rem;
+    left: 3.6rem;
+    position: absolute;
+    font-size: .56rem;
+    letter-spacing: .1rem;
+    margin: 0;
+}
+
+
+.sidebar .container-User:hover p {
+    color: #444343;
+
+}
+
+.container-User:hover {
+    background-color: #13121228;
+}
+
+
+.userImg {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.userGrup p{
+    letter-spacing: .2rem;
+}
+
+.userImg img {
+    width: 100%;
+}
+
+#customBtn {
+    display: inline-block;
+    background: white;
+    color: #444;
+    width: 190px;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+}
+
+#customBtn:hover {
+    cursor: pointer;
+}
+
+span.label {
+    font-family: serif;
+    font-weight: normal;
+}
+
+span.icon {
+    background: url('/imagens/logos/g-normal.png') transparent 5px no-repeat;
+    display: inline-block;
+    vertical-align: center;
+    width: 32px;
+    height: 32px;
+}
+
+span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@media screen and (max-width:992px) {
+    .navegação--menu {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .campo-container {
+    margin: 6.9rem 0 2.2rem 0;
+    border-radius: .6rem;
+   
+    grid-template-areas:
+    "titulo"
+    "imgProduto"
+    "pagamento"
+    "buttons"
+    "informacao";
+    }
+
+    .title--produto{
+        grid-area: "titulo";
+         grid-row: titulo; 
+        }
+
+        .campoInfoProdutos{
+            width: 100%;
+            max-width: 25em;
+            align-items: center;
+            justify-content: center;
+            grid-row: imgProduto; 
+        }
+
+        .campoSob{
+            margin: 2rem 0;
+             grid-row: informacao; 
+        }
+
+        .campoPagamentos{ 
+        grid-row: pagamento;
+        }
+
+        .containerbuttons .card{
+            margin: 0 .3rem 0 0;
+        }
+
+        .text{
+            display: flex;
+            align-items:center;
+            width: 100%;
+            /* padding:2rem 0 .4rem 0; */
+            padding: 0;
+            margin-top: 3rem;
+        }
+
+        .btnPrimary{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: .2rem;
+        }
+        
+        .campo--button{
+            position: relative;
+            grid-row:buttons;  
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            display: flex;
+            align-items: start;
+            justify-content:center;
+        }
+        
+        .campo--button button{
+            font-size: .9rem;
+            margin:  0 .6rem;
+            
+        }
+
+       .campo--button .campoFavorito {
+            margin: 1rem 0;
+        }
+        
+       
+        
+
+   .campo-container .title--produto{
+    width: 100%;
+       font-size: 1.3rem;
+       padding: .5rem .7rem;
+    }
+
+
+
+    .campo--Imgs {
+        width: 100%;
+        background-color: #b1b1b1;
+        padding: 10px;
+        object-fit: cover;
+    }
+
+
+    .campoSob{
+        width: 100%;
+        margin-left: .5em;
+    }
+    .campoSob h2{
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .campo--descricao,.campo--caracteristicas{
+        margin: 2rem 0;
+    }
+
+    .preco-produto{
+        width: 100%;
+    }
+
+
+    .campoFavorito span {
+        font-size: .7rem;
+    }
+
+    .campoFavorito i {
+        margin: 0 .3rem;
+        font-size: 1.2rem;
+    }
+
+    
+    .campo--button{
+        gap: 1rem;
+    }
+
+    .campo--button button img {
+
+        width: 1.2rem;
+
+    }
+
+    .campoBack{
+        position: absolute;
+
+        top:0;
+        right: -1rem;
+    }
+
+    .mobile-btn {
+        left: -100em;
+        transition: all 0.5s ease-in;
+    }
+
+
+    .containerbuttons{
+        justify-content: start;
+
+    }
+
+
+#btn-login
+ {
+    margin:0;
+}
+
+    .login {
+        width: 100px;
+        
+        margin: 0 30px;
+        padding: 10px;
+        color: #fff;
+        font-family: var(--fontTerceiry);
+        font-weight: bolder;
+        font-size: 1rem;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        background-color: rgb(252, 14, 2);
+        transition: all 1s ease-in-out;
+    }
+    
+
+    .btnExit{
+        top: 5rem;
+    }
+
+
+    .container-User .textEmail{
+        width: 22em;
+        left: 9em;
+
+    }
+
+}
+
+@media screen and (max-width:425px) {
+    
+ 
+    .campoBack{
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+    top: 7.4rem;
+    right: 2rem;
+    }
+}
+
+@media screen and (min-width:625px ) and (max-width:996px){
+    .campoBack{
+      
+        align-items: center;
+        justify-content: center;
+        top: 1.1rem;
+        right: .1rem;
+        }
+}
+
+@media screen and (min-width:496px ) and (max-width:625px) {
+    
+    .campo--button .campoFavorito {
+        gap: 0;
+        margin: 1rem 0;
+        padding: .7rem 0;
+    }
+
+    .campoBack{
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+    top: 4.4rem;
+    right: 2rem;
+    }
+}
+
+@media screen and (max-width:310px) {
+    .campo-container{
+        width: 249.406px;
+    }
+}
+
+@media screen and (max-width:426px) {
+    
+}

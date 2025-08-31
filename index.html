@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
+
 	<link charset="UTF-8" lang="pt-br">
 	<meta name="viewport" content="width=device-width" />
-	<title>INFORTEC</title>
-	<link rel="apple-touch-icon" sizes="180x180" href="imagens/logos/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="imagens/logos/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="imagens/logos/favicon-16x16.png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Inicio Infortec</title>
+	<meta name="theme-color" content="#fe0000">
+	<link rel="icon" href="/imagens/logos/android-chrome-red-512x512.png" sizes="192x192" type="image/x-icon" />
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="imagens/logos/apple-touch-icon.png"> -->
+	<!-- <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="imagens/logos/android-chrome-192x192.png"> -->
+	<!-- <link rel="icon" type="image/png" sizes="32x32" href="imagens/logos/favicon-32x32.png"> -->
+	<!-- <link rel="icon" type="image/png" sizes="16x16" href="imagens/logos/favicon-16x16.png"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 	<link rel="stylesheet" type="text/css"
 		href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
 	<link rel="stylesheet" type="text/css"
@@ -16,13 +19,14 @@
 	<link rel="stylesheet" href="Css/base.css" />
 	<link rel="stylesheet" href="Css/layout.css" />
 	<link rel="stylesheet" href="Css/conteudo.css" />
+	
 </head>
 
 <body>
 	<aside class="styleSidebar sidebar">
 		<nav class="navegação--menu">
 			<div class="container--nav">
-				<img src="imagens/logos/logo.png" class="logo--img" alt="logo-marca da loja">
+				<img src="imagens/logos/logo.png"  class="logo--img" alt="logo-marca da loja">
 				<p class="logo--name">infortec</p>
 			</div>
 			<ul class="nav--menu mobile-btn">
@@ -79,7 +83,7 @@
 						</div>
 					</div>
 				</a>
-				<a target="_blank" href="login.html">
+				<a id="btn-login" href="login.html#login">
 					<button class="login">Login</button>
 				</a>
 			</ul>
@@ -106,125 +110,123 @@
 				<p>Somos uma empresa pretativa e focamos em oferecer otimos resultados ao nossos clientes</p>
 			</div>
 		</section>
-		<div class="line">
-			<section class="produtos--container" id="sec-2">
-				<h1>Conheça Alguns dos Nossos Produtos</h1>
-				<div class="produtos--items"></div>
-			</section>
-			<section class="services" id="sec-3">
-				<div class="container-service">
-					<div class="base-services">
-						<h2>Serviços </h2>
-						<img class="img-service-mobile" src="imagens/itens/asus (cópia).png" alt="Img-serviços">
-						<ul class="servicosPrestados">
-							<li> Manutenção de computadores </li>
-							<li> Manutenção de (Notebooks e Tablets)</li>
-							<li> Reparo Avançado de Placas Mãe Desktop</li>
-							<li> Atualização de BIOS (Placa Mãe e Notebooks)</li>
-							<li> Preventiva em equipamento Teste de Desempenho</li>
-							<li> Montagem de computadores Gamer </li>
-						</ul>
+		<section class="produtos--container" id="sec-2">
+			<h1>Conheça Alguns dos Nossos Produtos</h1>
+			<div class="produtos--items"></div>
+		</section>
+		<section class="services" id="sec-3">
+			<div class="container-service">
+				<div class="base-services">
+					<h2>Serviços </h2>
+					<img class="img-service-mobile" src="imagens/itens/asus (cópia).png" alt="Img-serviços">
+					<ul class="servicosPrestados">
+						<li>Manutenção de computadores</li>
+						<li>Manutenção de (Notebooks e Tablets)</li>
+						<li>Reparo Avançado de Placas Mãe Desktop</li>
+						<li>Atualização de BIOS (Placa Mãe e Notebooks)</li>
+						<li>Preventiva em equipamento Teste de Desempenho</li>
+						<li>Montagem de computadores Gamers </li>
+					</ul>
 
-					</div>
-					<div class="service-img">
-						<div class="service-container-img">
-							<img class="img-service" src="imagens/itens/asus.png" alt="Img-serviços">
-						</div>
+				</div>
+				<div class="service-img">
+					<div class="service-container-img">
+						<img class="img-service" src="imagens/itens/asus.png" alt="Img-serviços">
 					</div>
 				</div>
-			</section>
-			<section class="mapa--conteudo" id="sec-4">
+			</div>
+		</section>
+		<section class="mapa--conteudo" id="sec-4">
+			<div class="mapa--container">
 				<h1 class="titulo--mapa1">Estamos em São Paulo capital</h1>
-				<div class="mapa--container">
-					<iframe class="mapa--item"
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.982718037278!2d-46.65548478559927!3d-23.46108786378075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef76af0b82459%3A0xe5fd5bdb77503d77!2sR.%20Condessa%20Am%C3%A1lia%20Matarazzo%2C%20255%20-%20Jardim%20Peri%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002652-000!5e0!3m2!1spt-BR!2sbr!4v1671302934470!5m2!1spt-BR!2sbr"
-						allowfullscreen="" loading="lazy" refererpolicy="no-referrer-when-downgrade"></iframe>
 
-				</div>
-				<div class="localizacao--container">
-					<h1 class="titulo--mapa2">Nossa localização e rotas </h1>
-					<div class="localizacao-itens">
-						<p>Rua Condessa Amália Matarazzo</p>
-						<p>Jardim Peri-Teles</p>
-						<p>Nº254</p>
-						<p>São Paulo-SP</p>
-						<p>CEP: 02652-000</p>
-						<a target="_blank"
-							 href="https://www.google.com/maps/dir//R.+Condessa+Am%C3%A1lia+Matarazzo,+255+-+Jardim+Peri,+S%C3%A3o+Paulo+-+SP,+02652-000/@-23.461093,-46.653296,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cef76af0b82459:0xe5fd5bdb77503d77!2m2!1d-46.6532961!2d-23.4610928?hl=pt-BR" 
-							>
-							<button class="botao-loq"><img src="./imagens/logos/icons8-rota-96.png" alt="rota"><span>ver rotas</span></button>
-						</a>
-					</div>
-				</div>
-			</section>
-			<section class="contatos--container" id="sec-5">
-				<h1>Envie sua mensagem para nossa equipe</h1>
-				<div class="container-form">
-					<form action="" class="form-contatos" autocomplete="off">
-						<div class="group-input">
-								<div class="grupform">
-									<label for="nome">Nome :</label>
-									<input type="text" name="nome" id="nome">
-								</div>
-								<div class="grupform">
-									<label for="sobr">Sobrenome :</label>
-									<input type="text" name="sobr" id="sobr">
-								</div>
-							</div>
-							<div class="group-input">
-								<div class="grupform">
-									<label for="email">Email :</label>
-									<input type="email" name="email" id="email">
-								</div>
-								<div class="grupform">
-									<label for="numero">Numero :</label>
-									<input type="text" name="numero" id="numero">
-								</div>
-							</div>
-							<div class="gruop-mensagem">
-								<label class="label-m" for="mensagem">mensagem</label>
-								<textarea name="mensagem" id="mensagem" maxlength="12" cols="7" rows="5"></textarea>
-							</div>
-							<button  class="btn-contatos" type="submit">Enviar</button>
-						</form>
-					</div>
-				<div class="contatosImg">
-					<img class="img-cont" src="imagens/itens/atendente.png" alt="contatos">
-				</div>
-			</section>
-		</div>
-		<footer class="layout__rodape">
-			<div class="inform-site">
-				<p>Entre contato com nosso atendimento: (11)95564-8976</p>	
-				<p>Siga Nos no Instagram: @infortec2020</p>
-				<p>Siga Nos no Facebook: Infortec_2020</p>
-				<p>Vejam videos Novos No Youtube: Youtube-Infortec2020</p> 
+					<iframe class="mapa--item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.9827181999185!2d-46.655871025542226!3d-23.461087857914286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef7b733b5e707%3A0x7f9b068f87aadee4!2sInfortec!5e0!3m2!1spt-BR!2sbr!4v1709220914926!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+					
 			</div>
-			<div class="logMark">
-				<img src="imagens/logos/cablogo.png" class='logo-img'>
-				<p>&copy;2020 INFORTEC</p>
-				<p>Todos os direitos Reservados</p>
+			<div class="localizacao--container">
+				<h1 class="titulo--mapa2">Nós estamos localizados</h1>
+				<div class="localizacao-itens">
+					<p>Rua Condessa Amália Matarazzo</p>
+					<p>Jardim Peri-Teles</p>
+					<p>Nº254</p>
+					<p>São Paulo-SP</p>
+					<p>CEP: 02652-000</p>
+					<a target="_blank"
+							href="https://www.google.com/maps/dir//R.+Condessa+Am%C3%A1lia+Matarazzo,+255+-+Jardim+Peri,+S%C3%A3o+Paulo+-+SP,+02652-000/@-23.461093,-46.653296,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cef76af0b82459:0xe5fd5bdb77503d77!2m2!1d-46.6532961!2d-23.4610928?hl=pt-BR" 
+						>
+						<button class="botao-loq"><img src="./imagens/logos/icons8-rota-96.png" alt="rota"><span>ver rotas</span></button>
+					</a>
+				</div>
 			</div>
-			<div class="contatos_container">
-				<div class="contatos-container">
-					<div class="itemDecontato">
-						<i class="fa-brands fa-whatsapp"></i>
+		</section>
+		<section class="contatos--container" id="sec-5">
+			<h1>Envie sua mensagem para nossa equipe</h1>
+			<div class="container-form">
+				<form action="" class="form-contatos" autocomplete="off">
+					<div class="group-input">
+							<div class="grupform">
+								<label for="nome">Nome</label>
+								<input type="text" name="nome" id="nome" placeholder="Digite seu Nome">
+							</div>
+							<div class="grupform">
+								<label for="sobr">Sobrenome</label>
+								<input type="text" name="sobr" id="sobr" placeholder="Digite seu Sobrenome">
+							</div>
+							<div class="grupform">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" placeholder="exemploEmail@yahoo.com">
+							</div>
+							<div class="grupform">
+								<label for="numero">Numero</label>
+								<input type="tel" name="numero" id="numero" placeholder="(xx) xxxxx-xxxx">
+							</div>
+						</div>
+						<div class="gruop-mensagem">
+							<label class="label-m" for="mensagem">mensagem</label>
+							<textarea name="mensagem" id="mensagem" maxlength="12" cols="7" rows="5"></textarea>
+						</div>
+						<button  class="btn-contatos" type="submit">Enviar</button>
+					</form>
+				</div>
+				<div class="imgContainer">
+					<div class="contatosImg">
+						<img class="img-cont" src="imagens/itens/atendente.png" alt="contatos">
 					</div>
-					<div class="itemDecontato">
-						<i class="fa-brands fa-instagram"></i>
-					</div>
-					<div class="itemDecontato">
-						<i class="fa-brands fa-facebook" ></i>
-					</div>
-					<div class="itemDecontato">
-						<i class="fa-brands fa-youtube"></i>
-					</div>
-				</div>			
-			</div>
-		</footer>
+				</div>
+		</section>
 	</main>
+<footer class="layout__rodape">
+	<div class="inform-site">
+		<p>Entre contato com nosso atendimento: (11)95564-8976</p>	
+		<p>Siga Nos no Instagram: @infortec2020</p>
+		<p>Siga Nos no Facebook: Infortec_2020</p>
+		<p>Vejam videos Novos No Youtube: Youtube-Infortec2020</p> 
+	</div>
+	<div class="logMark">
+		<img src="imagens/logos/cablogo.png" class='logo-img'>
+		<p>&copy;2020 INFORTEC</p>
+		<p>Todos os direitos Reservados</p>
+	</div>
+	<div class="contatos_container">
+		<div class="contatos-container">
+			<div class="itemDecontato">
+				<i class="fa-brands fa-whatsapp"></i>
+			</div>
+			<div class="itemDecontato">
+				<i class="fa-brands fa-instagram"></i>
+			</div>
+			<div class="itemDecontato">
+				<i class="fa-brands fa-facebook" ></i>
+			</div>
+			<div class="itemDecontato">
+				<i class="fa-brands fa-youtube"></i>
+			</div>
+		</div>			
+	</div>
+</footer>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-	<script src="js/Script.js"></script>
+	<script src="js/ScriptInicio.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 .sidebar {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 90px;
     top: 0;
     left: 0;
@@ -30,32 +30,38 @@
     }
 }
 
-.line{
-    border-top: 1px   solid #2c2c2c;
-    border-bottom: 1px   solid #2c2c2c;
-    box-shadow: inset 0px -3px 25px -8px rgba(0,0,0,0.75);
+.line {
+    border-top: 1px solid #2c2c2c;
+    border-bottom: 1px solid #2c2c2c;
+    box-shadow: inset 0px -3px 25px -8px rgba(0, 0, 0, 0.75);
 }
 
 
 .layout__principal {
     width: 100%;
-
+    height: 100%;
 }
 
 .mapa--container {
     position: relative;
-    width: 45%;
+    width: 50%;
     height: 47em;
     padding: 5em .2em;
     align-items: center;
+    background-color: rgb(12, 12, 12);
+    
     justify-content: center;
 }
 
 .localizacao--container {
     position: relative;
-    width: 55%;
-    height: 30em;
+    width: 50%;
+    margin: 12px 0;
+    /* height: 30em; */
     color: #fff;
+
+    
+
 }
 
 
@@ -63,20 +69,20 @@
 @media screen and (max-width:992px) {
 
 
-.layout__principal {
-    overflow-x: hidden;
+    .layout__principal {
+        overflow-x: hidden;
+    }
 
-
-}
     .localizacao--container {
         position: relative;
         width: 100%;
-        padding:2em 0;
+        color: #fff;
+        padding: 2em 0;
     }
 
     .mapa--container {
         width: 100%;
-    height: 65vh;
+        height: 65vh;
     }
 
     .mapa--container:before {
@@ -105,18 +111,18 @@
 
 
 .contatos--container {
-position: relative;
-display:flex;
-justify-content:space-around;
-width: 100%;
-
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 90px 0;
 }
 
 
 .layout__rodape {
     width: 100%;
-    height: 13em;
-   display: inline-flex;
+    height: 17em;
+    display: inline-flex;
     align-items: center;
     justify-content: space-around;
     color: #fff;
@@ -130,17 +136,17 @@ width: 100%;
         display: flex;
         width: 100%;
         padding: 20px 0;
-      
+
     }
 
 
     .layout__rodape {
         display: flex;
-       flex-direction: column;
+        flex-direction: column;
         width: 100%;
         height: 25em;
         padding: 10px 0;
-       
+
         color: #fff;
     }
 

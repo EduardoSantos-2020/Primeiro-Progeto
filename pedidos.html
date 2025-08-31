@@ -1,28 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/imagens/logos/android-chrome-red-512x512.png" sizes="192x192" type="image/x-icon" />
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="imagens/logos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/logos/favicon-16x16.png"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Css/base.css">
+    <link rel="stylesheet" href="Css/layout.css">
     <link rel="stylesheet" href="Css/pedidos.css">
-    <title>INFORTEC</title>
+
+    <title>Pedido Infortec </title>
 </head>
+
 <body>
+    <aside class="sidebar">
+        <nav class="navegação--menu">
+            <div class="container--nav">
+                <img src="imagens/logos/logo.png" class="logo--img" alt="logo-marca da loja">
+                <p class="logo--name">infortec</p>
+            </div>
+            <div class="containerbuttons mobile-btn">
+                <div class="container-section">
+                    <i class="card fa-solid fa-heart"></i>
+                    <p>Favoritos</p>
+                </div>
+                <div class="container-section">
+                    <i class="card fa-sharp fa-solid fa-headset"></i>
+                    <p>Suporte</p>
+                </div>
+                <div class="container-section">
+                    <i class="card fa-solid fa-cart-shopping"></i>
+                    <p>Carrinho</p>
+                </div>
+                <a id="btn-login" href="login.html">
+                    <button class="login">Login</button>
+                </a>
+            </div>
+        </nav>
+        <div class="button-prop">
+            <div class="menu-btn">
+                <span class="list-1 line "></span>
+                <span class="list-2 line "></span>
+                <span class="list-3 line "></span>
+            </div>
+    </aside>
     <div class="container">
         <div class="campo-container">
             <h2 class="title--produto"></h2>
-            <div class="campo--Imgs">
-                <img class="img--produto">
+            <div class="campoInfoProdutos">
+                <div class="campo--Imgs">
+                    <img class="img--produto">
+                </div> 
+                <div class="text">
+                    <span class="preco-produto"></span>
+                    <div class="formasPagamentos">
+                        <i class="fa-brands fa-pix"></i>
+                        <span>Pix</span>
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>Cartão</span>
+                        <i class="fa-sharp fa-solid fa-barcode"></i>
+                        <span>Cod.Barra</span>
+                    </div>
+                </div>
             </div>
-            <div class="campo--descricao">
-                <p class="descricao--produto"></p>
+            <div class="campoSob">
+                <h2>Caracteristicas</h2>
+                <div class="campo--caracteristicas">                    
+                </div>
+                <h2>Descrição do Produto</h2>
+                <div class="campo--descricao">
+                </div>
+            </div>
+            <div class="campoPagamentos">
+                <span class="parcePag">Em até 10x de R$ 39,99 sem juros no cartão ou em 1x no cartão com até 15% OFF</span>
             </div>
             <div class="campo--button">
-                <button id="confirmar">comprar</button>
-                <button id="adicionar-carrinho">adicionar ao carrinho</button>
+                <div class="btnPrimary">
+                    <button id="confirmar">Comprar</button>
+
+                    <button id="adicionar-carrinho">Adicionar ao carrinho</button>
+                    <button class="campoFavorito">
+                        <i class="card fa-solid fa-heart"></i>
+                        Adicionar aos Favoritos
+                    </button>
+                </div>
+                <button id="btn-Back" class="campoBack" type="button">
+                    <img src="/imagens/logos/return-23.svg" alt="">Voltar ao Inicio</button>
             </div>
         </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/app.js"></script>
+<script src="js/ScriptPedidos.js"></script>
+
 </html>

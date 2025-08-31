@@ -9,14 +9,13 @@
 
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
 
-display: none;
+    display: none;
 
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,160 +23,414 @@ display: none;
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
 
-:root{
-    --primeirafont:'Baloo Da 2', sans-serif;
-    --segundafont:'Josefin Sans', sans-serif;
-    --terceirafont:'Franklin Gothic Medium',sans-serif
+:root {
+    --primeirafont: 'Baloo Da 2', sans-serif;
+    --segundafont: 'Josefin Sans', sans-serif;
+    --terceirafont: 'Franklin Gothic Medium', sans-serif
 }
 
-
-
-body{
+body {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(219, 221, 224, 0.84);
+    background-color: #141414;
 }
 
-.container{
+.container {
     width: 100%;
     height: 100%;
-    font-family: var(--segundafont);
+    font-family: var(--primeirafont);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.containerMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 52em;
+  height: fit-content;
 
-.containerMenu{
+    background-color: rgb(173, 170, 170,0.20);
+    
+   
+    border-radius: 7px;
+    box-shadow: 8px 6px 17px 4px rgba(0, 0, 0, 0.45);
+}
+
+.container-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-gruop {
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 30px;
-    width: 500px;
-    height: 500px;
-    background-color:#353333;
-    border: 1px solid rgba(0, 0, 0,0.3);
-    border-radius: 7px;
-    box-shadow: 8px 6px 17px 4px rgba(0,0,0,0.75);
+    padding: .5em 2em .5em 2em;
 }
 
-.container-titulo{
-    display: inline-flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-.img-title{
+.img-title {
     object-fit: cover;
-    margin:0 10px;
 }
 
-.titulo-login{
-    font-size: 2rem;
+.titulo-login {
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
     color: #FFFF;
-    text-shadow:1px 2px 1px #000;
+    padding: 8px 0 0 8px;
+    text-shadow: 1px 2px 1px #000;
     font-weight: bolder;
-    vertical-align: bottom;
-    margin: 10px;
     text-transform: uppercase;
 }
-.nameGrupo,.passwordGrupo,.botoesGrupo{
+
+
+.nameGrupo,.emailGrupo,
+.passwordGrupo{
+    display: flex;
+    align-items: start;
+   
+    color: #fff;
+    margin: .5rem 0;
+     padding: .5rem .8rem;
+    border:solid .1rem #141414;
+    border-radius: .7rem;
+}
+
+
+.nameGrupo,
+.passwordGrupo,
+.botoesGrupo {
     position: relative;
     font-size: 1.2rem;
     color: #FFFF;
-    width: 80%;
-    height: 50px;
-    margin: 15px;
-    padding: 10px;
 }
 
-.input-cad ,.passwordGrupo input{
-padding:5px; 
-border: none;
-background: none;
-outline: none;
-font-size: 1.3rem;
-color: #FFFF;
-width: 100%;
-border-bottom: 2px solid #000;
-transition: border .5s linear;
+.input-cad,
+.passwordGrupo input {
+    padding-left: .8rem;
+    border: none;
+    background: none;
+    outline: none;
+    width: 50%;
+    font-size: 1.2rem;
+    color: #FFFF;  
+    transition: border .5s linear;
 }
 
-.nameLabel,.namePassword{
-    position: absolute;
-    top: 1.5rem;
-    left: 1rem;
-    font-size: 1.3rem;
+.container-gruop a {
+    margin: .7rem 0 0 20px;
+    color: #fff;
+
+}
+
+.nameLabel,.emailLabel,
+.namePassword {
+
+    font-size: 1.5rem;
     font-weight: bold;
-    font-family: var(--segundafont);
-    text-shadow:1px 1px 1px #000;
+    font-family: var(--fontTerceiry);
+    text-shadow: 1px 1px 1px #000;
     transition: all .5s ease-in-out;
 }
 
 
-.input-cad:focus,.input-cad:focus{
-    border-style: none;
-    border-bottom: 2px solid #FA290C ;
+.input-cad:focus~.nameLabel,
+.input-cad:not(:placeholder-shown)~.nameLabel {
+    top: -1.2rem;
+    font-size: 1rem;
 }
 
-
-.input-cad:focus ~ .nameLabel,
-.input-cad:not(:placeholder-shown) ~ .nameLabel{
-   top: 0;
-   font-size: 1rem;
-}
-.input-cad:focus ~ .namePassword ,
-.input-cad:not(:placeholder-shown) ~ .namePassword{
-  top: 0;
-  font-size: 1rem;
+.input-cad:focus~.namePassword,
+.input-cad:not(:placeholder-shown)~.namePassword {
+    top: -1.2rem;
+    font-size: 1rem;
 }
 
-.botoesGrupo{
+.botoesGrupo {
     width: 100%;
-    padding: 10px;
+    height: 15dvh; 
+    margin: 0;
+    padding: 2rem 0;
     display: flex;
     align-items: center;
+}
+.botoesGrupo a{
+    width: 100%;
+    height: 100%;
+    display: flex;
     justify-content: space-around;
+    text-decoration: none;
 }
 
-.botoesGrupo .btn-enter {
-    width: 30%;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: .5rem;
-    margin: 10px;
+.btn-Login {
+    width: 10rem;
+    height: 60px;
+    padding: 14px 15px;
+    margin: 0 10px;
     font-family: var(--fontPrimary);
-    font-weight: 800;
-    text-transform: uppercase;
-    background-color: #fff;
-    border-radius: 7px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-    border: 1px solid #000;
-    
-}
-
-.btn-cadastrar{
-    width: 30%;
     font-size: 1.2rem;
-    cursor: pointer;
-    padding: .5rem;
-    margin: 10px;
-    text-align: center;
-    font-family: var(--fontPrimary);
     font-weight: 800;
-    text-transform: uppercase;
+    white-space: nowrap;
+    text-transform:capitalize;
     background-color: #fff;
-    border-radius: 7px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-    border: 1px solid #000;
-    
+    border-radius: 5px;
+    border: none;
+    /* transition: background-color .7s ease-in; */
 }
 
-     .btn-enter:active, .btn-cadastrar:active{
-    margin-top: 1.2rem;
+ .recovery .btn-enter{
+    width: 10rem;
+ }
+  .recovery .btn-cadastrar{
+    width: 13rem;
+ }
+ .recovery .btn-cancel-recovery{
+    display: none;
+ }
+
+ .btn-cancel-recovery{
+    display: none
+ }
+
+.btn-google {
+    width: 15rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+    padding: 14px 10px;
+}
+
+.iconGoogle {
+    width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family: var(--fontPrimary);
+    background: url(https://developers.google.com/identity/images/g-logo.png);
+    background-size: contain;
+    text-transform: capitalize;
+    vertical-align: middle;
+    mix-blend-mode: multiply;
+    margin: 0 5px 0 0;
+
+}
+
+.btn-enter:active,
+.btn-cadastrar:active,
+.btn-cancel-recovery:active,
+.btn-google:active {
+    margin-top: .2rem;
+
     box-shadow: none;
+}
+
+.btn-enter:hover,
+.btn-cadastrar:hover,
+.btn-cancel-recovery:hover,
+.btn-google:hover {
+    cursor: pointer;
+    background-color: #f5f4f4cc;
+    transition: background-color .7s ease-in-out;
+}
+
+
+.campoCadrastro{
+    display: none;
+}
+ .cadastrar .campoCadrastro{
+display: flex;
+}
+
+
+
+.cadastrar .campoFile{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.container-gruop .linkSenha{
+    margin: 0;
+}
+
+.cadastrar .linkSenha{
+    display: none;
+}
+
+
+.imgFile{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #595959;
+}
+
+.imgFile img{
+    width: 100%;
+}
+
+.FileButton{
+    width: 18em;
+    padding: .32em .38em; 
+    margin: 0 1rem;
+    font-size: .8rem;
+     display: inline-block;
+    background-color: #595959;
+    text-align: center;
+    color: white;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:992px) {
+    body {
+
+    height: 100dvh;
+    background-color: #141414;
+}
+
+
+
+    .containerMenu {
+        width: 95dvw;
+        background-color: #353333;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 7px;
+        box-shadow: 8px 6px 17px 4px rgba(0, 0, 0, 0.75);
+    }
+
+
+     .cadastrar {
+        width: 90dvw;
+        padding: 15px 5px;
+        align-items: center;
+        width: 95dvw;
+        height: 80dvh;
+    }
+
+    .titulo-login {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+
+    }
+    .emailGrupo input{
+        
+        font-size: 1.3rem;
+    }
+    
+   .recovery .namePassword {
+        width: 55%;
+        margin: .5rem 0;
+        font-size: .6em;
+    }
+
+    .recovery .btn-enter, .recovery .btn-cadastrar{
+    width: 10rem;
+ }
+ 
+
+   .cadastrar .nameLabel .namePassword , .cadastrar .emailLabel,
+   .cadastrar .namePassword {
+    width: fit-content; 
+    padding: .3rem 0; 
+    font-size: 1.3rem;
+    }
+
+    .cadastrar .nameGrupo,
+    .cadastrar .passwordGrupo
+    .cadastrar .emailGrupo
+    {
+        display: inline-flex;
+    }
+
+     .emailGrupo .input-cad, #password{
+        width: 70%;
+    }
+    .nameGrupo,.emailGrupo,
+    .passwordGrupo,
+    .botoesGrupo {
+        width: 100%;
+        position: relative;
+        font-size: 1.8rem;
+        color: #FFFF;
+        margin: 10px 0 ;
+        padding: 5px 10px;
+    }
+
+   
+    .confirPass label,.confirPass input {
+        font-size: 1.2rem;
+        
+    }
+
+    .passwordGrupo p {
+        font-size: 1.2rem;
+    }
+    
+    .container-gruop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: .8em;
+        margin: 3rem 0 0 0
     }
 
 
 
+    .botoesGrupo {
+        width: 100%;
+        height: 25%;
+        padding: .5rem;
+
+        margin: 1rem 0 0 0;
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        text-transform: lowercase;
+    }
+
+    .botoesGrupo a{
+     width: 100%;
+        height: 25%;
+        padding: .5rem;
+
+        margin: 1rem 0 0 0;
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        text-transform: lowercase;
+}
+
+    .btn-Login {
+        width: 150px;
+        padding: 1rem 0;
+        margin: .5rem 0;
+        font-family: var(--fontPrimary);
+        font-size: 1rem;
+        font-weight: 800;
+        white-space: nowrap;
+        background-color: #fff;
+        border-radius: 7px;
+        border: none;
+        transition: background-color .7s ease-in;
+    }
+
+    .btn-google {
+        width: 100%;
+    }
+
+}
