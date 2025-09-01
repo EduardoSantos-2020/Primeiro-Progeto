@@ -57,7 +57,7 @@ btnRecovery.addEventListener('click', function () {
   btnCreate.innerHTML = 'Confirmar código'
   btnCancelRecovery.style.display = 'block'
   btnGoogle.style.display = 'none'
-  link.setAttribute('href', '#recuparar')
+  link.setAttribute('href', '#password')
 
 })
 
