@@ -9,6 +9,7 @@ const btnRecovery = document.getElementById('recovery')
 const InputEmail = document.getElementById('Email')
 const InputPassword = document.getElementById('password')
 const LabelPassword = document.querySelector('.namePassword')
+const btnCreateUser = document.querySelector('.btn-cadastrar')
 const btnCancelRecovery = document.getElementById('btn-cancel-recovery')
 const containerCadastro = document.querySelector('.containerMenu');
 const link = document.querySelector('#link')
@@ -37,6 +38,22 @@ fileImg.addEventListener('change', (item) => {
   }
 })
 
+window.addEventListener("hashchange", function(event) {
+
+  if(this.location.hash=='#login') {
+    loginFunction()
+  }
+  else if (this.location.hash=='#registrar-se') 
+    {
+      registerFunction()
+  } 
+  else if(this.location.hash=='#password') 
+    {
+    recoveryPassFunction()
+  }
+
+})
+
 btnEnter.addEventListener('click', function () {
 
   sessionStorage.setItem('data', JSON.stringify({ 'name': nome.value, 'email': email.value, 'picture': imgPhoto.src }))
@@ -44,10 +61,24 @@ btnEnter.addEventListener('click', function () {
   window.location.href = `http://localhost:5500/${destino}`
 })
 
-
-
 btnRecovery.addEventListener('click', function () {
+  //link.setAttribute('href', '#password') // não precisa esta no html
+})
+
+
+btnCreateUser.addEventListener('click',function () {
+  link.setAttribute('href','#registrar-se')
+})
+
+btnCancelRecovery.addEventListener('click', function () {
+  removeCadastro()
+})
+
+
+function recoveryFunction(){
   containerCadastro.classList.add('recovery')
+  btnCreate.classList.remove('btn-cadastrar')
+  btnCreate.classList.add('btn-confirmar')
   LabelPassword.innerHTML = 'Confirme o codigo'
   InputEmail.placeholder = 'Digite seu e-mail cadastrado'
   btnRecovery.style.display = 'none'
@@ -57,68 +88,83 @@ btnRecovery.addEventListener('click', function () {
   btnCreate.innerHTML = 'Confirmar código'
   btnCancelRecovery.style.display = 'block'
   btnGoogle.style.display = 'none'
-  link.setAttribute('href', '#password')
+}
 
-})
+function registerFunction(){
 
-btnCreate.addEventListener('click', (event) => {
-  containerCadastro.classList.toggle('cadastrar');
+  containerCadastro.classList.add('cadastrar');
+  btnCreate.classList.add('btn-cadastrar')
+  btnCreate.classList.remove('btn-confirmar')
 
+  Title.innerHTML = 'Criar sua conta'
+  btnEnter.innerHTML = 'Confirmar' //botao enter
+  btnCreate.style.display = 'none' //botao criar conta
+  btnCancelRecovery.style.display = 'block'//botao cancelar
+  btnRecovery.style.display = 'none'//botao esqueceu a senha
+  btnGoogle.style.display = 'flex' //botao Google
+  
+  link.setAttribute('href', '#registrar-se')
+}
 
-  if (containerCadastro.classList.contains('recovery')) {
-  containerCadastro.classList.remove('recovery')
+function recoveryPassFunction(){
+link.setAttribute('href', '#password')
+
+containerCadastro.classList.add('recovery')
+btnCreate.classList.remove('btn-cadastrar')
+btnCreate.classList.add('btn-confirmar')
+
+btnConfirm()
+
+  LabelPassword.innerHTML = 'Confirme o codigo'
+  InputEmail.placeholder = 'Digite seu e-mail cadastrado'
+  btnRecovery.style.display = 'none'
+  InputPassword.placeholder = 'Digite  o codigo'
+  Title.innerHTML = 'Esqueceu a sua senha'
+  btnEnter.innerHTML = 'Enviar código'
+  btnCreate.innerHTML = 'Confirmar código'
+  btnCancelRecovery.style.display = 'block'
+  btnGoogle.style.display = 'none'
+}
+
+function loginFunction(){
   containerCadastro.classList.remove('cadastrar')
+  containerCadastro.classList.remove('recovery')
+  btnCreate.classList.remove('btn-confirmar')
+  btnCreate.classList.add('btn-cadastrar')
   Title.innerHTML = 'Fazer login infortec'
   btnEnter.innerHTML = 'Entrar'
   btnCreate.innerHTML = 'Criar Conta';
-
   btnGoogle.style.display = 'flex';
   btnRecovery.style.display = 'block';
-
+  btnCreate.style.display = 'block'
   LabelPassword.innerHTML = 'Senha';
   InputEmail.placeholder = 'Digite seu Email';
   InputPassword.placeholder = "Digite sua Senha";
   btnCancelRecovery.style.display = 'none'
-  link.setAttribute('href', '#login')
+  link.setAttribute('href','#login')
+}
 
-  }
-
-  if (containerCadastro.classList.contains('cadastrar')) {
-    Title.innerHTML = 'Criar sua conta'
-    btnEnter.innerHTML = 'Confirmar' //botao enter
-    btnCreate.style.display = 'none' //botao criar conta
-    btnCancelRecovery.style.display = 'block'//botao cancelar
-    btnRecovery.style.display = 'none'//botao esqueceu a senha
-    btnGoogle.style.display = 'flex' //botao Google
-
-    link.setAttribute('href', '#registrar-se')
-  }
-})
-
-btnCancelRecovery.addEventListener('click', function () {
-  containerCadastro.classList.remove('recovery')
+function removeCadastro(){
   containerCadastro.classList.remove('cadastrar')
-  Title.innerHTML = 'Fazer login infortec'
-  btnEnter.innerHTML = 'Entrar'
-  btnCreate.innerHTML = 'Criar Conta';
-
-  btnGoogle.style.display = 'flex';
-  btnRecovery.style.display = 'block';
-
-  LabelPassword.innerHTML = 'Senha';
-  InputEmail.placeholder = 'Digite seu Email';
-  InputPassword.placeholder = "Digite sua Senha";
+  containerCadastro.classList.remove('recovery')
+  btnRecovery.style.display = 'block'
+  btnCancelRecovery.style.display = 'none'
+  btnCreate.style.display = 'block'
+  btnCreate.classList.remove('btn-confirmar')
+  btnCreate.classList.add('btn-cadastrar')
   link.setAttribute('href', '#login')
+}
 
+function btnConfirm() {
 
-  if (!containerCadastro.classList.contains('cadastrar')) {
-    btnRecovery.style.display = 'block'
-    btnCancelRecovery.style.display = 'none'
-    btnCreate.style.display = 'block'
-
-    link.setAttribute('href', '#login')
-  }
-})
+const btnConfirmCode = document.querySelector('.btn-confirmar')
+    btnConfirmCode.addEventListener('click',function () {
+      
+      if (containerCadastro.classList.contains('recovery')) {
+        link.setAttribute('href', '#login')
+      }
+    })
+}
 
 const authEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
 

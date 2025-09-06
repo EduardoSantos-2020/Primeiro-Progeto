@@ -185,9 +185,10 @@ body {
  .recovery .btn-enter{
     width: 10rem;
  }
-  .recovery .btn-cadastrar{
+  .recovery .btn-confirmar{
     width: 13rem;
  }
+
  .recovery .btn-cancel-recovery{
     display: none;
  }
