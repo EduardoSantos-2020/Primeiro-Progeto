@@ -6,6 +6,7 @@ const btnBack = document.getElementById('btn-Back')
 const btnCreate = document.getElementById('btn-create')
 const btnEnter = document.getElementById('btn-entrar');
 const btnRecovery = document.getElementById('recovery')
+const InputName = document.getElementById('Name')
 const InputEmail = document.getElementById('Email')
 const InputPassword = document.getElementById('password')
 const LabelPassword = document.querySelector('.namePassword')
@@ -97,6 +98,7 @@ function registerFunction(){
   btnCreate.classList.remove('btn-confirmar')
 
   Title.innerHTML = 'Criar sua conta'
+  InputName.focus()
   btnEnter.innerHTML = 'Confirmar' //botao enter
   btnCreate.style.display = 'none' //botao criar conta
   btnCancelRecovery.style.display = 'block'//botao cancelar
@@ -117,6 +119,7 @@ btnConfirm()
 
   LabelPassword.innerHTML = 'Confirme o codigo'
   InputEmail.placeholder = 'Digite seu e-mail cadastrado'
+  InputEmail.focus()
   btnRecovery.style.display = 'none'
   InputPassword.placeholder = 'Digite  o codigo'
   Title.innerHTML = 'Esqueceu a sua senha'
@@ -139,6 +142,7 @@ function loginFunction(){
   btnCreate.style.display = 'block'
   LabelPassword.innerHTML = 'Senha';
   InputEmail.placeholder = 'Digite seu Email';
+  InputEmail.focus()
   InputPassword.placeholder = "Digite sua Senha";
   btnCancelRecovery.style.display = 'none'
   link.setAttribute('href','#login')

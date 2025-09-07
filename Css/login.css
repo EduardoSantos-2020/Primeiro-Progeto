@@ -92,7 +92,6 @@ body {
 .passwordGrupo{
     display: flex;
     align-items: start;
-   
     color: #fff;
     margin: .5rem 0;
      padding: .5rem .8rem;
@@ -105,7 +104,7 @@ body {
 .passwordGrupo,
 .botoesGrupo {
     position: relative;
-    font-size: 1.2rem;
+
     color: #FFFF;
 }
 
@@ -116,6 +115,7 @@ body {
     background: none;
     outline: none;
     width: 50%;
+   margin: .35rem 0  ;
     font-size: 1.2rem;
     color: #FFFF;  
     transition: border .5s linear;
@@ -129,8 +129,8 @@ body {
 
 .nameLabel,.emailLabel,
 .namePassword {
-
-    font-size: 1.5rem;
+    margin: .5rem 0;
+    font-size: 1.3em;
     font-weight: bold;
     font-family: var(--fontTerceiry);
     text-shadow: 1px 1px 1px #000;
@@ -138,7 +138,7 @@ body {
 }
 
 
-.input-cad:focus~.nameLabel,
+/* .input-cad:focus~.nameLabel,
 .input-cad:not(:placeholder-shown)~.nameLabel {
     top: -1.2rem;
     font-size: 1rem;
@@ -148,43 +148,52 @@ body {
 .input-cad:not(:placeholder-shown)~.namePassword {
     top: -1.2rem;
     font-size: 1rem;
-}
+} */
 
 .botoesGrupo {
     width: 100%;
     height: 15dvh; 
-    margin: 0;
-    padding: 2rem 0;
+    margin: 1.5rem 0;
+    padding: 0;
     display: flex;
     align-items: center;
 }
 .botoesGrupo a{
     width: 100%;
-    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-around;
     text-decoration: none;
 }
 
-.btn-Login {
-    width: 10rem;
-    height: 60px;
-    padding: 14px 15px;
+#link{
+    width: 100%;
+    
+}
+
+.btn-Login {    
+    padding: 20px 25px;
+    text-align: center;
     margin: 0 10px;
     font-family: var(--fontPrimary);
     font-size: 1.2rem;
     font-weight: 800;
-    white-space: nowrap;
+
     text-transform:capitalize;
     background-color: #fff;
     border-radius: 5px;
     border: none;
     /* transition: background-color .7s ease-in; */
 }
+.btn-enter , .btn-confirmar {
+    width: 14rem;
+}
 
- .recovery .btn-enter{
-    width: 10rem;
- }
+
+.recovery .btn-enter , .recovery .btn-confirmar{
+    width: 15rem;
+}
+
   .recovery .btn-confirmar{
     width: 13rem;
  }
@@ -198,13 +207,12 @@ body {
  }
 
 .btn-google {
-    width: 15rem;
     right: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: none;
-    padding: 14px 10px;
+    
 }
 
 .iconGoogle {
@@ -225,14 +233,14 @@ body {
 
 }
 
-.btn-enter:active,
+/* .btn-enter:active,
 .btn-cadastrar:active,
 .btn-cancel-recovery:active,
 .btn-google:active {
     margin-top: .2rem;
 
     box-shadow: none;
-}
+} */
 
 .btn-enter:hover,
 .btn-cadastrar:hover,
@@ -303,10 +311,10 @@ display: flex;
     background-color: #141414;
 }
 
-
-
     .containerMenu {
-        width: 95dvw;
+        width: 100dvw;
+        height: 100dvh;
+        padding: 30px 10px;
         background-color: #353333;
         border: 1px solid rgba(0, 0, 0, 0.3);
         border-radius: 7px;
@@ -315,11 +323,10 @@ display: flex;
 
 
      .cadastrar {
-        width: 90dvw;
+        width: 100dvw;
+        height: 100dvh;
         padding: 15px 5px;
         align-items: center;
-        width: 95dvw;
-        height: 80dvh;
     }
 
     .titulo-login {
@@ -327,27 +334,56 @@ display: flex;
         text-transform: uppercase;
 
     }
-    .emailGrupo input{
-        
-        font-size: 1.3rem;
-    }
-    
+   
    .recovery .namePassword {
-        width: 55%;
-        margin: .5rem 0;
-        font-size: .6em;
+        width: 9em;
     }
 
-    .recovery .btn-enter, .recovery .btn-cadastrar{
-    width: 10rem;
+  
+
+ .recovery .btn-confirmar{
+    width: 9.5rem;
  }
+ 
+ .nameLabel,.emailLabel,
+.namePassword {
+    margin: .5rem 0;
+    font-size: 95%;
+    font-weight: bold;
+    font-family: var(--fontTerceiry);
+    text-shadow: 1px 1px 1px #000;
+    transition: all .5s ease-in-out;
+}
+
+
+.FileButton{
+   
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+
+.input-cad,
+.passwordGrupo input {
+    font-size: 95%;
+}
+
  
 
    .cadastrar .nameLabel .namePassword , .cadastrar .emailLabel,
    .cadastrar .namePassword {
     width: fit-content; 
-    padding: .3rem 0; 
-    font-size: 1.3rem;
+    
+
+    }
+
+    .recovery .namePassword{
+        width: 3em;
+        font-size: 75%;
+    }
+
+    .cadastrar .namePassword{
+        font-size: 90%;
     }
 
     .cadastrar .nameGrupo,
@@ -364,18 +400,26 @@ display: flex;
     .passwordGrupo,
     .botoesGrupo {
         width: 100%;
+        font-size: 1.5rem;
         position: relative;
-        font-size: 1.8rem;
         color: #FFFF;
-        margin: 10px 0 ;
-        padding: 5px 10px;
+        margin: 1rem 0 ;
+        padding: 1rem 1.5rem;
     }
 
+    .linkSenha p {
+        font-size: 1.3em;
+        margin: 15px 0;
+    }
+    .confirPass label{
+        font-size: .7rem;
+    }
    
-    .confirPass label,.confirPass input {
+   .confirPass input {
         font-size: 1.2rem;
         
     }
+
 
     .passwordGrupo p {
         font-size: 1.2rem;
@@ -391,13 +435,19 @@ display: flex;
     }
 
 
+    .cadastrar #link{
+        margin: 0;
+        padding: 0;
+    }
+
+
 
     .botoesGrupo {
         width: 100%;
-        height: 25%;
+        height: 100dvh;
         padding: .5rem;
 
-        margin: 1rem 0 0 0;
+        margin:  0;
         display: flex;
         align-items: start;
         flex-wrap: wrap;
@@ -405,7 +455,7 @@ display: flex;
     }
 
     .botoesGrupo a{
-     width: 100%;
+        width: 100%;
         height: 25%;
         padding: .5rem;
 
@@ -417,11 +467,11 @@ display: flex;
 }
 
     .btn-Login {
-        width: 150px;
-        padding: 1rem 0;
-        margin: .5rem 0;
+
+        padding: 1.8rem 2rem;
+        margin: 1rem 0;
         font-family: var(--fontPrimary);
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-weight: 800;
         white-space: nowrap;
         background-color: #fff;
@@ -429,9 +479,35 @@ display: flex;
         border: none;
         transition: background-color .7s ease-in;
     }
+  .recovery .btn-enter, .recovery .btn-cadastrar{
+    width: 12rem;
+ }
 
-    .btn-google {
-        width: 100%;
+
+.cadastrar .btn-enter ,.cadastrar .btn-cancel-recovery{
+    margin: 0;
+}
+
+.btn-google {
+    width: 100%;
+}
+
+.recovery .btn-confirmar{
+    width: 50%;
+    word-break: break-all;
+ }
+
+
+}
+@media screen and (max-width:485px){
+   .recovery .namePassword {
+        width: 12em;
+   
     }
+
+    .input-cad, .passwordGrupo input{
+        padding-left: .5rem;
+    }
+
 
 }
