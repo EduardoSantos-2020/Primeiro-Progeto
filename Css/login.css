@@ -378,7 +378,7 @@ display: flex;
     }
 
     .recovery .namePassword{
-        width: 3em;
+       
         font-size: 75%;
     }
 
@@ -493,17 +493,28 @@ display: flex;
 }
 
 .recovery .btn-confirmar{
-    width: 50%;
+    width: 40%;
     word-break: break-all;
  }
 
 
 }
-@media screen and (max-width:485px){
-   .recovery .namePassword {
-        width: 12em;
-   
-    }
+@media screen and (max-width:640px){
+
+    .recovery .namePassword {
+        
+    width: 20%;
+     }
+ .recovery .btn-enter {
+  width: 75%;
+ }
+ .recovery .btn-confirmar{
+     width: 75%;
+ }
+.recovery .btn-cancel-recovery{
+    width: 65%;
+}
+
 
     .input-cad, .passwordGrupo input{
         padding-left: .5rem;
