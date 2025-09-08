@@ -122,7 +122,7 @@ btnConfirm()
   InputEmail.focus()
   btnRecovery.style.display = 'none'
   InputPassword.placeholder = 'Digite  o codigo'
-  Title.innerHTML = 'Esqueceu a sua senha'
+  Title.innerHTML = 'Esqueceu a sua senha ?'
   btnEnter.innerHTML = 'Enviar código'
   btnCreate.innerHTML = 'Confirmar código'
   btnCancelRecovery.style.display = 'block'
