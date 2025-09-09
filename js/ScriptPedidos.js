@@ -96,6 +96,16 @@ $(window).ready(() => {
 
    $('#btn-Back').click(() => {
       window.location.href = "http://localhost:5500/index.html";
+
+if (location.protocol=='https:') {
+  
+   window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ 'index.html';
+  
+}else if (location.protocol=='http:') {
+
+  window.location.href = location.protocol+'//'+ location.host +'/index.html';
+  
+}
       //window.location.href = "https://d25a-138-118-58-221.ngrok-free.app/index.html";
    })
 

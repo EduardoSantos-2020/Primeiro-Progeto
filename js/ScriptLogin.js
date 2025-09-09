@@ -59,7 +59,16 @@ btnEnter.addEventListener('click', function () {
 
   sessionStorage.setItem('data', JSON.stringify({ 'name': nome.value, 'email': email.value, 'picture': imgPhoto.src }))
 
-  window.location.href = `http://localhost:5500/${destino}`
+  if (location.protocol=='https') {
+  
+   window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino;
+  
+}else if (location.protocol=='http') {
+
+  window.location.href = location.protocol+'//'+ location.host +'/'+ destino;
+  
+}
+
 })
 
 btnRecovery.addEventListener('click', function () {
@@ -176,8 +185,15 @@ btnGoogle.addEventListener('click', function () {
 
   // Caso for ver no Mobile  mude a URL redirect_uri;
 
+ if (location.protocol=='https:') {
+  
+  var urlVerified = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino;
+  
+}else if (location.protocol=='http:') {
 
-  const urlVerified = `http://localhost:5500/${destino}`;
+  var urlVerified = location.protocol+'//'+ location.host +'/'+ destino;
+  
+}
   //const urlVerified = `https://d25a-138-118-58-221.ngrok-free.app/${destino}`;
 
   //const state = encodeURIComponent(urlVerified);
