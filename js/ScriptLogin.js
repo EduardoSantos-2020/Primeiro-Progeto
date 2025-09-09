@@ -1,7 +1,7 @@
 
 const destino = sessionStorage.getItem('page', window.location.href)
 const Title = document.querySelector(".titulo-login")
-const linkTitle=document.getElementById('imgLink')
+const linkTitle = document.getElementById('imgLink')
 const btnGoogle = document.getElementById("btn-entrar-google");
 const btnBack = document.getElementById('btn-Back')
 const btnCreate = document.getElementById('btn-create')
@@ -15,16 +15,16 @@ const btnCreateUser = document.querySelector('.btn-cadastrar')
 const btnCancelRecovery = document.getElementById('btn-cancel-recovery')
 const containerCadastro = document.querySelector('.containerMenu');
 const link = document.querySelector('#link')
-const linkSenha=document.querySelector('.linkSenha')
+const linkSenha = document.querySelector('.linkSenha')
 const fileImg = document.querySelector('#upFile')
 const nome = document.getElementById('Name')
 const email = document.getElementById('Email')
 const imgPhoto = document.getElementById('Photo')
-urlVerified='';
+urlVerified = '';
 
-if (!containerCadastro.classList.contains('recovery')||!containerCadastro.classList.contains('cadastrar')&& window.location.reload) {
-  location.hash='login';
-}  
+if (!containerCadastro.classList.contains('recovery') || !containerCadastro.classList.contains('cadastrar') && window.location.reload) {
+  location.hash = 'login';
+}
 
 fileImg.addEventListener('change', (item) => {
 
@@ -41,17 +41,15 @@ fileImg.addEventListener('change', (item) => {
   }
 })
 
-window.addEventListener("hashchange", function(event) {
+window.addEventListener("hashchange", function (event) {
 
-  if(this.location.hash=='#login') {
+  if (this.location.hash == '#login') {
     loginFunction()
   }
-  else if (this.location.hash=='#registrar-se') 
-    {
-      registerFunction()
-  } 
-  else if(this.location.hash=='#password') 
-    {
+  else if (this.location.hash == '#registrar-se') {
+    registerFunction()
+  }
+  else if (this.location.hash == '#password') {
     recoveryPassFunction()
   }
 
@@ -61,15 +59,15 @@ btnEnter.addEventListener('click', function () {
 
   sessionStorage.setItem('data', JSON.stringify({ 'name': nome.value, 'email': email.value, 'picture': imgPhoto.src }))
 
-  if (location.protocol=='https:') {
-  
-   window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino;
-  
-}else if (location.protocol=='http:') {
+  if (location.protocol == 'https:') {
 
-  window.location.href = location.protocol+'//'+ location.host +'/'+ destino;
-  
-}
+    window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino;
+
+  } else if (location.protocol == 'http:') {
+
+    window.location.href = location.protocol + '//' + location.host + '/' + destino;
+
+  }
 
 })
 
@@ -78,8 +76,8 @@ btnRecovery.addEventListener('click', function () {
 })
 
 
-btnCreateUser.addEventListener('click',function () {
-  link.setAttribute('href','#registrar-se')
+btnCreateUser.addEventListener('click', function () {
+  link.setAttribute('href', '#registrar-se')
 })
 
 btnCancelRecovery.addEventListener('click', function () {
@@ -87,7 +85,7 @@ btnCancelRecovery.addEventListener('click', function () {
 })
 
 
-function recoveryFunction(){
+function recoveryFunction() {
   containerCadastro.classList.add('recovery')
   btnCreate.classList.remove('btn-cadastrar')
   btnCreate.classList.add('btn-confirmar')
@@ -102,7 +100,7 @@ function recoveryFunction(){
   btnGoogle.style.display = 'none'
 }
 
-function registerFunction(){
+function registerFunction() {
 
   containerCadastro.classList.add('cadastrar');
   btnCreate.classList.add('btn-cadastrar')
@@ -115,18 +113,18 @@ function registerFunction(){
   btnCancelRecovery.style.display = 'block'//botao cancelar
   btnRecovery.style.display = 'none'//botao esqueceu a senha
   btnGoogle.style.display = 'flex' //botao Google
-  
+
   link.setAttribute('href', '#registrar-se')
 }
 
-function recoveryPassFunction(){
-link.setAttribute('href', '#password')
+function recoveryPassFunction() {
+  link.setAttribute('href', '#password')
 
-containerCadastro.classList.add('recovery')
-btnCreate.classList.remove('btn-cadastrar')
-btnCreate.classList.add('btn-confirmar')
+  containerCadastro.classList.add('recovery')
+  btnCreate.classList.remove('btn-cadastrar')
+  btnCreate.classList.add('btn-confirmar')
 
-btnConfirm()
+  btnConfirm()
 
   LabelPassword.innerHTML = 'Confirme o codigo'
   InputEmail.placeholder = 'Digite seu e-mail cadastrado'
@@ -140,7 +138,7 @@ btnConfirm()
   btnGoogle.style.display = 'none'
 }
 
-function loginFunction(){
+function loginFunction() {
   containerCadastro.classList.remove('cadastrar')
   containerCadastro.classList.remove('recovery')
   btnCreate.classList.remove('btn-confirmar')
@@ -156,10 +154,10 @@ function loginFunction(){
   InputEmail.focus()
   InputPassword.placeholder = "Digite sua Senha";
   btnCancelRecovery.style.display = 'none'
-  link.setAttribute('href','#login')
+  link.setAttribute('href', '#login')
 }
 
-function removeCadastro(){
+function removeCadastro() {
   containerCadastro.classList.remove('cadastrar')
   containerCadastro.classList.remove('recovery')
   btnRecovery.style.display = 'block'
@@ -172,23 +170,23 @@ function removeCadastro(){
 
 function btnConfirm() {
 
-const btnConfirmCode = document.querySelector('.btn-confirmar')
-    btnConfirmCode.addEventListener('click',function () {
-      
-      if (containerCadastro.classList.contains('recovery')) {
-        link.setAttribute('href', '#login')
-      }
-    })
+  const btnConfirmCode = document.querySelector('.btn-confirmar')
+  btnConfirmCode.addEventListener('click', function () {
+
+    if (containerCadastro.classList.contains('recovery')) {
+      link.setAttribute('href', '#login')
+    }
+  })
 }
 // Caso for ver no Mobile  mude a URL redirect_uri;
 
-if (location.protocol=='https:') {
- urlVerified = `${location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino}`;
-linkTitle.setAttribute('href',location.protocol+'//'+ location.host +'/Primeiro-Progeto/index.html')
+if (location.protocol == 'https:') {
+  urlVerified = `${location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino}`;
+  linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/Primeiro-Progeto/index.html')
 }
-if (location.protocol=='http:') {
-  urlVerified = `${location.protocol+'//'+ location.host +'/'+ destino}`;
-  linkTitle.setAttribute('href',location.protocol+'//'+ location.host +'/index.html')
+if (location.protocol == 'http:') {
+  urlVerified = `${location.protocol + '//' + location.host + '/' + destino}`;
+  linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/index.html')
 }
 
 //const urlVerified = `https://d25a-138-118-58-221.ngrok-free.app/${destino}`;

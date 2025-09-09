@@ -43,11 +43,14 @@ $(window).ready(() => {
             sessionStorage.removeItem("data");
             sessionStorage.removeItem("page");
 
-            if (location.protocol=='https:') {
-               window.location.href= `${location.protocol+'//'+ location.host +'/Primeiro-Progeto/'}`;
-            }
-            if (location.protocol=='http:') {
-               urlVerified = `${location.protocol+'//'+ location.host +'/'}`;
+            if (location.protocol == 'https:') {
+
+               window.location.href = '/Primeiro-Progeto/' + 'index.html';
+
+            } else if (location.protocol == 'http:') {
+
+               window.location.href = '/index.html';
+
             }
 
          })
@@ -55,24 +58,29 @@ $(window).ready(() => {
 
    }
 
-     function fetchUserInfo (accessToken) {
+   function fetchUserInfo(accessToken) {
 
       // Limpa a URL (remove token e params)
 
-      //  if (accessToken) {
-      //       window.history.replaceState({}, document.title, '/pedidos.html'); 
-      //    }
+      if (accessToken) {
+         if (location.protocol == 'https:') {
+            window.history.replaceState({}, document.title, '/Primeiro-Progeto/pedidos.html');
+         }
+         if (location.protocol == 'http:') {
+            window.history.replaceState({}, document.title, 'pedidos.html');
+         }
+      }
 
 
       $.ajax({
-         url: "https://www.googleapis.com/oauth2/v3/userinfo", 
-         type: 'GET', 
+         url: "https://www.googleapis.com/oauth2/v3/userinfo",
+         type: 'GET',
          headers: {
             'Authorization': `Bearer ${accessToken}`
          },
-         success: function(response) {
+         success: function (response) {
 
-             sessionStorage.setItem("data", JSON.stringify(response));
+            sessionStorage.setItem("data", JSON.stringify(response));
             const data = JSON.parse(sessionStorage.getItem("data"));
 
             if (sessionStorage.getItem('data')) {
@@ -90,36 +98,37 @@ $(window).ready(() => {
                   sessionStorage.removeItem('access_token')
                   sessionStorage.removeItem("data");
                   sessionStorage.removeItem("page");
-               if (location.protocol=='https:') {
-               
-                  window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ 'index.html';
-               
-               }else if (location.protocol=='http:') {
 
-               window.location.href = location.protocol+'//'+ location.host +'/index.html';
-               
-               }
-            })
-         }
-      },
-         error: function( error) {
+                  if (location.protocol == 'https:') {
+
+                     window.location.href = '/Primeiro-Progeto/' + 'index.html';
+
+                  } else if (location.protocol == 'http:') {
+
+                     window.location.href = '/index.html';
+
+                  }
+               })
+            }
+         },
+         error: function (error) {
             console.log('Erro:', error);
          }
       });
    }
 
 
-$('#btn-Back').click(() => {
+   $('#btn-Back').click(() => {
 
-if (location.protocol=='https:') {
-  
-   window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ 'index.html';
-  
-}else if (location.protocol=='http:') {
+      if (location.protocol == 'https:') {
 
-  window.location.href = location.protocol+'//'+ location.host +'/index.html';
-  
-}
+         window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'index.html';
+
+      } else if (location.protocol == 'http:') {
+
+         window.location.href = location.protocol + '//' + location.host + '/index.html';
+
+      }
       //window.location.href = "https://d25a-138-118-58-221.ngrok-free.app/index.html";
    })
 
@@ -134,30 +143,30 @@ if (location.protocol=='https:') {
 
    let imgSrc = $('.img--produto');
    let titleProd = $('.title--produto');
-   let caracterProd =$('.campo--caracteristicas');
+   let caracterProd = $('.campo--caracteristicas');
    let desProd = $('.campo--descricao');
    let precoProd = $('.preco-produto');
-   
+
    $(objeto).map((i, obj) => {
-      
+
       $('title').html(obj.name);
       $(precoProd).html('R$:' + obj.price);
       $(titleProd).html(obj.name);
       $(imgSrc).attr('src', obj.image);
-   
 
-      $(obj.descricao).map((i,event)=>{
 
-         
-         
-         let Texto1=obj.caracteristics[i].p;
-         let Texto2=obj.descricao[i].p;
+      $(obj.descricao).map((i, event) => {
+
+
+
+         let Texto1 = obj.caracteristics[i].p;
+         let Texto2 = obj.descricao[i].p;
 
          let caract = $('<p></p>').addClass('caracter--produto')
          $(caracterProd).append(caract.text(Texto1));
-         
+
          let descri = $('<p></p>').addClass('descricao--produto')
-            $(desProd).append(descri.html(Texto2))
+         $(desProd).append(descri.html(Texto2))
       })
    })
 })

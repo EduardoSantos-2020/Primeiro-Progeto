@@ -1,25 +1,25 @@
 $(function () {
- btnLogin = $('#btn-login').find('.login')[0];
+   btnLogin = $('#btn-login').find('.login')[0];
 
- $(btnLogin).on('click',function() {
-    sessionStorage.setItem('page', 'index.html')
+   $(btnLogin).on('click', function () {
+      sessionStorage.setItem('page', 'index.html')
    })
-    
-   $(window).on('load',function() {
-      
+
+   $(window).on('load', function () {
+
       if (window.location.hash.includes("access_token")) {
 
          const hash = window.location.hash.substring(1);
          const params = new URLSearchParams(hash);
 
          const accessToken = params.get("access_token");
-      
+
          fetchUserInfo(accessToken);
 
          // Limpa a URL (remove token e params)
 
          if (accessToken) {
-            window.history.replaceState({}, document.title, '/index.html'); 
+            window.history.replaceState({}, document.title, '/index.html');
          }
 
 
@@ -44,31 +44,34 @@ $(function () {
                sessionStorage.removeItem('access_token')
                sessionStorage.removeItem("data");
                sessionStorage.removeItem("page");
-               
-            if (location.protocol=='https:') {
-               window.location.href= `${location.protocol+'//'+ location.host +'/Primeiro-Progeto/'}`;
-            }
-            if (location.protocol=='http:') {
-               urlVerified = `${location.protocol+'//'+ location.host +'/'}`;
-            }
-               
+
+               if (location.protocol == 'https:') {
+
+                  window.location.href = '/Primeiro-Progeto/' + 'index.html';
+
+               } else if (location.protocol == 'http:') {
+
+                  window.location.href = '/index.html';
+
+               }
+
             })
          }
 
       }
    })
 
-   function fetchUserInfo (accessToken) {
+   function fetchUserInfo(accessToken) {
 
       $.ajax({
-         url: "https://www.googleapis.com/oauth2/v3/userinfo", 
-         type: 'GET', 
+         url: "https://www.googleapis.com/oauth2/v3/userinfo",
+         type: 'GET',
          headers: {
             'Authorization': `Bearer ${accessToken}`
          },
-         success: function(response) {
+         success: function (response) {
 
-             sessionStorage.setItem("data", JSON.stringify(response));
+            sessionStorage.setItem("data", JSON.stringify(response));
             const data = JSON.parse(sessionStorage.getItem("data"));
 
             if (sessionStorage.getItem('data')) {
@@ -86,19 +89,20 @@ $(function () {
                   sessionStorage.removeItem('access_token')
                   sessionStorage.removeItem("data");
                   sessionStorage.removeItem("page");
-                  if (location.protocol=='https:') {
-  
-                window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ 'index.html';
-            
-               }else if (location.protocol=='http:') {
 
-                  window.location.href = location.protocol+'//'+ location.host +'/index.html';
-               
-               }
-            })
-         }
-      },
-         error: function( error) {
+                  if (location.protocol == 'https:') {
+
+                     window.location.href = '/Primeiro-Progeto/' + 'index.html';
+
+                  } else if (location.protocol == 'http:') {
+
+                     window.location.href = '/index.html';
+
+                  }
+               })
+            }
+         },
+         error: function (error) {
             alert('Erro:', error);
          }
       });
@@ -122,14 +126,14 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
       $(btnCard).each((i, obj) => {
          $(obj).click(() => {
             sessionStorage.setItem('produts', JSON.stringify(produts));
-            if (location.protocol=='https:') {
+            if (location.protocol == 'https:') {
 
-               window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ 'pedidos.html';
-      
-            }else if (location.protocol=='http:') {
+               window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'pedidos.html';
 
-               window.location.href = location.protocol+'//'+ location.host +'/pedidos.html';
-            
+            } else if (location.protocol == 'http:') {
+
+               window.location.href = location.protocol + '//' + location.host + '/pedidos.html';
+
             }
          })
       });
