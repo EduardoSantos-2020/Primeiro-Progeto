@@ -59,9 +59,9 @@ $(window).ready(() => {
 
       // Limpa a URL (remove token e params)
 
-       if (accessToken) {
-            window.history.replaceState({}, document.title, '/pedidos.html'); 
-         }
+      //  if (accessToken) {
+      //       window.history.replaceState({}, document.title, '/pedidos.html'); 
+      //    }
 
 
       $.ajax({

@@ -20,6 +20,7 @@ const fileImg = document.querySelector('#upFile')
 const nome = document.getElementById('Name')
 const email = document.getElementById('Email')
 const imgPhoto = document.getElementById('Photo')
+urlVerified='';
 
 if (!containerCadastro.classList.contains('recovery')||!containerCadastro.classList.contains('cadastrar')&& window.location.reload) {
   location.hash='login';

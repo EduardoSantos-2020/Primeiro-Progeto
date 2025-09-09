@@ -122,7 +122,15 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
       $(btnCard).each((i, obj) => {
          $(obj).click(() => {
             sessionStorage.setItem('produts', JSON.stringify(produts));
-            location.href = 'pedidos.html';
+            if (location.protocol=='https:') {
+
+               window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ 'pedidos.html';
+      
+            }else if (location.protocol=='http:') {
+
+               window.location.href = location.protocol+'//'+ location.host +'/pedidos.html';
+            
+            }
          })
       });
 
