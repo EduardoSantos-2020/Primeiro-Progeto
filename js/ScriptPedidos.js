@@ -42,7 +42,14 @@ $(window).ready(() => {
             sessionStorage.removeItem('access_token')
             sessionStorage.removeItem("data");
             sessionStorage.removeItem("page");
-            window.location.href = "/";
+
+            if (location.protocol=='https:') {
+               window.location.href= `${location.protocol+'//'+ location.host +'/Primeiro-Progeto/'}`;
+            }
+            if (location.protocol=='http:') {
+               urlVerified = `${location.protocol+'//'+ location.host +'/'}`;
+            }
+
          })
       }
 
@@ -94,8 +101,7 @@ $(window).ready(() => {
    }
 
 
-   $('#btn-Back').click(() => {
-      window.location.href = "http://localhost:5500/index.html";
+$('#btn-Back').click(() => {
 
 if (location.protocol=='https:') {
   
