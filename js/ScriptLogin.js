@@ -179,22 +179,23 @@ const btnConfirmCode = document.querySelector('.btn-confirmar')
     })
 }
 
+if (location.protocol=='https:') {
+ 
+ urlVerified = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino;
+ 
+}
+if (location.protocol=='http:') {
+
+  urlVerified = location.protocol+'//'+ location.host +'/'+ destino;
+ 
+}
+console.log(urlVerified);
 const authEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
 
 btnGoogle.addEventListener('click', function () {
 
   // Caso for ver no Mobile  mude a URL redirect_uri;
 
- if (location.protocol=='https:') {
-  
-  urlVerified = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino;
-  
-}
- if (location.protocol=='http:') {
-
-   urlVerified = location.protocol+'//'+ location.host +'/'+ destino;
-  
-}
   //const urlVerified = `https://d25a-138-118-58-221.ngrok-free.app/${destino}`;
 
   //const state = encodeURIComponent(urlVerified);
