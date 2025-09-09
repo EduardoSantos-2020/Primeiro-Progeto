@@ -183,11 +183,11 @@ const btnConfirmCode = document.querySelector('.btn-confirmar')
 
 if (location.protocol=='https:') {
  urlVerified = `${location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino}`;
-linkTitle.setAttribute('href',location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino)
+linkTitle.setAttribute('href',location.protocol+'//'+ location.host +'/Primeiro-Progeto/index.html')
 }
 if (location.protocol=='http:') {
   urlVerified = `${location.protocol+'//'+ location.host +'/'+ destino}`;
-  linkTitle.setAttribute('href',location.protocol+'//'+ location.host +'/'+ destino)
+  linkTitle.setAttribute('href',location.protocol+'//'+ location.host +'/index.html')
 }
 
 //const urlVerified = `https://d25a-138-118-58-221.ngrok-free.app/${destino}`;
