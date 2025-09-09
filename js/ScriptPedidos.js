@@ -90,10 +90,18 @@ $(window).ready(() => {
                   sessionStorage.removeItem('access_token')
                   sessionStorage.removeItem("data");
                   sessionStorage.removeItem("page");
-                  window.location.href = "/";
-               })
-            }
-         },
+               if (location.protocol=='https:') {
+               
+                  window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ 'index.html';
+               
+               }else if (location.protocol=='http:') {
+
+               window.location.href = location.protocol+'//'+ location.host +'/index.html';
+               
+               }
+            })
+         }
+      },
          error: function( error) {
             console.log('Erro:', error);
          }

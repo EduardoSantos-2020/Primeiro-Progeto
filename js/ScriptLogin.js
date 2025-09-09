@@ -1,6 +1,7 @@
 
 const destino = sessionStorage.getItem('page', window.location.href)
 const Title = document.querySelector(".titulo-login")
+const linkTitle=document.getElementById('imgLink')
 const btnGoogle = document.getElementById("btn-entrar-google");
 const btnBack = document.getElementById('btn-Back')
 const btnCreate = document.getElementById('btn-create')
@@ -182,9 +183,11 @@ const btnConfirmCode = document.querySelector('.btn-confirmar')
 
 if (location.protocol=='https:') {
  urlVerified = `${location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino}`;
+linkTitle.setAttribute('href',location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino)
 }
 if (location.protocol=='http:') {
   urlVerified = `${location.protocol+'//'+ location.host +'/'+ destino}`;
+  linkTitle.setAttribute('href',location.protocol+'//'+ location.host +'/'+ destino)
 }
 
 //const urlVerified = `https://d25a-138-118-58-221.ngrok-free.app/${destino}`;
