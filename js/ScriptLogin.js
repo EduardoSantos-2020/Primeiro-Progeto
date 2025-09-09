@@ -59,11 +59,11 @@ btnEnter.addEventListener('click', function () {
 
   sessionStorage.setItem('data', JSON.stringify({ 'name': nome.value, 'email': email.value, 'picture': imgPhoto.src }))
 
-  if (location.protocol=='https') {
+  if (location.protocol=='https:') {
   
    window.location.href = location.protocol+'//'+ location.host +'/Primeiro-Progeto/'+ destino;
   
-}else if (location.protocol=='http') {
+}else if (location.protocol=='http:') {
 
   window.location.href = location.protocol+'//'+ location.host +'/'+ destino;
   
