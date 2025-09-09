@@ -305,7 +305,6 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         display: flex;
         align-items:center;
         flex-direction: column;
-        padding: 11px 16px;
         border-radius: 8px  8px 0 0 ;
     }
     
@@ -319,10 +318,10 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     
     .container-User .textEmail{
         top: 2.4rem;
-        left: 7rem;
+        left: 7.5rem;
         text-align: start;
         position: absolute;
-        font-size: 1.1rem;
+        font-size: .9rem;
         margin: 0;
     }
     
@@ -330,7 +329,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     .userGrup{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content:space-evenly;
         width: 100%;
         height: 100%;
     }
