@@ -145,7 +145,7 @@ body {
     }
 
     .container-section{
-        width: 100%;
+        width: 100dvw;
         display: flex;
         justify-content: center;
     }
@@ -708,7 +708,21 @@ span.buttonText {
         }
 
         .containerbuttons .card{
-            margin: 0 .3rem 0 0;
+        
+            font-size: 2rem;
+             margin: 0 1.5rem 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+
+        .containerbuttons p{
+            font-size: 2rem;
+        }
+
+        .containerbuttons i{
+           
         }
 
         .text{

@@ -366,10 +366,11 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         justify-content: center;
     }
 
-    .login {
+  .login {
         width: 100px;
+        
         margin: 0 30px;
-        padding:  10px;
+        padding: 10px;
         color: #fff;
         font-family: var(--fontTerceiry);
         font-weight: bolder;
@@ -378,7 +379,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         text-transform: uppercase;
         border-radius: 5px;
         background-color: rgb(252, 14, 2);
-        transition: all .5s ease-in-out;
+        transition: all 1s ease-in-out;
     }
 
     .sidebar .active .menu--secao,
