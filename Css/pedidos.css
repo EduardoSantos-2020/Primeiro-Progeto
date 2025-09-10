@@ -861,9 +861,7 @@ span.buttonText {
     }
     
 
-    .btnExit{
-        top: 5rem;
-    }
+  
 
 
     .container-User .textEmail{
@@ -871,6 +869,32 @@ span.buttonText {
         left: 9em;
 
     }
+
+.container-User .textEmail{
+        top: 2.4rem;
+        left: 7.5rem;
+        text-align: start;
+        position: absolute;
+        font-size: .9rem;
+        margin: 0;
+    }
+
+  .btnExit{
+        position: absolute;
+        top: 5rem;
+        width: 100%;
+        padding: 0 20px;
+        border: none;
+        font-weight: 900;
+        font-size: 2rem;
+        color: #fdfbfb;
+        background-color: #ffffff1a;
+        border-radius:  0 0 8px 8px;
+        text-transform: uppercase;
+        display:none;
+        justify-content: center;
+    }
+
 
 }
 
