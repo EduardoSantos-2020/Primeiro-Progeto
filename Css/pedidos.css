@@ -134,14 +134,30 @@ body {
         transition: all .7s ease-in-out;
     }
 
-    .container-User {
-        width: 20em;
+ .container-User{
+        width: 25em;
         height: 5rem;
         display: flex;
-        align-items: center;
+        align-items:center;
         flex-direction: column;
-        padding: 11px 16px;
-        border-radius: 8px 8px 0 0;
+        border-radius: 8px  8px 0 0 ;
+    }
+    
+    
+    
+    .container-User p{
+    
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    
+    .container-User .textEmail{
+        top: 2.4rem;
+        left: 7.5rem;
+        text-align: start;
+        position: absolute;
+        font-size: .9rem;
+        margin: 0;
     }
 
     .container-section{
@@ -149,21 +165,6 @@ body {
         display: flex;
         justify-content: center;
     }
-
-    .container-User p {
-        font-size: 3.3rem;
-        font-weight: bold;
-    }
-
-    .container-User .textEmail {
-        top: 2.4rem;
-        left: 8.8rem;
-        position: absolute;
-        font-size: 1.1rem;
-        margin: 0;
-    }
-
-
 
     .userGrup {
         display: flex;
