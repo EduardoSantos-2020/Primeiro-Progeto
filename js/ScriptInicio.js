@@ -5,7 +5,7 @@ $(function () {
       sessionStorage.setItem('page', 'index.html')
    })
 
-   $(window).on('load', function () {
+   $(window).ready(function () {
 
       if (window.location.hash.includes("access_token")) {
 

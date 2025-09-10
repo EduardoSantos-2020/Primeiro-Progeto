@@ -30,14 +30,12 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
     background-color: #141414;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+    width: 100dvw;
+    height: 100dvh;
     font-family: var(--primeirafont);
     display: flex;
     align-items: center;
@@ -49,11 +47,11 @@ body {
     flex-direction: column;
     padding: 30px;
     width: 52em;
-  height: fit-content;
+    height: fit-content;
 
-    background-color: rgb(173, 170, 170,0.20);
-    
-   
+    background-color: rgb(173, 170, 170, 0.20);
+
+
     border-radius: 7px;
     box-shadow: 8px 6px 17px 4px rgba(0, 0, 0, 0.45);
 }
@@ -66,7 +64,7 @@ body {
 }
 
 .container-gruop {
-   
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +72,7 @@ body {
 }
 
 .img-title {
-   width: 5em;
+    width: 5em;
     object-fit: cover;
 }
 
@@ -89,14 +87,15 @@ body {
 }
 
 
-.nameGrupo,.emailGrupo,
-.passwordGrupo{
+.nameGrupo,
+.emailGrupo,
+.passwordGrupo {
     display: flex;
     align-items: start;
     color: #fff;
     margin: .5rem 0;
-     padding: .5rem .8rem;
-    border:solid .1rem #141414;
+    padding: .5rem .8rem;
+    border: solid .1rem #141414;
     border-radius: .7rem;
 }
 
@@ -116,9 +115,9 @@ body {
     background: none;
     outline: none;
     width: 50%;
-   margin: .35rem 0  ;
+    margin: .35rem 0;
     font-size: 1.2rem;
-    color: #FFFF;  
+    color: #FFFF;
     transition: border .5s linear;
 }
 
@@ -128,7 +127,8 @@ body {
 
 }
 
-.nameLabel,.emailLabel,
+.nameLabel,
+.emailLabel,
 .namePassword {
     margin: .5rem 0;
     font-size: 1.3em;
@@ -153,13 +153,14 @@ body {
 
 .botoesGrupo {
     width: 100%;
-    height: 15dvh; 
+    height: 15dvh;
     margin: 1.5rem 0;
     padding: 0;
     display: flex;
     align-items: center;
 }
-.botoesGrupo a{
+
+.botoesGrupo a {
     width: 100%;
     display: flex;
     align-items: center;
@@ -167,12 +168,12 @@ body {
     text-decoration: none;
 }
 
-#link{
+#link {
     width: 100%;
-    
+
 }
 
-.btn-Login {    
+.btn-Login {
     padding: 20px 25px;
     text-align: center;
     margin: 0 10px;
@@ -180,32 +181,35 @@ body {
     font-size: 1.2rem;
     font-weight: 800;
 
-    text-transform:capitalize;
+    text-transform: capitalize;
     background-color: #fff;
     border-radius: 5px;
     border: none;
     /* transition: background-color .7s ease-in; */
 }
-.btn-enter , .btn-confirmar {
+
+.btn-enter,
+.btn-confirmar {
     width: 14rem;
 }
 
 
-.recovery .btn-enter , .recovery .btn-confirmar{
+.recovery .btn-enter,
+.recovery .btn-confirmar {
     width: 15rem;
 }
 
-  .recovery .btn-confirmar{
+.recovery .btn-confirmar {
     width: 13rem;
- }
+}
 
- .recovery .btn-cancel-recovery{
+.recovery .btn-cancel-recovery {
     display: none;
- }
+}
 
- .btn-cancel-recovery{
+.btn-cancel-recovery {
     display: none
- }
+}
 
 .btn-google {
     right: 1.5rem;
@@ -213,7 +217,7 @@ body {
     align-items: center;
     justify-content: center;
     text-transform: none;
-    
+
 }
 
 .iconGoogle {
@@ -253,31 +257,32 @@ body {
 }
 
 
-.campoCadrastro{
+.campoCadrastro {
     display: none;
 }
- .cadastrar .campoCadrastro{
-display: flex;
+
+.cadastrar .campoCadrastro {
+    display: flex;
 }
 
 
 
-.cadastrar .campoFile{
+.cadastrar .campoFile {
     display: flex;
     align-items: center;
     justify-content: start;
 }
 
-.container-gruop .linkSenha{
+.container-gruop .linkSenha {
     margin: 0;
 }
 
-.cadastrar .linkSenha{
+.cadastrar .linkSenha {
     display: none;
 }
 
 
-.imgFile{
+.imgFile {
     width: 3rem;
     height: 3rem;
     border-radius: 100%;
@@ -288,16 +293,16 @@ display: flex;
     background-color: #595959;
 }
 
-.imgFile img{
+.imgFile img {
     width: 100%;
 }
 
-.FileButton{
+.FileButton {
     width: 18em;
-    padding: .32em .38em; 
+    padding: .32em .38em;
     margin: 0 1rem;
     font-size: .8rem;
-     display: inline-block;
+    display: inline-block;
     background-color: #595959;
     text-align: center;
     color: white;
@@ -307,10 +312,8 @@ display: flex;
 
 @media screen and (max-width:992px) {
     body {
-
-    height: 100dvh;
-    background-color: #141414;
-}
+        background-color: #141414;
+    }
 
     .containerMenu {
         width: 100dvw;
@@ -323,118 +326,124 @@ display: flex;
     }
 
 
-     .cadastrar {
+    .cadastrar {
         width: 100dvw;
         height: 100dvh;
         padding: 15px 5px;
         align-items: center;
     }
 
-    .container-titulo{
+    .container-titulo {
         flex-direction: column;
     }
-.img-title {
-    width: 4em;
-}
+
+    .img-title {
+        width: 4em;
+    }
 
 
 
     .titulo-login {
+        padding: 0;
         font-size: 1.8rem;
         text-transform: uppercase;
 
     }
-   
-   .recovery .namePassword {
+
+    .recovery .namePassword {
         width: 9em;
     }
 
-  
-
- .recovery .btn-confirmar{
-    width: 9.5rem;
- }
- 
- .nameLabel,.emailLabel,
-.namePassword {
-    margin: .5rem 0;
-    font-size: 95%;
-    font-weight: bold;
-    font-family: var(--fontTerceiry);
-    text-shadow: 1px 1px 1px #000;
-    transition: all .5s ease-in-out;
-}
 
 
-.FileButton{
-   
-    margin: 1rem;
-    font-size: 1.2rem;
-}
+    .recovery .btn-confirmar {
+        width: 9.5rem;
+    }
+
+    .nameLabel,
+    .emailLabel,
+    .namePassword {
+        margin: .5rem 0;
+        font-size: 95%;
+        font-weight: bold;
+        font-family: var(--fontTerceiry);
+        text-shadow: 1px 1px 1px #000;
+        transition: all .5s ease-in-out;
+    }
 
 
-.input-cad,
-.passwordGrupo input {
-    font-size: 90%;
-}
+    .FileButton {
 
- 
+        margin: 1rem;
+        font-size: 1.2rem;
+    }
 
-   .cadastrar .nameLabel .namePassword , .cadastrar .emailLabel,
-   .cadastrar .namePassword {
-    width: fit-content; 
-    
+
+    .input-cad,
+    .passwordGrupo input {
+        font-size: 90%;
+    }
+
+
+
+    .cadastrar .nameLabel .namePassword,
+    .cadastrar .emailLabel,
+    .cadastrar .namePassword {
+        width: fit-content;
+
 
     }
 
-    .recovery .namePassword{
-       
+    .recovery .namePassword {
+
         font-size: 75%;
     }
 
-    .cadastrar .namePassword{
+    .cadastrar .namePassword {
         font-size: 90%;
     }
 
     .cadastrar .nameGrupo,
-    .cadastrar .passwordGrupo
-    .cadastrar .emailGrupo
-    {
+    .cadastrar .passwordGrupo .cadastrar .emailGrupo {
         display: inline-flex;
     }
 
-     .emailGrupo .input-cad, #password{
+    .emailGrupo .input-cad,
+    #password {
         width: 70%;
     }
-    .nameGrupo,.emailGrupo,
+
+    .nameGrupo,
+    .emailGrupo,
     .passwordGrupo,
     .botoesGrupo {
         width: 100%;
         font-size: 1.5rem;
         position: relative;
         color: #FFFF;
-        margin: 1rem 0 ;
-        padding: 1rem 1.5rem;
+        margin: .5rem 0;
+        padding: .8rem 1rem;
     }
 
     .linkSenha p {
         font-size: 1.3em;
-        margin: 10px  0 0 0;
+        margin: 10px 0 0 0;
     }
-    .confirPass label{
+
+    .confirPass label {
         font-size: .7rem;
     }
-   
-   .confirPass input {
+
+    .confirPass input {
         font-size: 1.2rem;
-        
+
     }
 
 
     .passwordGrupo p {
         font-size: 1.2rem;
     }
-    
+
     .container-gruop {
         width: 100%;
         display: flex;
@@ -445,7 +454,7 @@ display: flex;
     }
 
 
-    .cadastrar #link{
+    .cadastrar #link {
         margin: 0;
         padding: 0;
     }
@@ -456,23 +465,23 @@ display: flex;
         width: 100%;
         padding: .5rem;
 
-        margin:  0;
+        margin: 0;
         display: flex;
         align-items: start;
         flex-wrap: wrap;
         text-transform: lowercase;
     }
 
-    .botoesGrupo a{
+    .botoesGrupo a {
         width: 100%;
         height: 25%;
         padding: .5rem;
-        margin:0;
+        margin: 0;
         display: flex;
         align-items: start;
         flex-wrap: wrap;
         text-transform: lowercase;
-}
+    }
 
     .btn-Login {
 
@@ -488,49 +497,55 @@ display: flex;
         transition: background-color .7s ease-in;
     }
 
-  .btn-enter {
-    width: 10rem;
-  }
-    
-
-  .recovery .btn-enter, .recovery .btn-cadastrar{
-    width: 12rem;
- }
+    .btn-enter {
+        width: 10rem;
+    }
 
 
-.cadastrar .btn-enter ,.cadastrar .btn-cancel-recovery{
-    margin: 0;
+    .recovery .btn-enter,
+    .recovery .btn-cadastrar {
+        width: 12rem;
+    }
+
+
+    .cadastrar .btn-enter,
+    .cadastrar .btn-cancel-recovery {
+        margin: 0;
+    }
+
+    .btn-google {
+        width: 100%;
+    }
+
+    .recovery .btn-confirmar {
+        width: 40%;
+        word-break: break-all;
+    }
+
+
 }
 
-.btn-google {
-    width: 100%;
-}
-
-.recovery .btn-confirmar{
-    width: 40%;
-    word-break: break-all;
- }
-
-
-}
-@media screen and (max-width:640px){
+@media screen and (max-width:640px) {
 
     .recovery .namePassword {
-        
-    width: 20%;
-     }
- .recovery .btn-enter {
-  width: 75%;
- }
- .recovery .btn-confirmar{
-     width: 70%;
- }
-.recovery .btn-cancel-recovery{
-    width: 65%;
-}
+        width: 55%;
+    }
+
+    .recovery .btn-enter {
+        width: 75%;
+    }
+
+    .recovery .btn-confirmar {
+        width: 70%;
+    }
+
+    .recovery .btn-cancel-recovery {
+        width: 65%;
+    }
 
 
-    .input-cad, .passwordGrupo input{
+    .input-cad,
+    .passwordGrupo input {
         padding-left: .5rem;
     }
 

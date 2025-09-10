@@ -71,6 +71,11 @@ $(window).ready(() => {
          }
       }
 
+      $(window).ready(function () {
+
+
+      })
+
 
       $.ajax({
          url: "https://www.googleapis.com/oauth2/v3/userinfo",
