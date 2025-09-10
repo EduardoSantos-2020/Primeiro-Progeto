@@ -872,7 +872,7 @@ span.buttonText {
 
 .container-User .textEmail{
         top: 2.4rem;
-        left: 7.5rem;
+        left:9em;
         text-align: start;
         position: absolute;
         font-size: .9rem;
@@ -888,8 +888,8 @@ span.buttonText {
         font-weight: 900;
         font-size: 2rem;
         color: #fdfbfb;
-        background-color: #ffffff1a;
         border-radius:  0 0 8px 8px;
+        background-color: #13121228;
         text-transform: uppercase;
         display:none;
         justify-content: center;
