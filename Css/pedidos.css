@@ -859,20 +859,11 @@ span.buttonText {
         background-color: rgb(252, 14, 2);
         transition: all 1s ease-in-out;
     }
-    
-
-  
-
 
     .container-User .textEmail{
         width: 22em;
-        left: 9em;
-
-    }
-
-.container-User .textEmail{
         top: 2.4rem;
-        left: 7.5rem;
+        left: 5.5rem;
         text-align: start;
         position: absolute;
         font-size: .9rem;
