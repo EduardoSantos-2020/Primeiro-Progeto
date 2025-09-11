@@ -196,7 +196,7 @@ body {
 
 .recovery .btn-enter,
 .recovery .btn-confirmar {
-    width: 15rem;
+    width: 12rem;
 }
 
 .recovery .btn-confirmar {
@@ -518,7 +518,7 @@ body {
     }
 
     .recovery .btn-confirmar {
-        width: 55%;
+        width: 30%;
         word-break: break-all;
     }
 
@@ -528,19 +528,23 @@ body {
 @media screen and (max-width:640px) {
 
     .recovery .namePassword {
-        width: 40%;
+        width: 60%;
+        font-size: 1rem;
     }
 
     .recovery .btn-enter {
-        width: 75%;
+        width: 40%;
+        font-size: 1rem;
     }
 
     .recovery .btn-confirmar {
-        width: 70%;
+        width: 45%;
+        font-size: 1rem;
     }
 
     .recovery .btn-cancel-recovery {
-        width: 65%;
+        width: 90%;
+        font-size: 1rem;
     }
 
 
