@@ -131,6 +131,7 @@ function recoveryPassFunction() {
   InputEmail.focus()
   btnRecovery.style.display = 'none'
   InputPassword.placeholder = 'Digite  o codigo'
+  InputPassword.setAttribute('type','number')
   Title.innerHTML = 'Esqueceu a sua senha ?'
   btnEnter.innerHTML = 'Enviar código'
   btnCreate.innerHTML = 'Confirmar código'
@@ -153,6 +154,7 @@ function loginFunction() {
   InputEmail.placeholder = 'Digite seu Email';
   InputEmail.focus()
   InputPassword.placeholder = "Digite sua Senha";
+  InputPassword.setAttribute('type','password')
   btnCancelRecovery.style.display = 'none'
   link.setAttribute('href', '#login')
 }
