@@ -231,7 +231,9 @@ body {
 .campo-container {
     width: 90dvw;
     display: grid;
-    background-color: #adaaaa26;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
     color: #fff;
     margin-top: 5rem;
     padding: 1.8rem 1rem;

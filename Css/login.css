@@ -40,6 +40,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
 }
 
 .containerMenu {
@@ -48,12 +49,9 @@ body {
     padding: 30px;
     width: 52em;
     height: fit-content;
-
-    background-color: rgb(173, 170, 170, 0.20);
-
-
-    border-radius: 7px;
-    box-shadow: 8px 6px 17px 4px rgba(0, 0, 0, 0.45);
+     background-color: #141414;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
 }
 
 .container-titulo {
@@ -95,7 +93,7 @@ body {
     color: #fff;
     margin: .5rem 0;
     padding: .5rem .8rem;
-    border: solid .1rem #141414;
+     border:  .2rem solid #141414;
     border-radius: .7rem;
 }
 
@@ -120,6 +118,24 @@ body {
     color: #FFFF;
     transition: border .5s linear;
 }
+.input-cad:-webkit-autofill,
+.input-cad:-webkit-autofill:hover, 
+.input-cad:-webkit-autofill:focus, 
+.input-cad:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.passwordGrupo input:-webkit-autofill,
+.passwordGrupo input:-webkit-autofill:hover, 
+.passwordGrupo input:-webkit-autofill:focus, 
+.passwordGrupo input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 
 .container-gruop a {
     margin: .7rem 0 0 20px;
@@ -319,10 +335,7 @@ body {
         width: 100dvw;
         height: 100dvh;
         padding: 30px 10px;
-        background-color: #353333;
-        border: 1px solid rgba(0, 0, 0, 0.3);
         border-radius: 7px;
-        box-shadow: 8px 6px 17px 4px rgba(0, 0, 0, 0.75);
     }
 
 

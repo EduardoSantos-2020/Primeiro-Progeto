@@ -6,8 +6,17 @@
     --fontPrimary: 'Baloo Da 2', sans-serif;
     --fontSecundary: 'Josefin Sans', sans-serif;
     --fontTerceiry: 'Franklin Gothic Medium', sans-serif;
-}
 
+    --bg:#0b0b0bf8;
+      --panel:#0f0f10;
+      --accent:#e11b23; /* vermelho vibrante */
+      --accent-2:#ff3945;
+      --muted:#9a9a9a;
+      --glass: rgba(255,255,255,0.03);
+      --card-shadow: 0 8px 30px rgba(0,0,0,0.7);
+      --radius:16px;
+      --mono: 'SFMono-Regular', ui-monospace, Monaco, 'Roboto Mono', 'Courier New', monospace;
+}
 
 * {
     margin: 0;
@@ -20,15 +29,20 @@
 
 html {
     width: 100%;
-    height: 100dvh;
     scroll-behavior: smooth;
-    scroll-padding: 1.5rem;
+    scroll-padding-top: 90px;
     transition-duration: 2.5s smooth;
 }
 
 body {
     position: relative;
-    background-color: rgb(12, 12, 12);
+       background: radial-gradient(1200px 600px at 10% 20%, rgba(225,27,35,0.06), transparent 8%),
+                  radial-gradient(1000px 500px at 90% 80%, rgba(255, 57, 70, 0.164), transparent 8%),
+                  var(--bg);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+  
     background-size: cover;
     overflow: overlay;
 }

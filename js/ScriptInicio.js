@@ -108,9 +108,7 @@ $(function () {
       });
    }
 
-
 })
-
 
 $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
 
@@ -173,6 +171,7 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
 
    sideBar = $(".sidebar");
    nameLogo = $('.logo--name');
+   menu = $('.menu-btn .line');
    correntSlider = 0;
 
    $('.button-prop').on('click', mobileEvent)
@@ -182,6 +181,20 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
       $('.nav--menu').toggleClass('mobile-btn');
 
       !$('.nav--menu').hasClass('mobile-btn') && $('body').width() < 992 ? $('body').css('overflow', 'hidden') : $('body').css('overflow', 'visible');
+
+      if ($('.menu-btn').hasClass('btn-active')){
+            sideBar.css('background-color','#141414')
+            nameLogo.css('color', '#fff');
+            menu.css('background-color', '#fff');
+         }else{
+            if (window.scrollY==0) {
+               sideBar.css('background','transparent')
+            }else{
+               sideBar.css('background','#e9e8e8f8')
+                 nameLogo.css('color', '#000');
+               menu.css('background-color', '#000');
+            }
+         }   
    }
 
    function showSlider() {
@@ -212,13 +225,19 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
 
       if (sect > 0) {
          sideBar.removeClass('styleSidebar');
+         sideBar.css('background-color','#e9e8e8f8')
          nameLogo.css('color', '#000');
+         menu.css('background-color', '#000');
+          
       } else {
          sideBar.addClass('styleSidebar');
+         sideBar.css('background','transparent')
 
-
-         $(elem.currentTarget).width() <= 992 ? nameLogo.css('color', '#000') : nameLogo.css('color', '#fff')
+         nameLogo.css('color', '#fff')
+         menu.css('background-color', '#fff')
+         
       }
+
 
       $('section').each(function () {
          let target = $(this).offset().top;
@@ -231,8 +250,10 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
       });
 
    })
+
    // function Section() {
    // }
+
    $('.menu--secao').each(function (i, section) {
       $(section).click((e) => {
          if (e.type == 'click') {
@@ -242,13 +263,11 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
    })
 
    $('html').ready(function () {
-
       //$(document).scrollTop(0)
       //Section()
-
-      $(window).on('resize', (e) => {
-         e.currentTarget.innerWidth <= 992 ? nameLogo.css('color', '#000') : nameLogo.css('color', '#fff');
-      });
+      // $(window).on('resize', (e) => {
+      //    e.currentTarget.innerWidth <= 992 ? nameLogo.css('color', '#000') : nameLogo.css('color', '#fff');
+      // });
 
    });
    setInterval(showSlider, 15000)
