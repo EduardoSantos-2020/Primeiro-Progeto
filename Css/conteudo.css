@@ -15,8 +15,7 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 1.2rem 0;
-    padding: .8rem 0;
+    margin: 20px 0;
 }
 
 .container--nav {
@@ -82,7 +81,8 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: .9rem 8px;
+    transform: translateY(-25%);
+    padding: .7rem 8px;
     border-radius: 8px 8px 0 0;
 }
 
@@ -93,7 +93,7 @@ a {
 
 .container-User .textEmail {
     width: 17.5em;
-    top: 1.9rem;
+    top: 1.8rem;
     left: 3.6rem;
     position: absolute;
     font-size: .56rem;
@@ -105,7 +105,8 @@ a {
 .userGrup {
     display: flex;
     align-items: center;
-    height: .78rem;
+    padding-top: .8rem;
+    height: .32rem;
 }
 
 .userGrup p {
@@ -125,9 +126,10 @@ a {
 }
 
 
+
 .btnExit {
     position: absolute;
-    top: 2.6rem;
+    top: 2.2rem;
     width: 100%;
     padding: 0 20px;
     border: none;
@@ -344,6 +346,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         display: flex;
         align-items: center;
         padding: 0;
+        transform:none;
         border-radius: 8px 8px 0 0;
     }
 
