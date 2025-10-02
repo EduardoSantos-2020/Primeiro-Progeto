@@ -15,7 +15,8 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 20px 0;
+    margin: 1.2rem 0;
+    padding: .8rem 0;
 }
 
 .container--nav {
@@ -44,18 +45,6 @@ a {
 
 .styleSidebar .logo--name {
     color: #fff;
-}
-
-.sidebar .container-User:hover {
-    background-color: #13121228;
-}
-
-.sidebar .container-User:hover .btnExit {
-    display: flex;
-}
-
-.styleSidebar .container-User:hover {
-    background-color: #ffffff1a;
 }
 
 @media screen and (max-width:992px) {
@@ -93,7 +82,7 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 13px 8px;
+    padding: .9rem 8px;
     border-radius: 8px 8px 0 0;
 }
 
@@ -138,7 +127,7 @@ a {
 
 .btnExit {
     position: absolute;
-    top: 2.66rem;
+    top: 2.6rem;
     width: 100%;
     padding: 0 20px;
     border: none;
@@ -152,6 +141,62 @@ a {
     justify-content: center;
 }
 
+.styleSidebar .container-User .userGrup p {
+    color: #fff;
+}
+.styleSidebar .container-User:hover .userGrup  p {
+     color: #ffffff1a;
+}
+
+
+.sidebar .container-User:hover .btnExit {
+    background-color: #13121228;
+}
+
+.sidebar .container-User:hover .textName {
+    color: #ffffff1a;
+}
+
+.sidebar .container-User:hover .userGrup .textName {
+    color: #ffffff1a;
+}
+
+.sidebar .container-User:hover .textEmail {
+    color: #ffffff1a;
+}
+.sidebar .container-User:hover .userGrup p {
+    color: #ffffff1a;
+}
+
+
+
+.sidebar .container-User:hover .userGrup  p {
+     color: #13121228;
+}
+
+.sidebar .container-User:hover {
+    background-color: #13121228;
+    color: #13121228;
+}
+
+.sidebar .container-User:hover .btnExit {
+    display: flex;
+}
+
+.styleSidebar .container-User:hover {
+    background-color: #ffffff1a;
+    
+}
+.styleSidebar .container-User .textName,
+.styleSidebar .container-User .textEmail {
+    color: #fff;
+}
+
+.styleSidebar .container-User:hover {
+    background-color: #ffffff1a;
+}
+
+
 .sidebar .btnExit:hover {
     color: #3f3c3c;
 }
@@ -160,24 +205,16 @@ a {
     color: #afafaf;
 }
 
-.sidebar .container-User:hover .btnExit {
-    background-color: #13121228;
+.styleSidebar .container-User:hover .userGrup .textEmail {
+    color: #13121228;
 }
 
-.sidebar .container-User:hover .textEmail {
-    color: #444343;
-}
-
-.styleSidebar .container-User:hover .textEmail {
-    color: #ffffff;
-}
-
-.sidebar .container-User:hover .userGrup .textName {
-    color: #444343;
+.styleSidebar .sidebar .container-User:hover .userGrup .textName {
+    color: #ffffff1a;
 }
 
 .styleSidebar .container-User:hover .userGrup .textName {
-    color: #ffffff;
+    color: #ffffff1a;
 }
 
 .styleSidebar .container-User:hover .btnExit {
@@ -292,7 +329,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         padding: 15% 20%;
         background-color: #141414; 
         box-shadow: 0 12px 6px #141414;
-        transition: all .7s ease-in-out;
+        transition: all .3s ease;
     }
 
 
@@ -302,10 +339,11 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 
     .container-User {
         width: 25em;
-        height: 5rem;
+        height: 5em;
+        margin:0.5rem 0;
         display: flex;
         align-items: center;
-        flex-direction: column;
+        padding: 0;
         border-radius: 8px 8px 0 0;
     }
 
@@ -318,8 +356,8 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     }
 
     .container-User .textEmail {
-        top: 2.4rem;
-        left: 7.5rem;
+        top: 2.2rem;
+        left: 7.4rem;
         text-align: start;
         position: absolute;
         font-size: .9rem;
@@ -329,18 +367,18 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 
     .userGrup {
         display: flex;
-        align-items: center;
-        justify-content: space-evenly;
         width: 100%;
         height: 100%;
+        align-items: center;
+        justify-content: center;
+       
     }
 
 
     .userImg {
-
-        width: 48px;
-        height: 48px;
-
+        width: 4.5rem;
+        height: 4.5rem;
+        margin: 0 1.5rem 0 0;
     }
 
     .userImg img {
@@ -348,8 +386,6 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         object-fit: cover;
         border-radius: 50%;
     }
-
-
 
     .btnExit {
         position: absolute;
@@ -370,7 +406,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     .login {
         width: 100px;
 
-        margin: 0 30px;
+        margin: 30px;
         padding: 10px;
         color: #fff;
         font-family: var(--fontTerceiry);
@@ -485,7 +521,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 
     .mobile-btn {
         left: -100%;
-        transition: all 0.5s ease-in;
+        transition: all 0.3s ease-in;
     }
 
     /*-----------------------------------------------------------------------------------------*/
@@ -528,7 +564,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 
 .slider--item {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     opacity: 0;
     background-color: #000; 
@@ -656,7 +692,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     .conteiner--slider {
         position: relative;
         width: 100%;
-        height: 50vh; 
+        height: 37em; 
     }
 
 
@@ -1078,6 +1114,11 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     padding: 2.4rem 0;
 }
 
+.base-services {
+    position: relative;
+    width: 100%;
+}
+
 .services .servicosPrestados {
     padding: 10px 2rem;
     flex-direction: column;
@@ -1411,10 +1452,6 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     
 }
 
-.img-cont-mobile {
-    display: none;
-}
-
 .container-form {
     display: flex;
     align-items: center;
@@ -1488,6 +1525,7 @@ align-items: end;
 
 
 .contatosImg p{
+    width: 50%;
     font-size: 2.4rem;
     color: #fff;
     font-family: var(--fontPrimary);
@@ -1583,12 +1621,12 @@ textarea:focus {
 }
 
 .imgContainer{
-    width: 50%;
+
     display: flex;
 }
 
 .contatosImg {
-
+    width: 100%;
     filter: drop-shadow(0 -3mm 3mm #000);
 }
 
@@ -1601,10 +1639,6 @@ textarea:focus {
 }
 
 @media screen and (max-width:540px) {
-    .contatos--container h1 {
-        font-size: 1.2em;
-        left: 1em;
-    }
 
     .conteudo-contatos {
         display: flex;
@@ -1624,7 +1658,7 @@ textarea:focus {
 
     .imgContainer{
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         padding: 0;
         margin: 0;
     }
@@ -1638,14 +1672,14 @@ textarea:focus {
     .group-input .grupform label,
     .label-m {
         color: #fff;
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-weight: 900;
     }
 
     .contatosImg {
         position: relative;
         padding: 0;
-        height: 70%;
+        height: 25em;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -1658,13 +1692,13 @@ textarea:focus {
 }
 
     .img-cont {
-       width: 22rem;
+       width: 20rem;
         object-fit: cover;
         float: none;
     }
 
     .grupform {
-        width: 100%;
+        width: 90%;
         margin: 1rem;
     }
 

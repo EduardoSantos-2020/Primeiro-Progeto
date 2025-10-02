@@ -23,6 +23,68 @@ body {
     background-color: #0B0A0A;
 }
 
+.nav--menu {
+    position: relative;
+    display: inline-flex;
+    margin: 0 10px;
+    align-items: center;
+}
+
+
+.container-User {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 8px;
+    margin: 0 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.container-User p {
+    font-size: 1.2rem;
+   
+    font-weight: bold;
+    margin: 0 10px;
+
+}
+   
+ 
+.container-User .textEmail {
+    width: 17.5em;
+    top: 1.9rem;
+    left: 3.6rem;
+    position: absolute;
+    font-size: .56rem;
+    letter-spacing: .1rem;
+    margin: 0;
+}
+
+
+
+
+.container-User:hover {
+    background-color: #13121228;
+}
+
+
+.userImg {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.userGrup p{
+    letter-spacing: .2rem;
+}
+
+.userImg img {
+    width: 100%;
+}
+
+
 .sidebar {
     position: fixed;
     width: 100%;
@@ -34,6 +96,124 @@ body {
     box-shadow: .2rem .2rem .2rem #1C1C1C;
     transition: all 1s ease;
 }
+
+#btn-login {
+    text-decoration: none;
+}
+
+.container-User {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 8px;
+    margin: 0 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.container-User p {
+    font-size: 1.2rem;
+   
+    font-weight: bold;
+    margin: 0 10px;
+
+}
+   
+ 
+.container-User .textEmail {
+    width: 17.5em;
+    top: 1.9rem;
+    left: 3.6rem;
+    position: absolute;
+    font-size: .56rem;
+    letter-spacing: .1rem;
+    margin: 0;
+}
+
+.container-User:hover {
+    background-color: #13121228;
+}
+
+.sidebar .container-User:hover .userGrup .textName {
+    color: #13121228;  
+}
+
+.sidebar .container-User:hover .btnExit {
+    display: flex;
+}
+
+.container-User:hover .textEmail{
+    color:#13121228 ;
+}
+
+.userImg {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.userGrup p{
+    letter-spacing: .2rem;
+}
+
+.userImg img {
+    width: 100%;
+}
+
+.userGrup {
+    display: flex;
+    align-items: center;
+    height: .78rem;
+}
+
+.btnExit {
+    position: absolute;
+    top: 2.66rem;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #fdfbfb;
+    background-color: #13121228;
+    border-radius: 0 0 8px 8px;
+    text-transform: uppercase;
+    display: none;
+    justify-content: center;
+}
+
+.btnExit:hover {
+    color: #3f3c3c;
+
+}
+
+
+
+.login {
+    width: 100px;
+    margin: 10px;
+    padding: 5px;
+    display: none;
+    font-family: var(--fontTerceiry);
+    font-weight: bolder;
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: rgb(252, 14, 2);
+    transition: all .5s ease-in-out;
+}
+
+.login:hover {
+    background-color: rgb(199, 11, 1);
+    color: rgb(216, 213, 213);
+    transition: all .5s ease-in-out;
+}
+
+
 
 @media screen and (max-width:992px) {
     /*-------------------------*\
@@ -129,9 +309,9 @@ body {
         color: #fff;
         z-index: 100;
         overflow-y: scroll;
-
-        background-color: rgb(46, 46, 46);
-        transition: all .7s ease-in-out;
+        background-color: #141414; 
+        box-shadow: 0 12px 6px #141414;
+        transition: all .3s ease;
     }
 
  .container-User{
@@ -481,64 +661,6 @@ grid-column: buttons;
 
    color: red;
 }
-#btn-login {
-    text-decoration: none;
-}
-
-.userGrup {
-    display: flex;
-    align-items: center;
-    height: .78rem;
-}
-
-.btnExit {
-    position: absolute;
-    top: 2.66rem;
-    width: 100%;
-    padding: 0 20px;
-    border: none;
-    font-weight: 900;
-    font-size: 1.2rem;
-    color: #fdfbfb;
-    background-color: #13121228;
-    border-radius: 0 0 8px 8px;
-    text-transform: uppercase;
-    display: none;
-    justify-content: center;
-}
-
-.btnExit:hover {
-    color: #3f3c3c;
-
-}
-
-.sidebar .container-User:hover .btnExit {
-    display: flex;
-}
-
-.login {
-    width: 100px;
-    margin: 10px;
-    padding: 5px;
-    display: none;
-    font-family: var(--fontTerceiry);
-    font-weight: bolder;
-    font-size: 1rem;
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-    border-radius: 5px;
-    background-color: rgb(252, 14, 2);
-    transition: all .5s ease-in-out;
-}
-
-.login:hover {
-    background-color: rgb(199, 11, 1);
-    color: rgb(216, 213, 213);
-    transition: all .5s ease-in-out;
-}
-
-
 
 .containerbuttons p {
     font-family: var(--fontPrimary);
@@ -557,71 +679,6 @@ grid-column: buttons;
     font-size: 1.2rem;
 }
 
-
-
-.nav--menu {
-    position: relative;
-    display: inline-flex;
-    margin: 0 10px;
-    align-items: center;
-}
-
-
-.container-User {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 8px;
-    margin: 0 10px;
-    border-radius: 8px 8px 0 0;
-}
-
-.container-User p {
-    font-size: 1.2rem;
-   
-    font-weight: bold;
-    margin: 0 10px;
-
-}
-   
- 
-.container-User .textEmail {
-    width: 17.5em;
-    top: 1.9rem;
-    left: 3.6rem;
-    position: absolute;
-    font-size: .56rem;
-    letter-spacing: .1rem;
-    margin: 0;
-}
-
-
-.sidebar .container-User:hover p {
-    color: #444343;
-
-}
-
-.container-User:hover {
-    background-color: #13121228;
-}
-
-
-.userImg {
-    width: 32px;
-    height: 32px;
-
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.userGrup p{
-    letter-spacing: .2rem;
-}
-
-.userImg img {
-    width: 100%;
-}
 
 #customBtn {
     display: inline-block;
@@ -761,16 +818,12 @@ span.buttonText {
             margin: 1rem 0;
         }
         
-       
-        
-
-   .campo-container .title--produto{
-    width: 100%;
-       font-size: 1.3rem;
-       padding: .5rem .7rem;
+         
+        .campo-container .title--produto{
+        width: 100%;
+        font-size: 1.3rem;
+        padding: .5rem .7rem;
     }
-
-
 
     .campo--Imgs {
         width: 100%;

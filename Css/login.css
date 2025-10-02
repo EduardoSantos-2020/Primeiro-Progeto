@@ -154,19 +154,6 @@ body {
     transition: all .5s ease-in-out;
 }
 
-
-/* .input-cad:focus~.nameLabel,
-.input-cad:not(:placeholder-shown)~.nameLabel {
-    top: -1.2rem;
-    font-size: 1rem;
-}
-
-.input-cad:focus~.namePassword,
-.input-cad:not(:placeholder-shown)~.namePassword {
-    top: -1.2rem;
-    font-size: 1rem;
-} */
-
 .botoesGrupo {
     width: 100%;
     height: 15dvh;

@@ -1,5 +1,9 @@
 $(window).ready(() => {
 
+menu = $('.menu-btn .line');
+sideBar = $(".sidebar");
+nameLogo = $('.logo--name');
+
    $('.button-prop').on('click', mobileEvent)
 
    function mobileEvent() {
@@ -7,6 +11,20 @@ $(window).ready(() => {
       $('.containerbuttons').toggleClass('mobile-btn');
 
       !$('.containerbuttons').hasClass('mobile-btn') && $('body').width() < 992 ? $('body').css('overflow', 'hidden') : $('body').css('overflow', 'visible');
+
+
+      if ($('.menu-btn').hasClass('btn-active')){
+            sideBar.css('background-color','#141414')
+            nameLogo.css('color', '#fff');
+            menu.css('background-color', '#fff');
+         }else{
+           
+               sideBar.css('background','#e9e8e8f8')
+               nameLogo.css('color', '#000');
+               menu.css('background-color', '#000');
+            
+         }   
+
    }
 
    let btnLogin = $('#btn-login').find('.login')[0];
