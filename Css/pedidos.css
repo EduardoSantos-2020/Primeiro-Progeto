@@ -46,6 +46,15 @@ body {
     margin-right: .4rem;
 }
 
+.container--nav .logo--name {
+    font-size: 1.6rem;
+    font-family: var(--fontPrimary);
+    font-weight: bolder;
+    margin-top: 0.3rem;
+    color: #000;
+    text-shadow: #000 1px 1px 1px;
+    text-transform: uppercase;
+}
 
 .container-User {
     position: relative;

@@ -1624,6 +1624,10 @@ textarea:focus {
     flex-direction: column;
 }
 
+.logMark .logo-img {
+  object-fit: cover;
+}
+
 .logMark p:nth-child(2) {
     font-weight: 800;
     font-size: 1.2em;
