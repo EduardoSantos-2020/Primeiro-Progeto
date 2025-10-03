@@ -31,6 +31,22 @@ body {
 }
 
 
+.container--nav {
+    width: 30%;
+    position: relative;
+    display: flex;
+    align-content: center;
+}
+
+.container--nav .logo--img {
+    width: 3.3em;
+    display: flex;
+    object-fit: cover;
+    background-size:cover;
+    margin-right: .4rem;
+}
+
+
 .container-User {
     position: relative;
     display: flex;
