@@ -897,21 +897,21 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         top: 45%;
     }
 .slick-prev {
-    left: -1.7rem;
+    left: -1.4rem;
 }
 
 .slick-next {
-    right: -1.8rem;
+    right: -1.5rem;
 }
     .produtos--items {
         display: flex;
-        width: 100%;
+        width: 95%;
       
     }
 
     .produto--item {
-        padding: 0;
-        margin: 20px;
+        padding: 0 .7rem;
+        margin: 20px ;
         height: 25em;
     }
 
@@ -935,11 +935,11 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     }
 
     .produto--item button {
-       
+            margin-top: .5rem;
     }
 
     .produto--item button:active {
-        margin-top: 1.9rem;
+        margin-top: .8rem;
         box-shadow: none;
 
     }
