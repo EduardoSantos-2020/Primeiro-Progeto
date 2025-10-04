@@ -454,6 +454,10 @@ body {
         margin: 0;
         padding: 0;
     }
+    .recovery #link {
+        width: 90%;
+        margin: 0 auto;
+    }
 
 
 
