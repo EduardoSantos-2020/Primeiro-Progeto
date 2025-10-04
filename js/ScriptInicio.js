@@ -151,18 +151,20 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
             settings: {
                slidesToShow: 2,
                slidesToScroll: 2,
-               infinite: true,
+               infinite: false,
+               speed: 800,
                dots: false,
-               arrows: false,
+               arrows: true,
             }
          },
          {
             breakpoint: 600,
             settings: {
                slidesToShow: 1,
-               infinite: true,
+               infinite: false,
+               speed: 800,
                slidesToScroll: 1,
-               arrows: false,
+               arrows: true,
             }
          }
       ]
