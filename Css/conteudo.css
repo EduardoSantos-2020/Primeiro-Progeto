@@ -856,7 +856,6 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 
     .produto--item {
         width: 100%;
-        height: 22em;
     }
 
 
@@ -875,43 +874,28 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         margin: 5px 0;
     }
 
-    .produto--item button {
-        width: 50%;
-        font-size: 1rem;
-        cursor: pointer;
-        padding: 1rem;
-        margin: 15px;
-        margin: 1rem;
-    }
 
-    .produto--item button:active {
-        margin-top: 1.3rem;
-        box-shadow: none;
-
-    }
 }
 
 @media screen and (min-width:380px) and (max-width:590px) {
 
-    .slick-arrow{
-        top: 45%;
-    }
-.slick-prev {
+    .slick-prev {
     left: -1.8rem;
 }
 
-.slick-next {
-    right: -1.5rem;
-}
+    .slick-next {
+        right: -1.5rem;
+    }
+
     .produtos--items {
         display: flex;
-        width: 95%;
+        width: 100%;
       
     }
 
     .produto--item {
-        padding: 0 .7rem;
-        margin: 20px ;
+        padding: 0;
+        margin: 20px;
         height: 25em;
     }
 
@@ -935,11 +919,14 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     }
 
     .produto--item button {
-            margin-top: .5rem;
+        width: 7em;
+        padding: 1rem;
+        margin: 25px auto;
+        font-size: 1.3rem;
     }
 
     .produto--item button:active {
-        margin-top: .8rem;
+        margin-top: 1.9rem;
         box-shadow: none;
 
     }
@@ -1215,7 +1202,8 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 
 .services .servicosPrestados li:nth-child(2) {
    width: 300px;
-   height: 40vh;
+ 
+    height: 20em;
 }
 
 }
@@ -1331,11 +1319,14 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 }
 
 
-    .botao-loq {
-        width: 50%;
+  .localizacao-itens  .botao-loq {  
+        width: 7em;
+        padding: 1rem;
+        margin-top: 25px;
         display: flex;
         align-items: center;
-        margin: 1.5rem 6rem;
+        font-size: 1.3rem;
+        border: 1px solid #000;
     }
 
     .botao-loq img {
@@ -1371,9 +1362,10 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     }
 
     .botao-loq {
-        width: 8em;
-        padding: 10px;
+        width: 7em;
         margin-top: 25px;
+        font-size: 1.3rem;
+        padding: 1rem;
         border: 1px solid #000;
     }
 
@@ -1531,7 +1523,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     display: flex;
     width: 35em;
     margin: 8px 0;
-    border:  .3rem solid #141414;
+    border: rgb(218, 218, 218) solid .1rem;
     border-radius: .7rem;
 }
 
@@ -1557,6 +1549,10 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 
 .grupform input::placeholder{
     color: #bebdbd;
+}
+.grupform input::selection{
+    color: #fff;
+    background-color: #3f3c3c;
 }
 
 .grupform input:-webkit-autofill,
@@ -1587,7 +1583,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 textarea {
     background: none;
     width: 100%;
-    border:  .3rem solid #141414;
+    border: rgb(218, 218, 218) solid .1rem;
     border-radius: .7rem;
     color: #fff;
     font-size: 1rem;
@@ -1678,7 +1674,7 @@ align-items: end;
 }
 
 .img-cont {
-    width: 100%;
+    width: 55em;
     display: flex;
     align-items: end;
     object-fit: cover;
@@ -1780,7 +1776,7 @@ align-items: end;
     }
 
     .btn-contatos {
-        margin: 12px 7.5em;
+        margin: 1.4rem auto;
         width: 30%;
         font-size: 1.3rem;
         padding: 8px;
