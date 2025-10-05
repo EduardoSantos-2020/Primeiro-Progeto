@@ -879,6 +879,10 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 
 @media screen and (min-width:380px) and (max-width:590px) {
 
+    .slick-arrow{
+        top:45%;
+    }
+
     .slick-prev {
     left: -1.8rem;
 }
