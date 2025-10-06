@@ -571,24 +571,25 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     width: 100%;
     height: 100%;
     opacity: 0;
+    object-fit: cover;
     background-color: #000; 
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
     transition: opacity 5s linear;
 }
 
 .slider--item:nth-child(1) {
     background-image: url(../imagens/itens/img-service1.jpg);
-    object-fit: cover;
     opacity: .5;
 }
 
 .slider--item:nth-child(2) {
     background-image: url(../imagens/itens/img-service2.jpg);
-    object-fit: cover;
 }
 
 .slider--item:nth-child(3) {
     background-image: url(../imagens/itens/img-service3.jpg);
-    object-fit: cover;
 }
 
 .conteudo--pagina {
@@ -669,11 +670,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 
     .slider--item {
         position: absolute;
-        opacity: 0;
-        object-fit: cover;
-        background-repeat: no-repeat;
-        background-size: cover;
-        
+        opacity: 0;    
         transition: opacity 5s linear;
     }
 }
@@ -715,13 +712,12 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     .slider--item {
         position: absolute;
         width: 50em;
-        height: 28em;
+        height: 30em;
         opacity: 0;
-        background-size: cover;
+        background-size: 100% auto;
         object-fit: cover;
-         transform: scale(1.9);
+        transform: scale(1.8);
         background-color: #000;
-        transition: opacity 5s linear;
     }
 
 
