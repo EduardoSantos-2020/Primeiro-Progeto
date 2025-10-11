@@ -20,6 +20,10 @@ $(function () {
 
          if (accessToken) {
             window.history.replaceState({}, document.title, '/index.html');
+
+            if (window.location.host.includes('github.io')) {
+             window.history.replaceState({}, document.title, 'Primeiro-Projeto/index.html');
+          }
          }
 
 
