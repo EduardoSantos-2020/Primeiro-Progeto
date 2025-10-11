@@ -311,7 +311,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         transition: all .3s ease;
     }
 
-    .styleSidebar #btn-login {
+     #btn-login {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -349,11 +349,9 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     .container-User p {
         font-size: 1.7rem;
         font-weight: bold;
-    }
-
-    .container-User .userGrup p {
         width: 80%;
     }
+
      .sidebar .container-User:hover .userGrup p,
     .sidebar .container-User:hover .textEmail {
         color: #ffffff1a;
