@@ -192,20 +192,20 @@ if (location.protocol == 'https:') {
 
     urlVerified = `${location.protocol + '//' + location.host + '/' + destino}`;
 
-    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/index.html');
+    linkTitle.setAttribute('href', location.protocol + '//' + location.host + destino);
 
   } else {
 
     urlVerified = `${location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino}`;
 
-    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'index.html')
+    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino)
   }
 
 }
 
 if (location.protocol == 'http:') {
   urlVerified = `${location.protocol + '//' + location.host + '/' + destino}`;
-  linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/index.html')
+  linkTitle.setAttribute('href', location.protocol + '//' + location.host + destino)
 }
 
 // Caso for ver no Mobile  mude a URL redirect_uri;
