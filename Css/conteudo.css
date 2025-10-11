@@ -329,8 +329,8 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         border-radius: 8px 8px 0 0;
     }
 
-    .styleSidebar .container-User:hover {
-        background: none;
+   .styleSidebar .container-User:hover , .sidebar .container-User:hover {
+        background:none ;
     }
     .container-User .textEmail {
             position: absolute;
@@ -352,8 +352,8 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         width: 80%;
     }
 
-     .sidebar .container-User:hover .userGrup p,
-    .sidebar .container-User:hover .textEmail {
+    .container-User:hover .userGrup p,
+    .container-User:hover .textEmail {
         color: #ffffff1a;
     }
 

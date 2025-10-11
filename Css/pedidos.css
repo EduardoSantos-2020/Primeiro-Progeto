@@ -313,15 +313,13 @@ body {
         border-radius: 8px 8px 0 0;
     }
 
-    .styleSidebar .container-User:hover {
-        background: none;
+       .sidebar .container-User:hover {
+        background:none ;
     }
-
 
     .styleSidebar .container-User .userGrup p {
         width: 80%;
     }
-
 
     .container-User .textEmail {
         position: absolute;
@@ -348,8 +346,10 @@ body {
         height: 100%;
         align-items: center;
         padding: 0;
+        background: none;
         justify-content: space-evenly;
     }
+
 
     .userImg {
         width: 4.5rem;
@@ -380,7 +380,7 @@ body {
         justify-content: center;
     }
 
-    .styleSidebar .container-User:hover .btnExit {
+    .sidebar .container-User:hover .btnExit {
         background: none;
     }
 
@@ -398,10 +398,6 @@ body {
         background-color: rgb(252, 14, 2);
         transition: all 1s ease-in-out;
     }
-
-
-
-
 
     .mobile-btn {
         left: 40em;
