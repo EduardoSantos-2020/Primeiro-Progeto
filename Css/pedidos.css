@@ -70,12 +70,13 @@ body {
     transform: translateY(-25%);
     border-radius: 8px 8px 0 0;
 }
+
 .userGrup {
     width: 100%;
     display: flex;
     align-items: center;
     padding-top: .8rem;
-  
+
 }
 
 .container-User p {
@@ -143,21 +144,6 @@ body {
     background-color: #13121228;
 }
 
-.sidebar .container-User:hover .textName {
-    color: #ffffff1a;
-}
-
-.sidebar .container-User:hover .userGrup .textName {
-    color: #ffffff1a;
-}
-
-.sidebar .container-User:hover .textEmail {
-    color: #ffffff1a;
-}
-
-.sidebar .container-User:hover .userGrup p {
-    color: #ffffff1a;
-}
 
 
 
@@ -172,20 +158,6 @@ body {
 
 .sidebar .container-User:hover .btnExit {
     display: flex;
-}
-
-.styleSidebar .container-User:hover {
-    background-color: #ffffff1a;
-
-}
-
-.styleSidebar .container-User .textName,
-.styleSidebar .container-User .textEmail {
-    color: #fff;
-}
-
-.styleSidebar .container-User:hover {
-    background-color: #ffffff1a;
 }
 
 
@@ -329,15 +301,11 @@ body {
         border: none;
     }
 
-    
-
-
     .container-User {
         position: relative;
         width: 80%;
         height: 5em;
         margin: 0.5rem 0;
-
         display: flex;
         align-items: center;
         padding: 0;
@@ -349,7 +317,7 @@ body {
         background: none;
     }
 
-    
+
     .styleSidebar .container-User .userGrup p {
         width: 80%;
     }
@@ -369,7 +337,8 @@ body {
         line-height: 1.3rem;
     }
 
-    .styleSidebar .container-User:hover .userGrup .textName {
+   .sidebar .container-User:hover .userGrup p,
+    .sidebar .container-User:hover .textEmail {
         color: #ffffff1a;
     }
 
@@ -395,8 +364,6 @@ body {
         border-radius: 50%;
     }
 
-
-
     .btnExit {
         position: absolute;
         top: 5rem;
@@ -416,9 +383,6 @@ body {
     .styleSidebar .container-User:hover .btnExit {
         background: none;
     }
-
-
-
 
     .login {
         width: 100px;
@@ -716,12 +680,13 @@ body {
     font-size: 1.3rem;
 
 }
+
 #btn-login {
     text-decoration: none;
 }
 
 
-.container-section{
+.container-section {
     margin: 0 .6rem;
 }
 
@@ -783,9 +748,9 @@ span.buttonText {
         border: none;
     }
 
-    .container-section{
-    margin: 0;
-}
+    .container-section {
+        margin: 0;
+    }
 
     .containerbuttons {
         position: absolute;
@@ -796,7 +761,7 @@ span.buttonText {
         padding: 2em 1em;
         display: flex;
         align-items: center;
-     
+
         flex-direction: column;
         gap: 2em;
         margin: 0;
@@ -812,7 +777,7 @@ span.buttonText {
         font-weight: bold;
     }
 
-  #btn-login {
+    #btn-login {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -871,7 +836,7 @@ span.buttonText {
 
     }
 
-  
+
     .text {
         display: flex;
         align-items: center;
@@ -1022,5 +987,3 @@ span.buttonText {
         width: 249.406px;
     }
 }
-
-@media screen and (max-width:426px) {}

@@ -108,7 +108,6 @@ a {
     display: flex;
     align-items: center;
     padding-top: .8rem;
-  
 }
 
 .userGrup p {
@@ -119,6 +118,7 @@ a {
     width: 32px;
     height: 32px;
     margin: 0 10px 0 0;
+    object-fit: cover;
 }
 
 .userImg img {
@@ -141,67 +141,39 @@ a {
     border-radius: 0 0 8px 8px;
     text-transform: uppercase;
     display: none;
-    justify-content: center;
-}
-
-.styleSidebar .container-User .userGrup p {
-    color: #fff;
-}
-
-.styleSidebar .container-User:hover .userGrup p {
-    color: #ffffff1a;
-}
-
-
-.sidebar .container-User:hover .btnExit {
-    background-color: #13121228;
-}
-
-.sidebar .container-User:hover .textName {
-    color: #ffffff1a;
-}
-
-.sidebar .container-User:hover .userGrup .textName {
-    color: #ffffff1a;
-}
-
-.sidebar .container-User:hover .textEmail {
-    color: #ffffff1a;
-}
-
-.sidebar .container-User:hover .userGrup p {
-    color: #ffffff1a;
-}
-
-
-
-.sidebar .container-User:hover .userGrup p {
-    color: #13121228;
+    justify-content:center;
 }
 
 .sidebar .container-User:hover {
     background-color: #13121228;
-    color: #13121228;
+}
+
+.sidebar .container-User:hover .userGrup .textName,
+.sidebar .container-User:hover .textEmail {
+    color: #ffffff1a;
+}
+
+.styleSidebar .container-User:hover {
+    background-color: #ffffff1a;
+}
+
+.styleSidebar .container-User  .userGrup .textName,
+.styleSidebar .container-User .textEmail {
+    color: #fff;
+}
+
+.styleSidebar .container-User:hover .textName,
+.styleSidebar .container-User:hover .textEmail {
+    color: #ffffff1a;
+}
+
+.sidebar .container-User:hover .btnExit {
+    background-color: #13121228;
 }
 
 .sidebar .container-User:hover .btnExit {
     display: flex;
 }
-
-.styleSidebar .container-User:hover {
-    background-color: #ffffff1a;
-
-}
-
-.styleSidebar .container-User .textName,
-.styleSidebar .container-User .textEmail {
-    color: #fff;
-}
-
-.styleSidebar .container-User:hover {
-    background-color: #ffffff1a;
-}
-
 
 .sidebar .btnExit:hover {
     color: #3f3c3c;
@@ -211,22 +183,22 @@ a {
     color: #afafaf;
 }
 
-.styleSidebar .container-User:hover .userGrup .textEmail {
-    color: #13121228;
-}
-
-.styleSidebar .container-User:hover .userGrup .textName {
-    color: #ffffff1a;
-}
-
-.styleSidebar .container-User:hover .userGrup .textName {
-    color: #ffffff1a;
-}
-
 .styleSidebar .container-User:hover .btnExit {
     background-color: #ffffff1a;
 }
 
+.styleSidebar .container-User:hover {
+    background-color: #ffffff1a;
+}
+
+/* .styleSidebar .container-User:hover .userGrup .textEmail {
+    color: #13121228;
+}
+*/
+
+/* .styleSidebar .container-User:hover .userGrup .textName {
+    color: #ffffff1a;
+}  */
 
 .menu--secao {
     position: relative;
@@ -348,7 +320,6 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         width: 100%;
         height: 5em;
         margin: 0.5rem 0;
-
         display: flex;
         align-items: center;
         padding: 0;
@@ -359,33 +330,30 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     .styleSidebar .container-User:hover {
         background: none;
     }
+    .container-User .textEmail {
+            position: absolute;
+            top: 3.5rem;
+            left: 30%;
+            width: 19em;
+            margin: 0;
+            display: flex;
+            align-items: baseline;
+            font-size: .9rem;
+            word-break: break-all;
+            text-align: start;
+            line-height: 1.3rem;
+        }
 
     .container-User p {
-
         font-size: 1.7rem;
         font-weight: bold;
     }
 
-    .styleSidebar .container-User .userGrup p {
+    .container-User .userGrup p {
         width: 80%;
     }
-
-
-    .container-User .textEmail {
-        position: absolute;
-        top: 3.5rem;
-        left: 30%;
-        width: 19em;
-        margin: 0;
-        display: flex;
-        align-items: baseline;
-        font-size: .9rem;
-        word-break: break-all;
-        text-align: start;
-        line-height: 1.3rem;
-    }
-
-    .styleSidebar .container-User:hover .userGrup .textName {
+     .sidebar .container-User:hover .userGrup p,
+    .sidebar .container-User:hover .textEmail {
         color: #ffffff1a;
     }
 
@@ -410,10 +378,8 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         object-fit: cover;
         border-radius: 50%;
     }
-
-
-
-    .btnExit {
+   
+   .container-User .btnExit {
         position: absolute;
         top: 5rem;
         width: 100%;
@@ -432,8 +398,7 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
     .styleSidebar .container-User:hover .btnExit {
         background: none;
     }
-
-
+    
     .login {
         width: 100px;
         margin: 30px;
@@ -683,7 +648,6 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         text-transform: uppercase;
     }
 
-    .conteudo--principal {}
 
     .conteudo--pagina>p {
         font-size: 1.3rem;
@@ -957,7 +921,6 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
 }
 
 @media screen and (max-width:1024px) {
-    .produtos--items {}
 
     .produto--item h2 {
         font-family: var(--fontPrimary);
