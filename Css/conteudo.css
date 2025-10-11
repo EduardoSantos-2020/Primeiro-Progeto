@@ -357,6 +357,11 @@ aside:not(.styleSidebar) .container-User:hover .userGrup p {
         color: #ffffff1a;
     }
 
+    .sidebar .container-User:hover .userGrup p,
+    .sidebar .container-User:hover .textEmail {
+        color: #ffffff1a;
+    }
+
     .userGrup {
         display: flex;
         width: 80%;
