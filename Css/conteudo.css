@@ -80,6 +80,7 @@ a {
 .container-User p {
     font-size: 1.3rem;
     font-weight: bold;
+   
 }
 
 .container-User .textEmail {
@@ -148,6 +149,11 @@ a {
     background-color: #13121228;
 }
 
+.styleSidebar .container-User  .userGrup .textName,
+.styleSidebar .container-User .textEmail {
+    color: #fff;
+}
+
 .sidebar .container-User:hover .userGrup .textName,
 .sidebar .container-User:hover .textEmail {
     color: #ffffff1a;
@@ -157,10 +163,6 @@ a {
     background-color: #ffffff1a;
 }
 
-.styleSidebar .container-User  .userGrup .textName,
-.styleSidebar .container-User .textEmail {
-    color: #fff;
-}
 
 .styleSidebar .container-User:hover .textName,
 .styleSidebar .container-User:hover .textEmail {
