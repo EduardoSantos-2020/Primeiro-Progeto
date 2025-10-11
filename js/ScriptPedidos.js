@@ -63,10 +63,17 @@ $(window).ready(() => {
 
             if (location.protocol == 'https:') {
 
-               if (window.location.host.includes('ngrok-free.app')) {
-                  window.location.href = '/index.html';
-               } else {
-                  window.location.href = '/Primeiro-Progeto/' + 'index.html';
+
+               if (location.protocol == 'https:') {
+
+                  if (window.location.host.includes('ngrok-free.app')) {
+
+                     window.location.href = '/index.html';
+
+                  } else if (window.location.host.includes('github.io')) {
+
+                     window.location.href = '/Primeiro-Progeto/' + 'index.html';
+                  }
                }
 
             } else if (location.protocol == 'http:') {

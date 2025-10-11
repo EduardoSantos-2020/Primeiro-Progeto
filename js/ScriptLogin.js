@@ -192,20 +192,21 @@ if (location.protocol == 'https:') {
 
     urlVerified = `${location.protocol + '//' + location.host + '/' + destino}`;
 
-    linkTitle.setAttribute('href', location.protocol + '//' + location.host + destino);
+    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/index.html');
 
-  } else {
+ 
+    
+
+  } else if (window.location.host.includes('github.io')) {
 
     urlVerified = `${location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino}`;
 
-    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino)
+    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'index.html')
   }
 
-}
-
-if (location.protocol == 'http:') {
+}else if (location.protocol == 'http:') {
   urlVerified = `${location.protocol + '//' + location.host + '/' + destino}`;
-  linkTitle.setAttribute('href', location.protocol + '//' + location.host + destino)
+  linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/index.html')
 }
 
 // Caso for ver no Mobile  mude a URL redirect_uri;
