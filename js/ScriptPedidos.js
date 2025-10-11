@@ -1,8 +1,8 @@
 $(window).ready(() => {
 
-menu = $('.menu-btn .line');
-sideBar = $(".sidebar");
-nameLogo = $('.logo--name');
+   menu = $('.menu-btn .line');
+   sideBar = $(".sidebar");
+   nameLogo = $('.logo--name');
 
    $('.button-prop').on('click', mobileEvent)
 
@@ -13,17 +13,17 @@ nameLogo = $('.logo--name');
       !$('.containerbuttons').hasClass('mobile-btn') && $('body').width() < 992 ? $('body').css('overflow', 'hidden') : $('body').css('overflow', 'visible');
 
 
-      if ($('.menu-btn').hasClass('btn-active')){
-            sideBar.css('background-color','#141414')
-            nameLogo.css('color', '#fff');
-            menu.css('background-color', '#fff');
-         }else{
-           
-               sideBar.css('background','#e9e8e8f8')
-               nameLogo.css('color', '#000');
-               menu.css('background-color', '#000');
-            
-         }   
+      if ($('.menu-btn').hasClass('btn-active')) {
+         sideBar.css('background-color', '#141414')
+         nameLogo.css('color', '#fff');
+         menu.css('background-color', '#fff');
+      } else {
+
+         sideBar.css('background', '#e9e8e8f8')
+         nameLogo.css('color', '#000');
+         menu.css('background-color', '#000');
+
+      }
 
    }
 
@@ -63,36 +63,36 @@ nameLogo = $('.logo--name');
 
             if (location.protocol == 'https:') {
 
-               window.location.href = '/Primeiro-Progeto/' + 'index.html';
+               if (window.location.host.includes('ngrok-free.app')) {
+                  window.location.href = '/index.html';
+               } else {
+                  window.location.href = '/Primeiro-Progeto/' + 'index.html';
+               }
 
             } else if (location.protocol == 'http:') {
-
                window.location.href = '/index.html';
-
             }
-
          })
       }
-
    }
 
    function fetchUserInfo(accessToken) {
-
       // Limpa a URL (remove token e params)
-
       if (accessToken) {
          if (location.protocol == 'https:') {
-            window.history.replaceState({}, document.title, '/Primeiro-Progeto/pedidos.html');
+
+            if (window.location.host.includes('ngrok-free.app')) {
+               window.history.replaceState({}, document.title, '/pedidos.html');
+            } else {
+               window.history.replaceState({}, document.title, '/Primeiro-Progeto/pedidos.html');
+            }
          }
+
          if (location.protocol == 'http:') {
             window.history.replaceState({}, document.title, 'pedidos.html');
          }
+
       }
-
-      $(window).ready(function () {
-
-
-      })
 
 
       $.ajax({
@@ -124,7 +124,11 @@ nameLogo = $('.logo--name');
 
                   if (location.protocol == 'https:') {
 
-                     window.location.href = '/Primeiro-Progeto/' + 'index.html';
+                     if (window.location.host.includes('ngrok-free.app')) {
+                        window.location.href = '/index.html';
+                     } else {
+                        window.location.href = '/Primeiro-Progeto/' + 'index.html';
+                     }
 
                   } else if (location.protocol == 'http:') {
 
@@ -140,19 +144,21 @@ nameLogo = $('.logo--name');
       });
    }
 
-
    $('#btn-Back').click(() => {
 
       if (location.protocol == 'https:') {
 
-         window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'index.html';
-
-      } else if (location.protocol == 'http:') {
-
-         window.location.href = location.protocol + '//' + location.host + '/index.html';
+         if (window.location.host.includes('ngrok-free.app')) {
+            window.location.href = location.protocol + '//' + location.host + '/index.html';
+         } else {
+            window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'index.html';
+         }
 
       }
-      //window.location.href = "https://d25a-138-118-58-221.ngrok-free.app/index.html";
+
+      if (location.protocol == 'http:') {
+         window.location.href = location.protocol + '//' + location.host + '/index.html';
+      }
    })
 
    const dados = JSON.parse(sessionStorage.getItem("data"));
@@ -177,10 +183,7 @@ nameLogo = $('.logo--name');
       $(titleProd).html(obj.name);
       $(imgSrc).attr('src', obj.image);
 
-
       $(obj.descricao).map((i, event) => {
-
-
 
          let Texto1 = obj.caracteristics[i].p;
          let Texto2 = obj.descricao[i].p;

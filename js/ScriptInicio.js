@@ -47,7 +47,14 @@ $(function () {
 
                if (location.protocol == 'https:') {
 
-                  window.location.href = '/Primeiro-Progeto/' + 'index.html';
+                  if (window.location.host.includes('ngrok-free.app')) {
+
+                     window.location.href = '/index.html';
+
+                  } else {
+                     window.location.href = '/Primeiro-Progeto/' + 'index.html';
+                  }
+
 
                } else if (location.protocol == 'http:') {
 
@@ -92,7 +99,12 @@ $(function () {
 
                   if (location.protocol == 'https:') {
 
-                     window.location.href = '/Primeiro-Progeto/' + 'index.html';
+                     if (window.location.host.includes('ngrok-free.app')) {
+                        window.location.href = '/index.html';
+                     } else {
+                        window.location.href = '/Primeiro-Progeto/' + 'index.html';
+                     }
+
 
                   } else if (location.protocol == 'http:') {
 
@@ -126,7 +138,12 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
             sessionStorage.setItem('produts', JSON.stringify(produts));
             if (location.protocol == 'https:') {
 
-               window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'pedidos.html';
+               if (window.location.host.includes('ngrok-free.app')) {
+                  window.location.href = location.protocol + '//' + location.host + '/pedidos.html';
+               } else {
+                  window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'pedidos.html';
+               }
+
 
             } else if (location.protocol == 'http:') {
 
@@ -184,19 +201,19 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
 
       !$('.nav--menu').hasClass('mobile-btn') && $('body').width() < 992 ? $('body').css('overflow', 'hidden') : $('body').css('overflow', 'visible');
 
-      if ($('.menu-btn').hasClass('btn-active')){
-            sideBar.css('background-color','#141414')
-            nameLogo.css('color', '#fff');
-            menu.css('background-color', '#fff');
-         }else{
-            if (window.scrollY==0) {
-               sideBar.css('background','transparent')
-            }else{
-               sideBar.css('background','#e9e8e8f8')
-                 nameLogo.css('color', '#000');
-               menu.css('background-color', '#000');
-            }
-         }   
+      if ($('.menu-btn').hasClass('btn-active')) {
+         sideBar.css('background-color', '#141414')
+         nameLogo.css('color', '#fff');
+         menu.css('background-color', '#fff');
+      } else {
+         if (window.scrollY == 0) {
+            sideBar.css('background', 'transparent')
+         } else {
+            sideBar.css('background', '#e9e8e8f8')
+            nameLogo.css('color', '#000');
+            menu.css('background-color', '#000');
+         }
+      }
    }
 
    function showSlider() {
@@ -227,17 +244,17 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
 
       if (sect > 0) {
          sideBar.removeClass('styleSidebar');
-         sideBar.css('background-color','#e9e8e8f8')
+         sideBar.css('background-color', '#e9e8e8f8')
          nameLogo.css('color', '#000');
          menu.css('background-color', '#000');
-          
+
       } else {
          sideBar.addClass('styleSidebar');
-         sideBar.css('background','transparent')
+         sideBar.css('background', 'transparent')
 
          nameLogo.css('color', '#fff')
          menu.css('background-color', '#fff')
-         
+
       }
 
 

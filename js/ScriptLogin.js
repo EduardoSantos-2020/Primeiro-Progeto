@@ -20,6 +20,7 @@ const fileImg = document.querySelector('#upFile')
 const nome = document.getElementById('Name')
 const email = document.getElementById('Email')
 const imgPhoto = document.getElementById('Photo')
+
 urlVerified = '';
 
 if (!containerCadastro.classList.contains('recovery') || !containerCadastro.classList.contains('cadastrar') && window.location.reload) {
@@ -61,7 +62,11 @@ btnEnter.addEventListener('click', function () {
 
   if (location.protocol == 'https:') {
 
-    window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino;
+    if (window.location.host.includes('ngrok-free.app')) {
+      window.location.href = location.protocol + '//' + location.host +'/' + destino;
+    } else {
+      window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino;
+    }
 
   } else if (location.protocol == 'http:') {
 
@@ -131,7 +136,7 @@ function recoveryPassFunction() {
   InputEmail.focus()
   btnRecovery.style.display = 'none'
   InputPassword.placeholder = 'Digite  o codigo'
-  InputPassword.setAttribute('type','number')
+  InputPassword.setAttribute('type', 'number')
   Title.innerHTML = 'Esqueceu a sua senha ?'
   btnEnter.innerHTML = 'Enviar código'
   btnCreate.innerHTML = 'Confirmar código'
@@ -154,7 +159,7 @@ function loginFunction() {
   InputEmail.placeholder = 'Digite seu Email';
   InputEmail.focus()
   InputPassword.placeholder = "Digite sua Senha";
-  InputPassword.setAttribute('type','password')
+  InputPassword.setAttribute('type', 'password')
   btnCancelRecovery.style.display = 'none'
   link.setAttribute('href', '#login')
 }
@@ -180,18 +185,30 @@ function btnConfirm() {
     }
   })
 }
-// Caso for ver no Mobile  mude a URL redirect_uri;
 
 if (location.protocol == 'https:') {
-  urlVerified = `${location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino}`;
-  linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/Primeiro-Progeto/index.html')
+
+  if (window.location.host.includes('ngrok-free.app')) {
+
+    urlVerified = `${location.protocol + '//' + location.host + '/' + destino}`;
+
+    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/index.html');
+
+  } else {
+
+    urlVerified = `${location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino}`;
+
+    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'index.html')
+  }
+
 }
+
 if (location.protocol == 'http:') {
   urlVerified = `${location.protocol + '//' + location.host + '/' + destino}`;
   linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/index.html')
 }
 
-//const urlVerified = `https://d25a-138-118-58-221.ngrok-free.app/${destino}`;
+// Caso for ver no Mobile  mude a URL redirect_uri;
 
 const authEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
 
