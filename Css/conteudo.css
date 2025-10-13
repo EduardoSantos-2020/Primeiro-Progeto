@@ -152,23 +152,6 @@ a {
     color: #ffffff1a;
 }
 
-/* .styleSidebar .container-User  .userGrup .textName,
-.styleSidebar .container-User .textEmail {
-    color: #fff;
-}
-
-.sidebar .container-User:hover .userGrup .textName,
-.sidebar .container-User:hover .textEmail {
-    color: #ffffff1a;
-}
-
-
-
-.styleSidebar .container-User:hover .textName,
-.styleSidebar .container-User:hover .textEmail {
-    color: #ffffff1a;
-} */
-
 .sidebar .container-User:hover .btnExit {
     background-color: #13121228;
 }
@@ -188,20 +171,6 @@ a {
 .styleSidebar .container-User:hover .btnExit {
     background-color: #ffffff1a;
 }
-
-/* .styleSidebar .container-User:hover {
-    background-color: #ffffff1a;
-} */
-
-/* .styleSidebar .container-User:hover .userGrup .textEmail {
-    color: #13121228;
-}
-*/
-
-/* .styleSidebar .container-User:hover .userGrup .textName {
-    color: #ffffff1a;
-}  */
-
 
 .btnExit {
     position: absolute;
