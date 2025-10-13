@@ -84,11 +84,14 @@ a {
 }
 
 .container-User .textEmail {
-    width: 17.5em;
+    width: 20.5em;
     top: 2.3rem;
-    left: 3rem;
+    left: 3.5rem;
     position: absolute;
+    word-break: break-all;
     font-size: .56rem;
+    text-align: start;
+    line-height: .7rem;
     letter-spacing: .1rem;
     margin: 0;
 
