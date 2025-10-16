@@ -65,7 +65,7 @@ btnEnter.addEventListener('click', function () {
     if (window.location.host.includes('ngrok-free.app')) {
       window.location.href = location.protocol + '//' + location.host +'/' + destino;
     } else {
-      window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino;
+      window.location.href = location.protocol + '//' + location.host + '/Primeiro-Projeto/' + destino;
     }
 
   } else if (location.protocol == 'http:') {
@@ -199,9 +199,9 @@ if (location.protocol == 'https:') {
 
   } else if (window.location.host.includes('github.io')) {
 
-    urlVerified = `${location.protocol + '//' + location.host + '/Primeiro-Progeto/' + destino}`;
+    urlVerified = `${location.protocol + '//' + location.host + '/Primeiro-Projeto/' + destino}`;
 
-    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'index.html')
+    linkTitle.setAttribute('href', location.protocol + '//' + location.host + '/Primeiro-Projeto/' + 'index.html')
   }
 
 }else if (location.protocol == 'http:') {

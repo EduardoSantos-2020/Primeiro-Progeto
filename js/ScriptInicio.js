@@ -22,7 +22,7 @@ $(function () {
             window.history.replaceState({}, document.title, '/index.html');
 
             if (window.location.host.includes('github.io')) {
-             window.history.replaceState({}, document.title, 'Primeiro-Progeto/index.html');
+             window.history.replaceState({}, document.title, 'Primeiro-Projeto/index.html');
           }
          }
 
@@ -56,7 +56,7 @@ $(function () {
                      window.location.href = '/index.html';
 
                   } else {
-                     window.location.href = '/Primeiro-Progeto/' + 'index.html';
+                     window.location.href = '/Primeiro-Projeto/' + 'index.html';
                   }
 
 
@@ -106,7 +106,7 @@ $(function () {
                      if (window.location.host.includes('ngrok-free.app')) {
                         window.location.href = '/index.html';
                      } else {
-                        window.location.href = '/Primeiro-Progeto/' + 'index.html';
+                        window.location.href = '/Primeiro-Projeto/' + 'index.html';
                      }
 
 
@@ -145,7 +145,7 @@ $.getJSON('js/ApiProduts.json', function (arrayProdutos) {
                if (window.location.host.includes('ngrok-free.app')) {
                   window.location.href = location.protocol + '//' + location.host + '/pedidos.html';
                } else {
-                  window.location.href = location.protocol + '//' + location.host + '/Primeiro-Progeto/' + 'pedidos.html';
+                  window.location.href = location.protocol + '//' + location.host + '/Primeiro-Projeto/' + 'pedidos.html';
                }
 
 
